@@ -8,6 +8,7 @@ Beginning Phase 1
           Current Status: One can post and comment on a post (tagging doesn't work)
 
           A post consists of a name (user), title, content, user location (determined by us), post location [where event is occuring] (determined by user), date and time, accuracy and inaccuracy
+
           One may edit, delete, and show a post
           Showing a post shows details of the post and any comments or tags
           
