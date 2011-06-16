@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  title: MyString
+  content: MyText
+  user_location: MyString
+  post_location: MyString
+  accuracy: 1
+  inaccuracy: 1
+  date: 2011-06-15
+  time: 2011-06-15 17:51:18
+
+two:
+  name: MyString
+  title: MyString
+  content: MyText
+  user_location: MyString
+  post_location: MyString
+  accuracy: 1
+  inaccuracy: 1
+  date: 2011-06-15
+  time: 2011-06-15 17:51:18
