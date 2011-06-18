@@ -1,0 +1,43 @@
+<div id="header">
+  <a href="http://www.orchive.com"><%= image_tag("Logo/Logo.jpg", :alt => "[Or]chive") %></a> 
+</div>
+
+<div id="navBar">
+
+  <div id="search" class="floatLeft">
+    <%= text_field_tag('searchField', 'Start a search', :size => 60)%>
+  </div>
+
+  <p id="worldMapNewsFeed" class="floatLeft">
+    <a id="worldMap" href="worldMap" >World Map</a> / 
+    <%= link_to 'News Feed', posts_path %>
+  </p>
+
+  <!--  May Redesign this, but that would mean changing with accounts -->
+  <div id="linksDiv">
+    <div id="topLinks">
+      <!-- Not Used in First Beta (Only with Accounts)
+      <a id="followerPosts" href="#FollowerPosts">Follower Posts</a>
+      <a id="trendingPosts" href="#TrendingPosts">Trending Posts</a> -->
+
+      <a class="secondSet" href="#politics">Politics</a>
+      <a class="secondSet" href="#living">Living</a>
+      <a class="secondSet" href="#society">Society</a>
+      <a class="secondSet" href="#finance">Finance</a>
+      <a class="secondSet" href="#technology">Technology</a>
+      <a class="secondSet" href="#weather">Weather</a>
+    </div>
+  
+    <div id="botLinks">
+      <!-- Not Used in First Beta (Only with Accouts)
+      <a id="relevantPosts" href="/RelevantPosts">Relevant Posts</a>
+      <a id="localPosts" href="/LocalPosts">Local Posts</a> -->
+
+      <a class="secondSet" href="#environmental">Environmental</a>
+      <a class="secondSet" href="#education">Education</a>
+      <a class="secondSet" href="#entertainment">Entertainment</a>
+      <a class="secondSet" href="#justice">Justice</a>
+      <a class="secondSet" href="#sports">Sports</a>
+    </div>
+  </div>
+</div>
