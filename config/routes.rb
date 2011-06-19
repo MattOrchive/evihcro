@@ -1,4 +1,4 @@
-OrchiveApp::Application.routes.draw do |map|
+OrchiveApp::Application.routes.draw do
   get "pages/About"
   get "pages/Contact"
   get "pages/Privacy"
