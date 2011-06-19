@@ -18,6 +18,8 @@ Beginning Phase 1
           A comment consists of a name (commenter) and content
           One may only delete a comment (not edit)
 
+
+
 6/18/11:  Made Header (Logo + Navigation Bar) and Footer (Copy, Translation
           [Not Working] and Bottom Links)
 
@@ -30,5 +32,16 @@ Beginning Phase 1
           Then... Either add CSS or build News Feed, Home Page, etc.
 
 
+
+6/19/11:  Completed the Static Pages (Meaning added content to them)
+          
+          Added CSS successfully styling and formatting the pages
+
+          Fixed previous problem with page width... Now all pages are the 
+          whole screen
+
+          Next... Build News Feed and Home Page
+          Then... Format and Style News Feed and Home Page
+          After Then... Tagging System and New Posting (Modals)
 
 *Orchive.com*
