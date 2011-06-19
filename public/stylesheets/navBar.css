@@ -1,11 +1,9 @@
 /* Header CSS (Logo + Nav Bar)*/
 #navBar {
-  /* Background Properties */
   background-image: url("./../images/background_navBar.jpg");
   background-repeat: no-repeat;
   background-size:100%;
  }
-/* Search Field Properties */
 #searchField{
   margin:1.5% auto 0% 6%;
   font-family: "Myriad Pro";

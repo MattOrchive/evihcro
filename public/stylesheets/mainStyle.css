@@ -14,8 +14,7 @@ a img {border:none;}
 :focus {outline:0;}
 
 /* Main CSS Document */
-/* This may or may not be used */
-@font-family {
+@font-face {
 	font-family: "Dax";
 	src: url(Dax/Dax-Medium.otf) format("truetype");
 }
