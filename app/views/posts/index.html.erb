@@ -1,4 +1,4 @@
-<h1>News Feed</h1>
+<h1>News!!!</h1>
 
 <table>
   <tr>
@@ -18,7 +18,7 @@
 
 <% @posts.each do |post| %>
   <tr>
-    <td><%= post.name %></td>
+    <td><%= link_to  post.name, post  %></td>
     <td><%= post.title %></td>
     <td><%= post.content %></td>
     <td><%= post.user_location %></td>
@@ -27,9 +27,9 @@
     <td><%= post.inaccuracy %></td> 
     <td><%= post.date %></td>
     <td><%= post.time %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+    <!--<td>%= link_to 'Show', post %></td>
+    <td>%= #link_to 'Edit', edit_post_path(post) %></td>-->
+    <td><%= link_to 'Delete', post, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

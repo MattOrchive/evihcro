@@ -1,7 +1,7 @@
-<%= form.fields_for :tags do |tag_form| %>
+<%= fields_for :tags do |tag_form| %>
   <div class="field">
     <!-- DOES NOT WORK
-    Cannot figure out how to, when clicked, add the desired string to tags
+    Cannot figure out how to, when clicked, add the desired string to tags -->
 
     <%= tag_form.label :name, 'Politics:' %>
     <%= tag_form.check_box :name %>
@@ -10,8 +10,9 @@
     <%= tag_form.check_box :name%>
 
     <%= tag_form.label :name, 'Add More Check Boxes:' %>
-    <%= tag_form.check_box :name %> -->
+    <%= tag_form.check_box :name %>
   </div>
+
   <% unless tag_form.object.nil? || tag_form.object.new_record? %>
     <div class="field">
       <%= tag_form.label :_destroy, 'Remove:' %>
@@ -19,4 +20,3 @@
     </div>
   <% end %>
 <% end %>
-

@@ -1,5 +1,22 @@
 <div id="header">
-  <%= link_to(image_tag("logo.jpg", :alt => "[Or]chive"), "/")%> 
+  <span id="logo" class="">
+    <%= link_to(image_tag("logo.jpg", :alt => "[Or]chive"), "/")%> 
+  </span>
+  <span id="headPages" class="floatRight">
+    <p>
+      <%= link_to 'Home', '/' %>
+      &#8942
+      <%= link_to 'About', '/about' %>
+      &#8942
+      <%= link_to 'Contact', '/contact' %>
+      &#8942
+      <%= link_to 'Help', '/future' %>
+      &#8942
+      <%= link_to 'Sign Up', '/future' %>
+      &#8942
+      <%= link_to 'Sign In', '/future' %>
+    </p>
+  </span>
 </div>
 
 <div id="navBar">
