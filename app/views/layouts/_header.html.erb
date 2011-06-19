@@ -4,14 +4,12 @@
 
 <div id="navBar">
 
-  <div id="search" class="floatLeft">
-    <%= text_field_tag('searchField', 'Start a search', :size => 60)%>
-  </div>
-
-  <p id="worldMapNewsFeed" class="floatLeft">
-    <a id="worldMap" href="worldMap" >World Map</a> / 
+  <%= text_field_tag('searchField', 'Start a search', :size => 60, :class => "floatLeft")%>
+  
+  <span id="worldMapNewsFeed" class="floatLeft">
+    <%= link_to 'World Map', '/future' %>/ 
     <%= link_to 'News Feed', posts_path %>
-  </p>
+  </span>
 
   <!--  May Redesign this, but that would mean changing with accounts -->
   <div id="linksDiv">

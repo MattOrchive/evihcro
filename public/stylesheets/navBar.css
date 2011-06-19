@@ -1,62 +1,42 @@
-/*Navigation Bar CSS Document*/
-#navBar
-{
-	height: 84px;
-	background-image: url(images/navBar/background.jpg);
+/* Header CSS (Logo + Nav Bar)*/
+#navBar {
+  /* Background Properties */
+  background-image: url("./../images/background_navBar.jpg");
+  background-repeat: no-repeat;
+  background-size:100%;
+ }
+/* Search Field Properties */
+#searchField{
+  margin:1.5% auto 0% 6%;
+  font-family: "Myriad Pro";
+  color: #9E9E9E;
+  background-color: #FFFFFF;
+  border: 2px solid #D3EADA;
+  border-radius: 4px;
+  -moz-border-radius:4px;
+  height:27%;
 }
-#search
-{
-	margin: 23px 40px auto;
+#worldMapNewsFeed {  
+  margin: 1.5% 6% 0% 3%;
+  font-size:1.1em;
 }
-#searchField
-{
-	font-family: "Myriad Pro";
-	color: #9E9E9E;
-	background-color: #FFFFFF;
-	border: 2px solid #D3EADA;
-	border-radius: 4px;
-	padding: 10px 0px 0px 5px;
+#worldMapNewsFeed A {
+  padding:2px;
 }
-#searchButton
-{
-	-webkit-appearance: searchfield-results-button;
+#navBar A {
+  color: #555555;
+  text-decoration: none;
 }
-#worldMapNewsFeed
-{
-	margin: 30px auto auto;
+#navBar A:hover {
+  color: #00BE69;
 }
-#Spacer_navLine
-{
-	margin: 18px auto auto;
+#linksDiv {
+  padding: 1% 0% .5% 0%;
+  font-size: 13px;
 }
-#navBar A
-{
-	color: #555555;
-	margin-right: 5px;
-	text-decoration: none;
+#linksDiv A {
+  padding-right:2%;
 }
-#navBar A:visited
-{
-	color: #00BE69;
-}
-#linksDiv
-{
-	padding-top: 20px;
-	font-size: 12px;
-}
-#topLinks
-{
-	margin-bottom: 3px;
-}
-#linksDiv #localPosts
-{
-	margin-right: 20px;
-}
-#linksDiv #trendingPosts
-{
-	margin-right: 15px;
-}
-#linksDiv A.secondSet
-{
-	font-size: 10px;
+#topLinks{
+  margin-bottom: 3px;
 }
