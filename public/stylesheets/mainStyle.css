@@ -13,75 +13,79 @@ blockquote, q {quotes:"" "";}
 a img {border:none;}
 :focus {outline:0;}
 
+
+
+
+
 /* Main CSS Document */
 @font-face {
-	font-family: "Dax";
-	src: url(Dax/Dax-Medium.otf) format("truetype");
+  font-family: "Dax";
+  src: url(Dax/Dax-Medium.otf) format("truetype");
 }
 @font-face {
   font-family: "Myriad Pro"
   src: url(./fonts/myriadwebpro.ttf) format("truetype");
 }
-BODY
-{
+BODY {
   margin:0px;
   color:#000; 
   font-family: "Myriad Pro";
 }
-#main h1 {
-	margin:0px;
-        font-size:50px;
-	font-weight:500;
+#main{
+  background-image: url("./../images/background_content.jpg");
+  background-repeat: no-repeat;
+  background-size:100%;
+  padding-bottom:9%;
 }
-#main p {
-	margin:0px;
+#content {
+  margin:0% 6% 1% 6%;
+}
+#content h1 {
+  margin:0px;
+  font-size:48px;
+  font-weight:500;
+}
+#content p {
+  margin:0px;
 }
 .green {
-	color:#00BE69;
+  color:#00BE69;
+}	
+.inline {
+  display: inline;
 }
-	
-.inline
-{
-	display: inline;
+.floatLeft{
+  float: left;
 }
-.floatLeft
-{
-	float: left;
-}
-.floatRight
-{
-	float: right;
+.floatRight{
+  float: right;
 }
 .clearLeft {
-	clear:left;
+  clear:left;
 }
 .clearRight {
-	clear:right;
+  clear:right;
 }
 .textCenter {
-	text-align:center;
+  text-align:center;
 }
 .button {
-	background: #48B76A;
-   	border: 1px solid #3b9737;
-   	font: bold 14px "Myriad Pro";
-		
-   	color: #fff!important;
-   	text-shadow: 0 -1px 1px rgba(0,0,0,0.3);  
-	 
-	-webkit-box-shadow:1px 1px #D9D9D9;
-    	
-    height: 32px;
-	width:63px;
-		
-	cursor: pointer;
-	}
+  background: #48B76A;
+  border: 1px solid #3b9737;
+  font: bold 14px "Myriad Pro";
+  color: #fff!important;
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.3);  
+  -webkit-box-shadow:1px 1px #D9D9D9;
+  height: 32px;
+  width:63px;
+  cursor: pointer;
+}
 .button:hover {
     background: #a6DAb3;
 }
-
 .button:active {
     background: #E19460;
     box-shadow: 0 0 3px rgba(0,0,0,0);
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,0);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0);
 }

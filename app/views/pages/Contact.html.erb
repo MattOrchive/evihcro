@@ -1,7 +1,26 @@
+<head>
+  <style type="text/css">
+    #suggestionBox {
+      resize:none;
+      border:3px solid #7E7E7E;
+      border-radius:10px;
+      -webkit-appearance: textarea;
+      -moz-appearance:textarea;
+      color:#7E7E7E;
+      font-size:15px;
+      font-family:"Myriad Pro";
+      padding:8px 8px 8px 8px;
+      margin: 0.5% 1% 1% 0%;
+      width:425px;
+      height:225px;
+    }
+  </style>
+</head>
+
 <h1 class="inline">Contact Us</h1>       
 
-<div id="infoDiv" class="clearLeft">
-  <%= text_area_tag('suggestionBox', 'Leave a nice message') %>
+<div id="infoDiv" >
+  <%= text_area_tag('suggestionBox', 'Leave a nice message', :class => "floatLeft")%>
 
   <p id="info" class="floatLeft">
     We would love to hear your constructive criticism. Any thoughts regarding any aspect of the
@@ -24,11 +43,11 @@
 </div>
         
 <div id="buttonDiv">
-  <%= submit_tag('Submit') %>
+  <%= submit_tag('Submit', :class => "button") %>
 </div>
 
 <div id="socialDiv">
-  <h1 class="inline">Social Networking</h1>
+  <h1>Social Networking</h1>
   <%= image_tag("SN/twitter.jpg") %>
   <%= image_tag("SN/fbook.jpg") %>
   <%= image_tag("SN/in.jpg") %>
