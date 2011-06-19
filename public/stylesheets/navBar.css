@@ -1,0 +1,62 @@
+/*Navigation Bar CSS Document*/
+#navBar
+{
+	height: 84px;
+	background-image: url(images/navBar/background.jpg);
+}
+#search
+{
+	margin: 23px 40px auto;
+}
+#searchField
+{
+	font-family: "Myriad Pro";
+	color: #9E9E9E;
+	background-color: #FFFFFF;
+	border: 2px solid #D3EADA;
+	border-radius: 4px;
+	padding: 10px 0px 0px 5px;
+}
+#searchButton
+{
+	-webkit-appearance: searchfield-results-button;
+}
+#worldMapNewsFeed
+{
+	margin: 30px auto auto;
+}
+#Spacer_navLine
+{
+	margin: 18px auto auto;
+}
+#navBar A
+{
+	color: #555555;
+	margin-right: 5px;
+	text-decoration: none;
+}
+#navBar A:visited
+{
+	color: #00BE69;
+}
+#linksDiv
+{
+	padding-top: 20px;
+	font-size: 12px;
+}
+#topLinks
+{
+	margin-bottom: 3px;
+}
+#linksDiv #localPosts
+{
+	margin-right: 20px;
+}
+#linksDiv #trendingPosts
+{
+	margin-right: 15px;
+}
+#linksDiv A.secondSet
+{
+	font-size: 10px;
+}
