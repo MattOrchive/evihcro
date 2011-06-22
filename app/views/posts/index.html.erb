@@ -1,39 +1,46 @@
+<div id="sidebar">
+</div>
+
+<div id="feed">
+
 <h1>News!!!</h1>
+<div id="post">
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Title</th>
-    <th>Content</th>
-    <th>User location</th>
-    <th>Post location</th>
-    <th>Accuracy</th>
-    <th>Inaccuracy</th>
-    <th>Date</th>
-    <th>Time</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <% @posts.each do |post| %>
+    <img src="#" alt="Photo?" class="floatLeft" width=60 height=60/>
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= link_to  post.name, post  %></td>
-    <td><%= post.title %></td>
-    <td><%= post.content %></td>
-    <td><%= post.user_location %></td>
-    <td><%= post.post_location %></td>
-    <td><%= post.accuracy %></td>
-    <td><%= post.inaccuracy %></td> 
-    <td><%= post.date %></td>
-    <td><%= post.time %></td>
-    <!--<td>%= link_to 'Show', post %></td>
-    <td>%= #link_to 'Edit', edit_post_path(post) %></td>-->
-    <td><%= link_to 'Delete', post, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <h2 id="postTitle"><%= link_to  post.title, post  %></h2>
+
+    <p id="postContent"><%= post.content %></p>
+
+    <p id="postName" class="floatLeft" style="clear:left;">Author: <%= post.name %></p>
+
+    <p id="tags" class="floatLeft">Tags: <%= post.tags %></p>
+
+    <p id="source"  style="clear:left;">Source: </p>
+
+    <p id="userLoc" class="floatLeft">Location: <%= post.user_location %></p>
+
+    <p id="postLoc" class="floatLeft">Occuring In: <%= post.post_location %></p>
+
+
+
+
+  <%= post.accuracy %>
+  <%= post.inaccuracy %>
+    
+
+
+
+
+
+  <%= link_to 'Delete', post, :confirm => 'Are you sure?', :method => :delete %>
+
+  <br />
+  <br />
+  <br />
 <% end %>
-</table>
 
-<br />
+</div>
 
 <%= link_to 'New Post', new_post_path %>

@@ -40,16 +40,7 @@
     <%= post_form.label :inaccuracy %><br />
     <%= post_form.text_field :inaccuracy %>
   </div>
-  <div class="field">
-    <%= post_form.label :date %><br />
-    <%= post_form.date_select :date %>
-  </div>
-  <div class="field">
-    <%= post_form.label :time %><br />
-    <%= post_form.time_select :time %>
-  </div>
-
-  <h2>Tags</h2>
+      <h2>Tags</h2>
   <%= render :partial => 'tags/form',
              :locals => {:form => post_form} %>
 

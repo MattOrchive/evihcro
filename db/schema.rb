@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110616190439) do
+ActiveRecord::Schema.define(:version => 20110616200316) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -30,8 +30,6 @@ ActiveRecord::Schema.define(:version => 20110616190439) do
     t.string   "post_location"
     t.integer  "accuracy"
     t.integer  "inaccuracy"
-    t.date     "date"
-    t.time     "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

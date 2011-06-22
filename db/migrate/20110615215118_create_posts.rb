@@ -8,9 +8,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :post_location
       t.integer :accuracy
       t.integer :inaccuracy
-      t.date :date
-      t.time :time
-
+      
       t.timestamps
     end
   end
