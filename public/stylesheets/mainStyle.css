@@ -35,7 +35,7 @@ BODY {
   background-image: url("./../images/background_content.jpg");
   background-repeat: no-repeat;
   background-size:100%;
-  padding-bottom:9%;
+  padding: 0 0 9% 0;
 }
 #content {
   margin:0% 6% 1% 6%;
@@ -50,7 +50,8 @@ BODY {
 }
 .green {
   color:#00BE69;
-}	
+}
+
 .inline {
   display: inline;
 }
@@ -69,6 +70,7 @@ BODY {
 .textCenter {
   text-align:center;
 }
+
 .button {
   background: #48B76A;
   border: 1px solid #3b9737;

@@ -17,6 +17,8 @@
   background-image: url("./../images/background_navBar.jpg");
   background-repeat: no-repeat;
   background-size:100%;
+  padding:.5% 0 .5% 0;
+  border-bottom:1px solid #E8E8E8;
  }
 #searchField{
   margin:1.5% auto 0% 6%;

@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /* Footer CSS Document */
 #footer {
-  margin-top:2%;
+  margin-top:1%;
   margin-left:6%;
-  margin-bottom:5%;
+  margin-bottom:3%;
 }
 #dropDownDiv {
   border: 1px solid #E6E6E6;

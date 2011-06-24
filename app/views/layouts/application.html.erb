@@ -15,14 +15,16 @@
   
 </head>
 <body>
-  <%= render "layouts/header" %>
-  
-  <div id="main">
-    <div id="content">
-      <%= yield %>
+  <div id="wrapper">
+    <%= render "layouts/header" %>
+    
+    <div id="main"> 
+      <div id="content">
+        <%= yield %>
+      </div>
     </div>
-  </div>
 
-  <%= render "layouts/footer" %>
+    <%= render "layouts/footer" %>
+  </div>  
 </body>
 </html>

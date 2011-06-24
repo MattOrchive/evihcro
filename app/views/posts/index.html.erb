@@ -1,46 +1,53 @@
-<div id="sidebar">
+<head>
+  <style type="text/css">
+    #main {display:inline;}
+    #content {float:left;  }
+
+    #sidebar {background:#EEE;  width: 500px;}
+    #feed h1 {margin:0; padding:0; font-size:30px;}
+  </style>
+</head>
+
+<div id="sidebar" class="floatLeft">
+  <p>Side Bar Stuff</p>
 </div>
 
-<div id="feed">
+<div id="feed" class="floatLeft">
 
-<h1>News!!!</h1>
-<div id="post">
+  <h1>News!!!</h1>
 
-  <% @posts.each do |post| %>
-    <img src="#" alt="Photo?" class="floatLeft" width=60 height=60/>
+  <div id="post" class="" >
 
-    <h2 id="postTitle"><%= link_to  post.title, post  %></h2>
+    <% @posts.each do |post| %>
+      <img src="#" alt="Photo?" class="floatLeft" width=60 height=60/>
+      
+      <h2 id="postTitle"><%= link_to  post.title, post  %></h2>
 
-    <p id="postContent"><%= post.content %></p>
+      <p id="postContent"><%= post.content %></p>
 
-    <p id="postName" class="floatLeft" style="clear:left;">Author: <%= post.name %></p>
+      <p id="postName" class="floatLeft" style="clear:left;">Author: <%= post.name %></p>
 
-    <p id="tags" class="floatLeft">Tags: <%= post.tags %></p>
+      <p id="tags" class="floatLeft">Tags: <%= post.tags %></p>
 
-    <p id="source"  style="clear:left;">Source: </p>
+      <p id="source"  style="clear:left;">Source: </p>
 
-    <p id="userLoc" class="floatLeft">Location: <%= post.user_location %></p>
+      <p id="userLoc" class="floatLeft">Location: <%= post.user_location %></p>
 
-    <p id="postLoc" class="floatLeft">Occuring In: <%= post.post_location %></p>
-
-
-
-
-  <%= post.accuracy %>
-  <%= post.inaccuracy %>
+      <p id="postLoc" class="floatLeft">Occuring In: <%= post.post_location %></p>
+      
+      
+      <%= post.accuracy %>
+      <%= post.inaccuracy %>
     
+      <%= link_to 'Delete', post, :confirm => 'Are you sure?', :method => :delete %>
 
-
-
-
-
-  <%= link_to 'Delete', post, :confirm => 'Are you sure?', :method => :delete %>
-
-  <br />
-  <br />
-  <br />
-<% end %>
+    <br />
+    <br />
+    <br />
+  <% end %>
 
 </div>
 
 <%= link_to 'New Post', new_post_path %>
+
+</div>
