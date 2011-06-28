@@ -1,29 +1,62 @@
 <head>
   <style type="text/css">
-    #main {display:inline;}
-    #content {float:left;  }
+    #main { display:inline;}
 
-    #sidebar {background:#EEE;  width: 500px;}
-    #feed h1 {margin:0; padding:0; font-size:30px;}
+    #content { float:left; margin-left:0;}
+  
+    #sidee { background: #fff; width: 400px; height:100%;
+      border-right: 1px solid #E7E7E7;
+      border-bottom: 1px solid #E7E7E7;
+      margin-right:30px;
+      background-image:url("/images/background_sideBar.jpg")
+    }
+
+    #sidebar { margin:10px 50px 100% 20%;}
+
+    #feed {margin-top:20px; width:750px; }
+    #feed h1 {font-size:30px; font-weight:600;}
+    #feed #filterText { margin-left:15px; font-size:14px; font-weight:600; vertical-align:20%;}
+
+    #feed #post {padding: 5px; border:2px solid #D0EBDA; margin-bottom:10px;}
+
+    #feed #photo {margin:4px 8px 8px 8px;}
+    #feed a {text-decoration:none; color:#000;}
+    #feed h2 {height:22px;}
+    #feed #postTitle {font-size:18px; font-weight:600; margin-bottom:0;}
+
+    #feed p {font-size:12px;}
+    #feed #postContent {font-size:13px;padding-left:86px; margin-top:0;}
+    #feed #omitText {color:#00BE69;}
+    #feed #deleteButton {font-size:12px;}
+
+
+
   </style>
 </head>
 
-<div id="sidebar" class="floatLeft">
-  <p>Side Bar Stuff</p>
+<div id="sidee" class="floatLeft">
+  <div id="sidebar">
+    <p>Side Bar Stuff</p>
+    <%= link_to 'New Post', new_post_path %>
+
+  </div>
 </div>
 
 <div id="feed" class="floatLeft">
 
-  <h1>News!!!</h1>
-
-  <div id="post" class="" >
+  <h1 class="inline">News Feed</h1>
+  <a id="filterText">Results are Based off of the Subject(s): Javascript?</a>
 
     <% @posts.each do |post| %>
-      <img src="#" alt="Photo?" class="floatLeft" width=60 height=60/>
-      
-      <h2 id="postTitle"><%= link_to  post.title, post  %></h2>
 
-      <p id="postContent"><%= post.content %></p>
+      <div id="post">
+
+      <%= image_tag('default_photo.jpg', :id=>"photo", :size=>"70x70", :class=>"floatLeft") %>
+
+      <h2><%=link_to  post.title, post, :id=>"postTitle"%></h2>
+
+      <p id="postContent"><%= truncate_content(post, post.content)        
+      %></p>
 
       <p id="postName" class="floatLeft" style="clear:left;">Author: <%= post.name %></p>
 
@@ -39,15 +72,9 @@
       <%= post.accuracy %>
       <%= post.inaccuracy %>
     
-      <%= link_to 'Delete', post, :confirm => 'Are you sure?', :method => :delete %>
+      <%= link_to 'Delete', post,:id=>'deleteButton', :confirm => 'Are you sure?', :method => :delete %>
+    </div>
 
-    <br />
-    <br />
-    <br />
   <% end %>
-
-</div>
-
-<%= link_to 'New Post', new_post_path %>
 
 </div>
