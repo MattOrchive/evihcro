@@ -44,4 +44,11 @@ Beginning Phase 1
           Then... Format and Style News Feed and Home Page
           After Then... Tagging System and New Posting (Modals)
 
+
+6/28/11:  News Feed only needs a little more touching up
+          Show Page is next, then the Beta Home Page, 
+          then lastly the Posting Interface.
+
+          
+          
 *Orchive.com*
