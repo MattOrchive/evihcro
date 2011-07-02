@@ -17,20 +17,21 @@
     #feed h1 {font-size:30px; font-weight:600;}
     #feed #filterText { margin-left:15px; font-size:14px; font-weight:600; vertical-align:20%;}
 
-    #feed #post {padding: 5px; border:2px solid #D0EBDA; margin-bottom:10px;}
+    #feed #post {padding: 8px; margin-bottom:10px;}
+    #feed #post {background-image:url('images/background_post.png');background-repeat:no-repeat;}
 
     #feed #photo {margin:4px 8px 8px 8px;}
     #feed a {text-decoration:none; color:#000;}
     #feed h2 {height:22px;}
+    #feed p { padding-left:8px;}
+
     #feed #postTitle {font-size:18px; font-weight:600; margin-bottom:0;}
 
     #feed p {font-size:12px;}
     #feed #postContent {font-size:13px;padding-left:86px; margin-top:0;}
     #feed #omitText {color:#00BE69;}
     #feed #deleteButton {font-size:12px;}
-
-
-
+    
   </style>
 </head>
 
@@ -47,6 +48,7 @@
   <h1 class="inline">News Feed</h1>
   <a id="filterText">Results are Based off of the Subject(s): Javascript?</a>
 
+    <% #sorter(@post) %>
     <% @posts.each do |post| %>
 
       <div id="post">
@@ -62,7 +64,7 @@
 
       <p id="tags" class="floatLeft">Tags: <%= post.tags %></p>
 
-      <p id="source"  style="clear:left;">Source: </p>
+      <p id="source"  class="clearLeft">Source: </p>
 
       <p id="userLoc" class="floatLeft">Location: <%= post.user_location %></p>
 
