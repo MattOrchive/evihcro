@@ -1,17 +1,14 @@
 @charset "UTF-8";
 /* Footer CSS Document */
 #footer {
-  margin-top:1%;
-  margin-left:6%;
-  margin-bottom:3%;
-}
+  margin:1% 0% 3% 3.5%;}
 #dropDownDiv {
   border: 1px solid #E6E6E6;
   border-radius: 5px;
   -moz-border-radius: 5px;
 }
 #dropDown{
-  background-image: url("./../images/dropDownIcon.jpg");
+  background-image: url("./../images/dropDownIcon.png");
   background-repeat: no-repeat;
   vertical-align:middle;
   color:#555555;
@@ -25,7 +22,7 @@
   margin-right:2%;
 }
 #pageNav {
-  margin-right:10%;
+  margin-right:8%;
 }
 #pageNav P {
   margin:0%;

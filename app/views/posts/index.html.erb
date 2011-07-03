@@ -4,16 +4,20 @@
 
     #content { float:left; margin-left:0;}
   
-    #sidee { background: #fff; width: 400px; height:100%;
-      border-right: 1px solid #E7E7E7;
+    #sidee {width:402px;
       border-bottom: 1px solid #E7E7E7;
       margin-right:30px;
-      background-image:url("/images/background_sideBar.jpg")
+      background-image:url("/images/background_sideBar.png");
+      background-repeat:no-repeat;
     }
 
-    #sidebar { margin:10px 50px 100% 20%;}
+    #sidebar { margin:10px 50px 0 10%;}
+    #sidebar #profile {margin-top:4%;}
+    #sidebar #postingInterface h1 {font-size:18px; font-weight:600;}
+    #sidebar #postingInterface p {font-size:14px; }
+    #sidebar #postingInterface #postButton {margin:2% auto 5% auto;}
 
-    #feed {margin-top:20px; width:750px; }
+    #feed {margin-top:6px; width:750px; }
     #feed h1 {font-size:30px; font-weight:600;}
     #feed #filterText { margin-left:15px; font-size:14px; font-weight:600; vertical-align:20%;}
 
@@ -37,9 +41,14 @@
 
 <div id="sidee" class="floatLeft">
   <div id="sidebar">
-    <p>Side Bar Stuff</p>
-    <%= link_to 'New Post', new_post_path %>
-
+    <%= image_tag('sidebar_profile.png', :id=>'profile') %>
+    <div id="postingInterface">
+      <h1>Posting Interface</h1>
+      <p>Contribute to the community</p>
+      <%= link_to((submit_tag('New Post', :class=>'button', :id=>'postButton')), new_post_path)%>
+      <%= image_tag('sidebar_notification.png') %>
+      <%= image_tag('sidebar_follow.png') %>
+    </div>
   </div>
 </div>
 
@@ -53,7 +62,7 @@
 
       <div id="post">
 
-      <%= image_tag('default_photo.jpg', :id=>"photo", :size=>"70x70", :class=>"floatLeft") %>
+      <%= image_tag('default_photo.png', :id=>"photo", :size=>"70x70", :class=>"floatLeft") %>
 
       <h2><%=link_to  post.title, post, :id=>"postTitle"%></h2>
 
