@@ -35,21 +35,19 @@ BODY {
   background-image: url("./../images/background_content.png");
   background-repeat: no-repeat;
   background-size:100%;
-  padding: 0 0 9% 0;
+  padding: 0 0 2% 0;
 }
-#content {
-  margin:0% 6% 1% 3.5%;
+#content{
+  width:1200px;
+  margin:0 auto 0 auto;
 }
-#content h1 {
+#content h1{
   margin:0px;
   font-size:48px;
   font-weight:500;
 }
 #content p {
   margin:0px;
-}
-.green {
-  color:#00BE69;
 }
 
 .inline {

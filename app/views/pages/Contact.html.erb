@@ -1,5 +1,8 @@
-<head>
+
   <style type="text/css">
+	#content {
+	  padding: 0 0 0 6%;
+	  }
     #suggestionBox {
       resize:none;
       border:3px solid #7E7E7E;
@@ -12,14 +15,23 @@
       padding:8px 8px 8px 8px;
       margin: 0.5% 3.5% 1% 0%;
       width:425px;
-      height:225px;
+      height:220px;
     }
+	
+	#buttonDiv {
+	  clear:both;
+	  padding-bottom:2%;
+	}
+	#submit {
+      clear:both;
+	  height:30px;
+	}
   </style>
-</head>
 
-<h1 class="inline">Contact Us</h1>       
 
-<div id="infoDiv" >
+<h1>Contact Us</h1>       
+
+
   <%= text_area_tag('suggestionBox', 'Leave a nice message', :class => "floatLeft")%>
 
   <p id="info" class="floatLeft">
@@ -39,11 +51,10 @@
     Princeton, NJ 08540
     <br /><br />
     General Information: info@orchive.com
-  </p>  
-</div>
+  </p>
         
 <div id="buttonDiv">
-  <%= submit_tag('Submit', :class => "button") %>
+  <%= submit_tag('Submit', :class => "button", :id=>"submit") %>
 </div>
 
 <div id="socialDiv">
