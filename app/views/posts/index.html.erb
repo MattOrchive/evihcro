@@ -1,10 +1,10 @@
-<head>
   <style type="text/css">
     #main { display:inline;}
 
-    #content { float:left; margin-left:0;}
+    #content { float:left;}
   
     #sidee {width:402px;
+
       border-bottom: 1px solid #E7E7E7;
       margin-right:30px;
       background-image:url("/images/background_sideBar.png");
@@ -24,20 +24,24 @@
     #feed #post {padding: 8px; margin-bottom:10px;}
     #feed #post {background-image:url('images/background_post.png');background-repeat:no-repeat;}
 
-    #feed #photo {margin:4px 8px 8px 8px;}
-    #feed a {text-decoration:none; color:#000;}
-    #feed h2 {height:22px;}
+    #feed #photo { margin:4px 8px 8px 8px;}
+    #feed a { text-decoration:none; color:#000;}
+	#feed a.green { color:#48B768;}
+    #feed h2 { height:22px;}
     #feed p { padding-left:8px;}
+	#feed #postName, #userLoc {width:200px;}
 
-    #feed #postTitle {font-size:18px; font-weight:600; margin-bottom:0;}
+    #feed #postTitle { font-size:18px; font-weight:600; margin-bottom:0; color:#4877B7}
 
-    #feed p {font-size:12px;}
-    #feed #postContent {font-size:13px;padding-left:86px; margin-top:0;}
-    #feed #omitText {color:#00BE69;}
-    #feed #deleteButton {font-size:12px;}
+    #feed p { font-size:12px;}
+    #feed #postContent { font-size:12px;padding-left:86px; margin-top:0;}
+    #feed #omitText { color:#00BE69;}
+    #feed #deleteButton { font-size:12px;}
+	
+	#feed #postInfo { color:#555555}
+	#feed #tags {}
     
   </style>
-</head>
 
 <div id="sidee" class="floatLeft">
   <div id="sidebar">
@@ -57,7 +61,6 @@
   <h1 class="inline">News Feed</h1>
   <a id="filterText">Results are Based off of the Subject(s): Javascript?</a>
 
-    <%  %>
     <% @posts.reverse.each do |post| %>
 
       <div id="post">
@@ -68,22 +71,24 @@
 
       <p id="postContent"><%= truncate_content(post, post.content)        
       %></p>
+	  
+	<section id="postInfo">
+      <p id="postName" class="floatLeft clearLeft">Reporter: <a class="green"><%= post.name %></a></p>
 
-      <p id="postName" class="floatLeft" style="clear:left;">Author: <%= post.name %></p>
-
-      <p id="tags" class="floatLeft">Tags: <%= post.tags %></p>
+      <p id="tags" class="floatLeft">Tags: <a class="green"><%= post.tags.to_s %></a></p>
 
       <p id="source"  class="clearLeft">Source: </p>
 
-      <p id="userLoc" class="floatLeft">Location: <%= post.user_location %></p>
+      <p id="userLoc" class="floatLeft">Location: <a class="green"><%= post.user_location %></a></p>
 
-      <p id="postLoc" class="floatLeft">Occuring In: <%= post.post_location %></p>
-      
+      <p id="postLoc" class="floatLeft">Occuring In: <a class="green"><%= post.post_location %></a></p>
+     </section> 
+	 
       
       <%= post.accuracy %>
       <%= post.inaccuracy %>
     
-      <%= link_to 'Delete', post,:id=>'deleteButton', :confirm => 'Are you sure?', :method => :delete %>
+      <%= link_to 'Delete', post, :id=>'deleteButton', :confirm => 'Are you sure?', :method => :delete %>
     </div>
 
   <% end %>
