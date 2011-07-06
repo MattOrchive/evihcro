@@ -3,6 +3,7 @@
 
     #content { float:left;}
   
+  /* Sidebar */
     #sidee {width:402px;
 
       border-bottom: 1px solid #E7E7E7;
@@ -10,37 +11,48 @@
       background-image:url("/images/background_sideBar.png");
       background-repeat:no-repeat;
     }
-
     #sidebar { margin:10px 50px 0 10%;}
     #sidebar #profile {margin-top:4%;}
     #sidebar #postingInterface h1 {font-size:18px; font-weight:600;}
     #sidebar #postingInterface p {font-size:14px; }
     #sidebar #postingInterface #postButton {margin:2% auto 5% auto;}
 
+	/* Feed */
     #feed { margin-top:20px; width:750px; }
     #feed h1 { font-size:30px; font-weight:600;}
-    #feed #filterText { margin-left:15px; font-size:14px; font-weight:600; vertical-align:20%;}
-
-    #feed #post {padding: 8px; margin-bottom:10px;}
-    #feed #post {background-image:url('images/background_post.png');background-repeat:no-repeat;}
+	#feed h2 { height:22px;}
+    #feed p { padding-left:8px; font-size:12px; line-height:110%;}
+	#feed a { text-decoration:none; color:#000;}
+	#feed a.blue {color: #4877B7;}
+		
+	#feed #filterText { margin-left:15px; font-size:14px; font-weight:600; vertical-align:20%;}
+    
+	#feed #post {
+		padding: 8px; 
+		margin-bottom:10px;
+		height:145px;
+		background-image:url('images/background_post.png');
+		background-repeat:no-repeat;
+	}
 
     #feed #photo { margin:4px 8px 8px 8px;}
-    #feed a { text-decoration:none; color:#000;}
-	#feed a.green { color:#48B768;}
-    #feed h2 { height:22px;}
-    #feed p { padding-left:8px;}
+    
 	#feed #postName, #userLoc {width:200px;}
 
     #feed #postTitle { font-size:18px; font-weight:600; margin-bottom:0; color:#4877B7}
-
-    #feed p { font-size:12px;}
-    #feed #postContent { font-size:12px;padding-left:86px; margin-top:0;}
-    #feed #omitText { color:#00BE69;}
-    #feed #deleteButton { font-size:12px;}
-	
-	#feed #postInfo { color:#555555}
-	#feed #tags {}
     
+    #feed #postContent { font-size:12px; padding-left:86px; margin-top:2px;}
+  	
+	#feed #postInfo { color:#555555; margin-top:0px;}
+	#feed #postInfo p {line-height:120%;}
+	#feed #postInfo #postName {padding-top:10px;}
+	
+	
+	#feed #postInfo #tags {padding-top:10px;}
+	#feed #omitText { color:#00BE69;}
+	#feed #deleteButton { font-size:12px;}
+	
+	
   </style>
 
 <div id="sidee" class="floatLeft">
@@ -73,15 +85,15 @@
       %></p>
 	  
 	<section id="postInfo">
-      <p id="postName" class="floatLeft clearLeft">Reporter: <a class="green"><%= post.name %></a></p>
+      <p id="postName" class="floatLeft clearLeft">Reporter: <a class="blue"><%= post.name %></a></p>
 
-      <p id="tags" class="floatLeft">Tags: <a class="green"><%= post.tags.to_s %></a></p>
+      <p id="tags" class="floatLeft">Tags: <a class="blue"><%= post.tags.to_s %></a></p>
 
       <p id="source"  class="clearLeft">Source: </p>
 
-      <p id="userLoc" class="floatLeft">Location: <a class="green"><%= post.user_location %></a></p>
+      <p id="userLoc" class="floatLeft">Location: <a class="blue"><%= post.user_location %></a></p>
 
-      <p id="postLoc" class="floatLeft">Occuring In: <a class="green"><%= post.post_location %></a></p>
+      <p id="postLoc" class="floatLeft">Occuring In: <a class="blue"><%= post.post_location %></a></p>
      </section> 
 	 
       

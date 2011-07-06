@@ -18,18 +18,11 @@ a img {border:none;}
 
 
 /* Main CSS Document */
-@font-face {
-  font-family: "Dax";
-  src: url(Dax/Dax-Medium.otf) format("truetype");
-}
-@font-face {
-  font-family: "Myriad Pro"
-  src: url(./fonts/myriadwebpro.ttf) format("truetype");
-}
+
 BODY {
   margin:0px;
   color:#000; 
-  font-family: "Myriad Pro";
+  font-family: 'Mako';
 }
 #main{
   background-image: url("./../images/background_content.png");
@@ -49,6 +42,9 @@ BODY {
 #content p {
   margin:0px;
 }
+.blue {
+	color: #4877B7
+	}
 .green{
 	color: #48B768
 }
