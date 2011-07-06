@@ -22,7 +22,7 @@ a img {border:none;}
 BODY {
   margin:0px;
   color:#000; 
-  font-family: 'Mako';
+  font-family: 'Cabin', arial, serif;
 }
 #main{
   background-image: url("./../images/background_content.png");
