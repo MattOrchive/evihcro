@@ -39,7 +39,7 @@
 
     #feed #photo { margin:4px 8px 8px 8px;}
     
-	#feed #postName, #userLoc {width:200px;}
+	#feed #postName, #userLoc, #source {width:200px;}
 
     #feed #postTitle { font-size:18px; font-weight:600; margin-bottom:0; color:#4877B7}
     
@@ -103,7 +103,7 @@
 	  
 	  <p id="source"  class="clearLeft floatLeft">Source: </p>
 	  
-	  <p id="time" class="floatLeft"> <%= distance_of_time_in_words(post.created_at, Time.now)%> ago</p>
+	  <p id="time" class="floatLeft"> <%=post.created_at.strftime("%B %e %l:%M %p %Y") %> (<%=distance_of_time_in_words(post.created_at, Time.now)%> ago)</p>
      </section> 
 	 
       
