@@ -1,26 +1,23 @@
 <div id="header">
-  <span id="logo" class="">
-    <%= link_to(image_tag("logo.png", :alt => "[Or]chive"), "/")%> 
-  </span>
+<div id="headerContent">
+
+<div id="topBar"> 
+  <%= link_to(image_tag('logo.png', :alt=>'Orchive', :id=>'logo'), '/') %>
+  
   <span id="headPages" class="floatRight">
     <p>
       <%= link_to 'Home', '/' %>
-      &#8942
+
       <%= link_to 'About', '/about' %>
-      &#8942
+
       <%= link_to 'Contact', '/contact' %>
-      &#8942
+
       <%= link_to 'Help', '/future' %>
-      &#8942
-      <%= link_to 'Sign Up', '/future' %>
-      &#8942
-      <%= link_to 'Sign In', '/future' %>
     </p>
   </span>
 </div>
 
 <div id="navBar">
-
   <%= text_field_tag('searchField', 'Start a search', :size => 55, :class => "floatLeft")%>
   
   <span id="worldMapNewsFeed" class="floatLeft">
@@ -28,13 +25,9 @@
     <%= link_to 'News Feed', posts_path %>
   </span>
 
-  <!--  May Redesign this, but that would mean changing with accounts -->
+
   <div id="linksDiv">
     <div id="topLinks">
-      <!-- Not Used in First Beta (Only with Accounts)
-      <a id="followerPosts" href="#FollowerPosts">Follower Posts</a>
-      <a id="trendingPosts" href="#TrendingPosts">Trending Posts</a> -->
-
       <a class="secondSet" href="#politics">Politics</a>
       <a class="secondSet" href="#living">Living</a>
       <a class="secondSet" href="#society">Society</a>
@@ -44,15 +37,13 @@
     </div>
   
     <div id="botLinks">
-      <!-- Not Used in First Beta (Only with Accouts)
-      <a id="relevantPosts" href="/RelevantPosts">Relevant Posts</a>
-      <a id="localPosts" href="/LocalPosts">Local Posts</a> -->
-
       <a class="secondSet" href="#environmental">Environmental</a>
       <a class="secondSet" href="#education">Education</a>
       <a class="secondSet" href="#entertainment">Entertainment</a>
       <a class="secondSet" href="#justice">Justice</a>
       <a class="secondSet" href="#sports">Sports</a>
     </div>
+  </div>
+  </div>
   </div>
 </div>
