@@ -18,14 +18,15 @@
     #sidebar #postingInterface #postButton {margin:2% auto 5% auto;}
 
 	/* Feed */
-    #feed { margin-top:20px; width:750px; }
+    #feed { margin-top:15px; width:750px; }
     #feed h1 { font-size:30px; font-weight:600;}
-	#feed h2 { height:22px;}
+
     #feed p { padding-left:8px; font-size:12px; line-height:110%;}
 	#feed a { text-decoration:none; color:#000;}
 	#feed a.blue {color: #4877B7;}
 		
-	#feed #filterText { margin-left:15px; font-size:14px; font-weight:600; vertical-align:20%;}
+	#feed #filterTag { position:relative; left:-30.1%; top:1px;}
+	#feed #filterStories { position:relative; left:4%; top:-12px;}
     
 	#feed #post {
 		padding: 8px; 
@@ -69,10 +70,11 @@
 </div>
 
 <div id="feed" class="floatLeft">
-
+<section>
   <h1 class="inline">News Feed</h1>
-  <a id="filterText">Results are Based off of the Subject(s): Javascript?</a>
-
+  <a id="filterStories" class="">Results are Based off the Stories: Javascript</a>
+  <a id="filterTag" class="">Results are Based off of the Tags: Javascript</a>
+</section>
     <% @posts.reverse.each do |post| %>
 
       <div id="post">
