@@ -4,8 +4,8 @@ module PostsHelper
   end
   
   def truncate_content(post, content)
-    output = content.truncate(425, :omission => '', :separator=>' ')
-    output += link_to('... See More', post, :id=>'omitText') if content.size > 425
+    output = content.truncate(410, :omission => '', :separator=>' ')
+    output += link_to('... See More', post, :id=>'omitText') if content.size > 410
     output.html_safe
   end
   
