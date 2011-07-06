@@ -96,19 +96,23 @@
       <p id="postName" class="floatLeft clearLeft">Reporter: <a class="blue"><%= post.name %></a></p>
 
       <p id="tags" class="floatLeft">Tags: <a class="blue"><%= post.tags.to_s %></a></p>
-
-      <p id="source"  class="clearLeft">Source: </p>
-
-      <p id="userLoc" class="floatLeft">Location: <a class="blue"><%= post.user_location %></a></p>
+	  
+      <p id="userLoc" class="clearLeft floatLeft">Location: <a class="blue"><%= post.user_location %></a></p>
 
       <p id="postLoc" class="floatLeft">Occuring In: <a class="blue"><%= post.post_location %></a></p>
+	  
+	  <p id="source"  class="clearLeft floatLeft">Source: </p>
+	  
+	  <p id="time" class="floatLeft"> <%= distance_of_time_in_words(post.created_at, Time.now)%> ago</p>
      </section> 
 	 
       
-      <%= post.accuracy %>
-      <%= post.inaccuracy %>
+      
     
-      <%= link_to 'Delete', post, :id=>'deleteButton', :confirm => 'Are you sure?', :method => :delete %>
+      <%= link_to 'Delete', post, :id=>'deleteButton',:class=>'clearLeft floatLeft', :confirm => 'Are you sure?', :method => :delete %>
+	  
+	  <%= post.accuracy %>
+      <%= post.inaccuracy %>
     </div>
 
   <% end %>
