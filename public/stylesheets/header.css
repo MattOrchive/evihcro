@@ -22,7 +22,7 @@
  }
 #searchField{
   margin:1.5% 1.6% 0% 3.5%;
-  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+  font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
   color: #9E9E9E;
   background-color: #FFFFFF;
   border: 2px solid #D3EADA;
