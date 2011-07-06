@@ -13,8 +13,8 @@
     }
     #sidebar { margin:10px 50px 0 10%;}
     #sidebar #profile {margin-top:4%;}
-    #sidebar #postingInterface h1 {font-size:18px; font-weight:600;}
-    #sidebar #postingInterface p {font-size:14px; }
+    #sidebar #postingInterface h1 {font-size:18px; font-weight:600; margin-top:7px;}
+    #sidebar #postingInterface p {font-size:13px; margin-bottom:10px; }
     #sidebar #postingInterface #postButton {margin:2% auto 5% auto;}
 
 	/* Feed */
@@ -25,12 +25,9 @@
 	#feed a { text-decoration:none; color:#000;}
 	#feed a.blue {color: #4877B7;}
 		
-	#feed #filterTags { font-size:11px; 
-		position:relative; left:-214px; 
-	}
-	#feed #filterStories { font-size:11px; 
-		position:relative; top:-15px; left:34px;
-	}
+	#feed section { margin-bottom:10px;}
+	#feed section #filters { font-size:11px; position:relative; top:-3px; line-height:14px;}
+	#feed section #filters a { margin-left:20px;}
     
 	#feed #post {
 		padding: 8px; 
@@ -74,11 +71,16 @@
 </div>
 
 <div id="feed" class="floatLeft">
+
 <section>
-  <h1 class="inline">News Feed</h1>
-  <a id="filterStories">Results are Based off of the Stories: Javascript</a>
-  <a id="filterTags">Results are Based off of the Tags: Javascript</a>
+  <h1 class="floatLeft">News Feed</h1>
+  <p id="filters">
+	<a id="filterStories">Results are Based off of the Stories: Javascript</a>
+	</br />
+	<a id="filterTags">Results are Based off of the Tags: Javascript</a>
+  </p>
 </section>
+
     <% @posts.reverse.each do |post| %>
 
       <div id="post">
