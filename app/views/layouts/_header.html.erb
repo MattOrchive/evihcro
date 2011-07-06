@@ -18,10 +18,11 @@
 </div>
 
 <div id="navBar">
-  <%= text_field_tag('searchField', 'Start a search', :size => 55, :class => "floatLeft")%>
+  
+  <%= text_field_tag('searchField', 'Start a search', :size => 61, :class => "floatLeft")%>
   
   <span id="worldMapNewsFeed" class="floatLeft">
-    <%= link_to 'World Map', '/future' %>/ 
+    <%= link_to 'World Map', '/future' %> | 
     <%= link_to 'News Feed', posts_path %>
   </span>
 

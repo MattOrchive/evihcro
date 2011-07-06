@@ -2,14 +2,18 @@
 #header {
   background-image: url('/images/background_header.png');
   background-repeat: no-repeat;
+
   background-size:100%;
+  border-bottom:1px solid #E8E8E8;
 }
 #header #headerContent {
   width:1200px;
-  height:182px;
   margin: 0 auto 0 auto;
 }
 /* Top Bar CSS */
+#header #headerContent #topBar {
+  margin:0 0 38px 0;
+}
 #header #headerContent #topBar #logo {
   margin: 25px 0 0 .5px;
 }
@@ -26,15 +30,24 @@
   color:#00BE69;
 }
 
+/* Navbar CSS */
+#header #headerContent #navBar{
+  background-image:url('/images/background_navBar.png');
+  background-repeat:no-repeat;
+}
 #searchField{
-  margin:1.5% 1.6% 0% 3.5%;
-  font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  background-color: transparent;
   color: #9E9E9E;
-  background-color: #FFFFFF;
-  border: 2px solid #D3EADA;
-  border-radius: 4px;
-  -moz-border-radius:4px;
-  height:27%;
+  
+  height:24px;
+  margin:8px 0 0 5px;
+  padding:0 6px 0 5px;
+  
+  font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  
+  
+  border:none;
+  
 }
 #worldMapNewsFeed {  
   margin: 1.5% 12.4% 0% 6%;
