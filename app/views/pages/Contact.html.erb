@@ -1,37 +1,43 @@
 
   <style type="text/css">
 	#content {
-	  padding: 0 0 0 6%;
-	  }
+	  background-image:url('/images/contact_textbox.png');
+	  background-repeat:no-repeat;
+	  background-position: 0 50px;
+	}
+	h1 {
+	  margin-left:100px;
+	}
     #suggestionBox {
+	  width:360px;
+      height:226px;
+	  
+	  margin: 15px 20px 10px 1px;
+	  padding:8px;
+	  
       resize:none;
-      border:3px solid #7E7E7E;
-      border-radius:10px;
-      -webkit-appearance: textarea;
-      -moz-appearance:textarea;
+	  border:none;
+      background-color:transparent;
       color:#7E7E7E;
       font-size:15px;
-      font-family:"Myriad Pro";
-      padding:8px 8px 8px 8px;
-      margin: 0.5% 3.5% 1% 0%;
-      width:425px;
-      height:220px;
     }
-	
 	#buttonDiv {
 	  clear:both;
 	  padding-bottom:2%;
 	}
+	#info {
+	  font-size:17px;
+	  margin:28px 0 0 23px;
+	}
 	#submit {
+	  margin:10px 0 0 3px;
       clear:both;
 	  height:30px;
 	}
   </style>
 
-
-<h1>Contact Us</h1>       
-
-
+  <h1>Contact Us</h1>  
+       
   <%= text_area_tag('suggestionBox', 'Leave a nice message', :class => "floatLeft")%>
 
   <p id="info" class="floatLeft">
@@ -39,9 +45,9 @@
     <br />
     project will be taken into consideration in order to deliver a more efficient, beautiful and
     <br />
-    customer friendly product when we release <a class="green">Orchive</a> 1.0
-    <br /><br />
-
+    customer friendly product when we release Orchive 1.0
+    <br /><br /><br />
+	
     <b>Contact Info</b>
     <br /><br />
     Orchive
