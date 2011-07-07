@@ -4,72 +4,77 @@
   background-repeat: no-repeat;
 
   background-size:100%;
+  padding-bottom:15px;
   border-bottom:1px solid #E8E8E8;
 }
 #header #headerContent {
   width:1200px;
   margin: 0 auto 0 auto;
 }
+#header #headerContent A {
+  color: #555555;
+  text-decoration: none;
+}
+/* Will become obsolete with js */
+#header #headerContent A:hover {
+  color:#00BE69;
+  cursor:pointer;
+}
+
 /* Top Bar CSS */
-#header #headerContent #topBar {
+#topBar {
   margin:0 0 38px 0;
 }
-#header #headerContent #topBar #logo {
+#topBar #logo {
   margin: 25px 0 0 .5px;
 }
-#header #headerContent #topBar #headPages {
+#topBar #headPages {
   font-size:14px;
   margin:30px 0 0 0;
 }
-#header #headerContent #topBar #headPages A {
-  color: #555555;
+#topBar #headPages A {
   margin-right:20px;
-  text-decoration: none;
-}
-#header #headerContent #topBar #headPages A:hover {
-  color:#00BE69;
 }
 
 /* Navbar CSS */
-#header #headerContent #navBar{
+#navBar{
   background-image:url('/images/background_navBar.png');
   background-repeat:no-repeat;
 }
+
 #searchField{
-  background-color: transparent;
-  color: #9E9E9E;
-  
   height:24px;
   margin:8px 0 0 5px;
   padding:0 6px 0 5px;
-  
-  font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-  
-  
+  background-color: transparent;
+  color: #9E9E9E;
   border:none;
-  
+  font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 }
-#worldMapNewsFeed {  
-  margin: 1.5% 12.4% 0% 6%;
-  font-size:1.1em;
-}
-#worldMapNewsFeed A {
+
+#newsFeed {
+  margin:9px 23px 0 17px;
+  font-size:20px;
   padding:2px;
 }
-#navBar A {
-  color: #555555;
-  text-decoration: none;
+
+#storiesDiv {
+  margin: 0 25px 0 0;
+  font-size:13px;
 }
-#navBar A:hover {
-  color: #00BE69;
+#storiesDiv #upStories #topStories {
+  margin-right:20px;
 }
-#linksDiv {
-  padding: 1% 0% .5% 0%;
+#storiesDiv #downStories #localStories {
+  margin-right:13px;
+}
+
+#filtersDiv {
   font-size: 13px;
 }
-#linksDiv A {
-  padding-right:2%;
+#filtersDiv #upFilters A {
+  margin-right: 20px;
 }
-#topLinks{
-  margin-bottom: 3px;
+#filtersDiv #downFilters A {
+  margin-right:9px;
 }

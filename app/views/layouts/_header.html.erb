@@ -7,44 +7,51 @@
   <span id="headPages" class="floatRight">
     <p>
       <%= link_to 'Home', '/' %>
-
       <%= link_to 'About', '/about' %>
-
       <%= link_to 'Contact', '/contact' %>
-
       <%= link_to 'Help', '/future' %>
     </p>
   </span>
 </div>
 
 <div id="navBar">
+  <%= text_field_tag('searchField', 'Start a search', :size => 61, :class => "floatLeft") %>
   
-  <%= text_field_tag('searchField', 'Start a search', :size => 61, :class => "floatLeft")%>
-  
-  <span id="worldMapNewsFeed" class="floatLeft">
+  <span id="newsFeed" class="floatLeft">
     <%= link_to 'World Map', '/future' %> | 
     <%= link_to 'News Feed', posts_path %>
   </span>
 
-
-  <div id="linksDiv">
-    <div id="topLinks">
-      <a class="secondSet" href="#politics">Politics</a>
-      <a class="secondSet" href="#living">Living</a>
-      <a class="secondSet" href="#society">Society</a>
-      <a class="secondSet" href="#finance">Finance</a>
-      <a class="secondSet" href="#technology">Technology</a>
-      <a class="secondSet" href="#weather">Weather</a>
+  <span id="storiesDiv" class="floatLeft" >
+	<div id="upStories">
+	  <a href="#topStories" id="topStories">Top Stories</a>
+	  <a href="#followStories">Stalker Stories</a>
+	</div>
+	
+	<div id="downStories">
+	  <a href="#localStories"id="localStories">Local Stories</a>
+	  <a href="#recentStories" >Recent Stories</a>
+	</div>
+  </span>
+  
+  <span id="filtersDiv">
+    <div id="upFilters">
+      <a href="#politics">Politics</a>
+	  <a href="#business">Business</a>
+      <a href="#nature">Nature</a>
+      <a href="#sports">Sports</a>
+      <a href="#science">Science</a>
     </div>
   
-    <div id="botLinks">
-      <a class="secondSet" href="#environmental">Environmental</a>
-      <a class="secondSet" href="#education">Education</a>
-      <a class="secondSet" href="#entertainment">Entertainment</a>
-      <a class="secondSet" href="#justice">Justice</a>
-      <a class="secondSet" href="#sports">Sports</a>
+    <div id="downFilters">
+      <a href="#crime">Crime</a>
+	  <a href="#tech">Technology</a>
+      <a href="#social">Social</a>
+      <a href="#entertainment">Entertainment</a>
+      <a href="#other">Other</a>
     </div>
-  </div>
+  </span>
+  
   </div>
   </div>
 </div>

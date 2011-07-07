@@ -12,9 +12,7 @@ article,aside,footer,header,hgroup,nav,section,figure,figcaption { display: bloc
 
 
 
-
 /* Main CSS Document */
-
 BODY {
   margin:0px;
   color:#000; 
@@ -31,26 +29,23 @@ BODY {
   margin:0 auto 0 auto;
 }
 #content h1{
-  margin:0px;
   font-size:48px;
   font-weight:500;
 }
-#content p {
-  margin:0px;
-}
+
 .blue {
 	color: #4877B7
 	}
 .green{
-	color: #48B768
+	color: #00BE69
 }
 .inline {
   display: inline;
 }
-.floatLeft{
+.floatLeft {
   float: left;
 }
-.floatRight{
+.floatRight {
   float: right;
 }
 .clearLeft {
@@ -59,10 +54,6 @@ BODY {
 .clearRight {
   clear:right;
 }
-.textCenter {
-  text-align:center;
-}
-
 .button {
   background: #48B76A;
   border: 1px solid #3b9737;
