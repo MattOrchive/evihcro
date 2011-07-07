@@ -3,15 +3,17 @@
 	#content {
 	  background-image:url('/images/contact_textbox.png');
 	  background-repeat:no-repeat;
-	  background-position: 0 50px;
+	  background-position: 575px 73px;
 	}
 	h1 {
-	  margin-left:100px;
+	  margin-left:180px;
 	}
     #suggestionBox {
-	  width:360px;
+	  width:354px;
       height:226px;
 	  
+	  position:relative;
+	  top:24px; left:106px;
 	  margin: 15px 20px 10px 1px;
 	  padding:5px 10px 5px 10px;
 	  
@@ -21,35 +23,49 @@
       color:#7E7E7E;
 	  font: 15px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
     }
-	#buttonDiv {
-	  margin-left:326;
-	  clear:both;
-	  padding-bottom:2%;
-	}
+	
 	#info {
 	  font-size:17px;
-	  margin:28px 0 0 23px;
+	  margin:35px 0 0 100px;
+	}
+	#info #infoText {
+	  font-size:15px;
+	  line-height:21px;
+	}
+	#info #infoAddress b {
+	  margin-left:100px;
+	}
+	
+	#buttonDiv {
+	  clear:both;
 	}
 	#submit {
 	  padding:0 5px 0 5px;
-	  margin:10px 0 0 166px;
+	  margin:0px 0 0 896px;
+	  position:relative;
+	  top:-39px;
       clear:both;
 	  height:30px;
+	  border-top-left-radius:15px 15px;
+	  border-right:none;
+	  border-bottom:none;
 	}
   </style>
 
   <h1>Contact Us</h1>  
-       
-  <%= text_area_tag('suggestionBox', 'Leave a nice message', :class => "floatLeft")%>
 
   <p id="info" class="floatLeft">
-    We would love to hear your constructive criticism. Any thoughts regarding any aspect of the
-    <br />
-    project will be taken into consideration in order to deliver a more efficient, beautiful and
-    <br />
-    customer friendly product when we release Orchive 1.0
-    <br /><br /><br />
+  
+  <span id="infoText">
+    We would love to hear your constructive criticism. 
+	<br />Any thoughts regarding any aspect of the project 
+	<br />will be taken into consideration in order to deliver
+	<br /> a more efficient, beautiful and customer friendly 
+	<br />product when we release Orchive 1.0
+    <br /><br />
+	</span>
 	
+	<span id="infoAddress">
     <b>Contact Info</b>
     <br /><br />
     Orchive
@@ -59,8 +75,10 @@
     Princeton, NJ 08540
     <br /><br />
     General Information: info@orchive.com
+	</span>
   </p>
-        
+       
+	   <%= text_area_tag('suggestionBox', 'Leave a nice message', :class => "floatLeft")%> 
 <div id="buttonDiv">
   <%= submit_tag('Submit', :class => "button", :id=>"submit") %>
 </div>
