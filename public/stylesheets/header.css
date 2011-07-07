@@ -4,7 +4,7 @@
   background-image: url('/images/background_header.png');
   background-repeat: no-repeat;
   background-position:left top;
-  background-size:100%;
+/*  background-size:100%; */
   
   padding-bottom:15px;
   border-bottom:1px solid #E8E8E8;
@@ -28,7 +28,7 @@
   margin:0 0 38px 0;
 }
 #topBar #logo {
-  margin: 25px 0 0 .5px;
+  margin: 25px 0 0 5px;
 }
 #topBar #headPages {
   font-size:14px;
@@ -46,7 +46,7 @@
 
 #searchField{
   height:24px;
-  margin:8px 0 0 5px;
+  margin:8px 0 0 0;
   padding:0 6px 0 5px;
   background-color: transparent;
   color: #9E9E9E;
