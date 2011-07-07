@@ -58,6 +58,14 @@
 	  border-right:none;
 	  border-bottom:none;
 	}
+	#socialDiv {
+	  margin-left:100px;
+	  }
+	#socialDiv h1 {
+	  font-size:30px;
+	  margin:20px 0 15px 0;
+	}
+	
 	</style>
 
   <h1>Contact Us</h1>  
@@ -91,10 +99,11 @@
   <%= submit_tag('Submit', :class => "button", :id=>"submit") %>
 </div>
 
+
 <div id="socialDiv">
   <h1>Social Networking</h1>
-  <%= image_tag("SN/twitter.png") %>
-  <%= image_tag("SN/fbook.png") %>
-  <%= image_tag("SN/in.png") %>
-  <%= image_tag("SN/t.png") %>
+  <%= link_to(image_tag("SN/twitter.png", :size=>"40x40")) %>
+  <%= link_to(image_tag("SN/facebook.png", :size=>"40x40")) %>
+  <%= link_to(image_tag("SN/linkedin.png", :size=>"40x40")) %>
+  <%= link_to(image_tag("SN/tumblr.png", :size=>"40x40")) %>
 </div>
