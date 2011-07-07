@@ -1,28 +1,33 @@
 
   <style type="text/css">
 	#content {
-	  background-image:url('/images/contact_textbox.png');
+	  /*background-image:url('/images/contact_textbox.png');
 	  background-repeat:no-repeat;
-	  background-position: 575px 73px;
+	  background-position: 575px 73px;*/
 	}
 	h1 {
 	  margin-left:100px;
 	}
     #suggestionBox {
-	  width:352px;
-      height:230px;
+	  width:358px;
+      height:235px;
 	
-	  margin: 39px 20px 10px 110px;
+	  margin: 35px 20px 10px 105px;
 	  padding:5px 10px 5px 10px;
 	  
       resize:none;
 	  border:none;
-      background-color:transparent;
+	  background: transparent url('/images/background_contact.png') no-repeat;
+	  background-position:-1px -1px;
+	  
       color:#7E7E7E;
+	  
 	  font: 15px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
     }
 	#suggestionBox:focus {
 	  outline-color:#DDDDDD;
+	  outline-width:8px;
+	  background:none;
 	}
 	
 	#info {
@@ -36,33 +41,42 @@
 	
 	#buttonDiv {
 	  clear:both;
+	  
+	  position:relative;
+	  top:247px;
+	  right:79px;
 	}
 	#submit {
-	  padding:0 5px 0 5px;
-	  margin:0px 0 0 895px;
-	  position:relative;
-	  top:-39px;
-      clear:both;
 	  height:30px;
+	  width:56px;
+	  
+	  padding:0;
+	  margin:0;
+	  
+	  
 	  
 	  -webkit-border-top-left-radius:15px 15px;
 	  -moz-border-top-left-radius:15px 15px;
 	  border-top-left-radius:15px 15px;
 	  
-	  -webkit-box-shadow:1px 1px 1px #AAAAAA;
-	  -moz-box-shadow:1px 1px 1px #AAAAAA;
-	  boz-shadow:1px 1px 1px #AAAAAA;
+	  -webkit-box-shadow:none;
+	  -moz-box-shadow:none;
+	  box-shadow:none;
 	  
 	  border-right:none;
 	  border-bottom:none;
 	}
+	
 	#socialDiv {
 	  margin-left:100px;
-	  }
-	#socialDiv h1 {
-	  font-size:30px;
-	  margin:20px 0 15px 0;
+	  display:block;
+	  clear:both;
 	}
+	#socialDiv img {
+	  margin-top:50px;
+	  margin-bottom:20px;
+	}
+	
 	
 	</style>
 
@@ -93,13 +107,12 @@
   </p>
        
 	   <%= text_area_tag('suggestionBox', 'Leave a nice message', :class => "floatLeft")%> 
-<div id="buttonDiv">
+<div id="buttonDiv" class="inline">
   <%= submit_tag('Submit', :class => "button", :id=>"submit") %>
 </div>
 
 
 <div id="socialDiv">
-  <h1>Social Networking</h1>
   <%= link_to(image_tag("SN/twitter.png", :size=>"40x40")) %>
   <%= link_to(image_tag("SN/facebook.png", :size=>"40x40")) %>
   <%= link_to(image_tag("SN/linkedin.png", :size=>"40x40")) %>

@@ -58,10 +58,16 @@ BODY {
 .button {
   background: #48B76A;
   border: 1px solid #3b9737;
-  font: bold 14px "Myriad Pro";
+  
+  font:bold 13px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  
   color: #fff!important;
+  
   text-shadow: 0 -1px 1px rgba(0,0,0,0.3);  
+  
   -webkit-box-shadow:1px 1px #D9D9D9;
+  -moz-box-shadow:1px 1px #D9D9D9;
+  box-shadow: 1px 1px #D9D9D9;
   
   cursor: pointer;
 }
