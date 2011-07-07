@@ -6,11 +6,11 @@
 	  background-position: 575px 73px;
 	}
 	h1 {
-	  margin-left:180px;
+	  margin-left:100px;
 	}
     #suggestionBox {
-	  width:354px;
-      height:226px;
+	  width:356px;
+      height:230px;
 	  
 	  position:relative;
 	  top:24px; left:106px;
@@ -23,6 +23,9 @@
       color:#7E7E7E;
 	  font: 15px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
     }
+	#suggestionBox:focus {
+	  outline-color:#DDDDDD;
+	}
 	
 	#info {
 	  font-size:17px;
@@ -32,25 +35,30 @@
 	  font-size:15px;
 	  line-height:21px;
 	}
-	#info #infoAddress b {
-	  margin-left:100px;
-	}
 	
 	#buttonDiv {
 	  clear:both;
 	}
 	#submit {
 	  padding:0 5px 0 5px;
-	  margin:0px 0 0 896px;
+	  margin:0px 0 0 895px;
 	  position:relative;
 	  top:-39px;
       clear:both;
 	  height:30px;
+	  
+	  -webkit-border-top-left-radius:15px 15px;
+	  -moz-border-top-left-radius:15px 15px;
 	  border-top-left-radius:15px 15px;
+	  
+	  -webkit-box-shadow:1px 1px 1px #AAAAAA;
+	  -moz-box-shadow:1px 1px 1px #AAAAAA;
+	  boz-shadow:1px 1px 1px #AAAAAA;
+	  
 	  border-right:none;
 	  border-bottom:none;
 	}
-  </style>
+	</style>
 
   <h1>Contact Us</h1>  
 
