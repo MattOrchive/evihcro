@@ -1,6 +1,6 @@
 /* Header CSS (Logo + Nav Bar)*/
 #header {
-  background: url('/images/background_header.png') no-repeat left left fixed;
+  background: url('/images/background_header.png') no-repeat fixed;
   /*-webkit-background-size:cover;
   -moz-background-size:cover;
   -o-background-size:cover;
