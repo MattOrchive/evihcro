@@ -1,15 +1,11 @@
 /* Header CSS (Logo + Nav Bar)*/
 #header {
-  background: url('/images/background_header.png') no-repeat left top fixed;
-  /*-webkit-background-size:cover;
-  -moz-background-size:cover;
-  -o-background-size:cover;
-  background-size:cover;
-/*
+  
   background-image: url('/images/background_header.png');
   background-repeat: no-repeat;
+  background-position:left top;
   background-size:100%;
-  */
+  
   padding-bottom:15px;
   border-bottom:1px solid #E8E8E8;
 }
