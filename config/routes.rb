@@ -67,8 +67,11 @@ OrchiveApp::Application.routes.draw do
 	
 	match '/enter' => 'Pages#Enter_Beta'
 	match '/request' => 'Pages#Request_Code'
+	match '/login' => 'Pages#Login_Beta'
+	match '/register' => 'Pages#Register'
 	match '/tys' => 'Pages#TY_Signup'
 	match '/tyo' => 'Pages#TY_Open'
 	match '/tyf' => 'Pages#TY_Full'
+	
 	
 end

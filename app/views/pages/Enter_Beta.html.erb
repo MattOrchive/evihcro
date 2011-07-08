@@ -31,7 +31,7 @@
 	#boxContent A:hover {
 		color:#48B76A;
 	}
-	#enterBetaCode {
+	.textField {
 		width:339px;
 		height:28px;
 		margin:11px 0 0 43px;
@@ -39,7 +39,7 @@
 		background:transparent;
 		font-size:15px;
 	}
-	#enterBetaCode:focus {
+	.textField:focus {
 		outline-color:#48B76A;
 	}
 	#submit {
@@ -71,7 +71,7 @@
 		<h2>Enter you beta code</h2>
 		<h1>Join Orchive</h1>
 		
-		<%= text_field_tag('enterBetaCode', '') %>
+		<%= text_field_tag('enterBetaCode', '', :class=>"textField") %>
 		<%= submit_tag('submit', :class=>'button', :id=>'submit') %>
 		
 		<p>Don't have a code? <%= link_to('SUCKS FOR YOU!', '/request') %> </p>

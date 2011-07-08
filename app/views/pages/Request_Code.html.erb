@@ -1,6 +1,6 @@
 <style type="text/css">
 	#main {
-		background: url('/images/background_betaPages.png') 0 -6px no-repeat;
+		background-image: url('/images/background_betaPages.png');
 		height:590px;
 	}
 	#box {
@@ -24,7 +24,6 @@
 	}
 	#boxContent P {
 		color:#4D4D4D;
-		padding:10px 0 20px 39px;
 	}
 	#boxContent A {
 		color:#4D4D4D;
@@ -33,7 +32,7 @@
 	#boxContent A:hover {
 		color:#48B76A;
 	}
-	#email {
+	.textField {
 		width:302px;
 		height:28px;
 		margin-bottom:15px;
@@ -41,7 +40,7 @@
 		background:transparent;
 		font-size:14px;
 	}
-	#email:focus {
+	.textField:focus {
 		outline-color:#48B76A;
 	}
 	#submit {
@@ -71,7 +70,7 @@
 		<p>Want to be a beta tester? Simply submit your email below and we will send you<br />your very own beta code.</p> 
 		
 		<h2 class="inline">Email</h2>
-		<%= text_field_tag('email', '', :type=>'email') %>
+		<%= text_field_tag('email', '', :type=>'email', :class=>'textField') %>
 		<%= submit_tag('submit', :class=>'button', :id=>'submit') %>
 		
 		<p>Already have a code? <%=link_to('Enter your code here', '/enter')%> </p>
