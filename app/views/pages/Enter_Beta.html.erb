@@ -35,34 +35,12 @@
 		width:339px;
 		height:28px;
 		margin:11px 0 0 43px;
-		border:none;
-		background:transparent;
-		font-size:15px;
 	}
-	.textField:focus {
-		outline-color:#48B76A;
-	}
-	#submit {
+	.submitTextField {
 		width:80px;
 		height:29px;
 		position:relative;
 		top:-2px;
-			
-		border:none;
-		border-left:1px solid #368A50;
-		
-		-webkit-border-top-right-radius:3px;
-		-webkit-border-bottom-right-radius:3px;
-		-moz-border-top-right-radius:3px;
-		-moz-border-bottom-right-radius:3px;
-		border-top-right-radius:3px;
-		border-bottom-right-radius:3px;
-		
-		-webkit-box-shadow:none;
-	  -moz-box-shadow:none;
-	  box-shadow:none;		
-		
-		/*background:transparent url('/images/enter_submit.png') no-repeat;	*/
 	}
 </style>
 
@@ -72,7 +50,7 @@
 		<h1>Join Orchive</h1>
 		
 		<%= text_field_tag('enterBetaCode', '', :class=>"textField") %>
-		<%= submit_tag('submit', :class=>'button', :id=>'submit') %>
+		<%= submit_tag('submit', :class=>'button submitTextField') %>
 		
 		<p>Don't have a code? <%= link_to('SUCKS FOR YOU!', '/request') %> </p>
 	</div>

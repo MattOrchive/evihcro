@@ -1,61 +1,46 @@
-
-  <style type="text/css">
+<style type="text/css">
 	#content {
 	  height:550px;
 	}
 	h1 {
 	  margin-left:174px;
 	}
-    #suggestionBox {
+	p {
+		line-height:18px;
+	  margin:5px 0 75px 174px;
+	}
+	
+	#suggestionBox {
 	  width:358px;
-      height:235px;
+		height:235px;
 	
 	  margin: 10px 20px 10px 105px;
 	  padding:5px 10px 5px 10px;
 	  
-      resize:none;
+		resize:none;
 	  border:none;
 	  
-	  background: transparent url('/images/contact_textbox.png') no-repeat;
+	  background: #fff url('/images/contact_textbox.png') no-repeat;
 	  background-position:-1px -1px;
 	  
-      color:#7E7E7E;
+		color:#7E7E7E;
 	  
-	  font: 15px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-    }	
+	  font: 15px 'Ubuntu', sans-serif;
+	}	
 	#suggestionBox:focus {
 	  outline-color:#DDDDDD;
 	  outline-width:8px;
 	  background:#fff;
-	}
-	
-	#info {
-	  line-height:18px;
-	  margin:5px 0 75px 174px;
-	}
-	#info #infoAddress{
-	  font-size:17px;
-	}
-	#info #infoText {
-	  line-height:21px;
-	}
-	
-	#buttonDiv {
-	  clear:both;
-	  
-	  position:relative;
-	  top:222px;
-	  right:79px;
-	}
-	
-	#submit {
+	}	
+	.button {
 	  height:30px;
 	  width:56px;
 	  
-	  padding:0;
-	  margin:0;
-
-	  -webkit-border-top-left-radius:15px 15px;
+		position:relative;
+	  top:222px;
+	  right:79px;
+		
+		-webkit-border-top-left-radius:15px 15px;
 	  -moz-border-top-left-radius:15px 15px;
 	  border-top-left-radius:15px 15px;
 	  
@@ -71,50 +56,46 @@
 	  margin-left:174px;
 	  clear:both;
 	}
-	#socialDiv img {
-	  margin-bottom:40px;
-	}
-	</style>
+</style>
 
   <h1>Contact Us</h1>  
 
   <p id="info" class="floatLeft">
-  
-  <span id="infoText">
-    We would love to hear your constructive criticism. 
-	<br />
-	Any thoughts regarding any aspect of the project 
-	<br />
-	will be taken into consideration in order to deliver
-	<br />
-	a more efficient, beautiful and customer friendly 
-	<br />
-	product when we release Orchive 1.0
-    <br /><br />
-  </span>
+		<span id="infoText">
+			We would love to hear your constructive criticism. 
+			<br />
+			Any thoughts regarding any aspect of the project 
+			<br />
+			will be taken into consideration in order to deliver
+			<br />
+			a more efficient, beautiful and customer friendly 
+			<br />
+			product when we release Orchive 1.0
+			<br /><br />
+		</span>
 	
-  <span id="infoAddress">
-    <b>Contact Info</b>
-    <br /><br />
-    Orchive
-    <br />
-    165 Grover Avenue
-    <br />
-    Princeton, NJ 08540
-    <br /><br />
-    General Information: info@orchive.com
-  </span>
+		<span id="infoAddress">
+			<b>Contact Info</b>
+			<br /><br />
+			Orchive
+			<br />
+			165 Grover Avenue
+			<br />
+			Princeton, NJ 08540
+			<br />
+			USA
+			<br /><br />
+			General Information: info@orchive.com
+		</span>
   </p>
        
-	   <%= text_area_tag('suggestionBox', 'Leave a nice message', :class => "floatLeft")%> 
-<div id="buttonDiv" class="inline">
-  <%= submit_tag('Submit', :class => "button", :id=>"submit") %>
-</div>
+	<%= text_area_tag('suggestionBox', 'Leave a nice message', :class => "floatLeft")%> 
 
-
-<div id="socialDiv">
-  <%= link_to(image_tag("SN/twitter.png", :size=>"30x30")) %>
-  <%= link_to(image_tag("SN/facebook.png", :size=>"30x30")) %>
-  <%= link_to(image_tag("SN/linkedin.png", :size=>"30x30")) %>
-  <%= link_to(image_tag("SN/tumblr.png", :size=>"30x30")) %>
-</div>
+  <%= submit_tag('Submit', :class => "button") %>
+	
+	<div id="socialDiv">
+		<%= link_to(image_tag("SN/twitter.png", :size=>"30x30")) %>
+		<%= link_to(image_tag("SN/facebook.png", :size=>"30x30")) %>
+		<%= link_to(image_tag("SN/linkedin.png", :size=>"30x30")) %>
+		<%= link_to(image_tag("SN/tumblr.png", :size=>"30x30")) %>
+	</div>

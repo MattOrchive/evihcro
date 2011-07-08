@@ -36,29 +36,17 @@
 	}
 	#boxContent A {
 		color:#4D4D4D;
-		font-weight:500;
 	}
 	#boxContent A:hover {
 		color:#48B76A;
 	}
-	.textField {
+	.betaTextField {
 		width:502px;
 		height:28px;
-		border:none;
-		background:transparent;
-		font-size:14px;
-	}
-	.textField:focus {
-		outline-color:#48B76A;
-	}
-	#submit {
+		}
+	.button {
 		width:90px;
 		height:29px;
-		
-		-webkit-border-radius:3px;
-		-moz-border-radius:3px;
-		border-radius:3px;
-
 		margin:20px 140px 0 222px;
 	}
 </style>
@@ -69,22 +57,22 @@
 		
 		<h1>Become a beta tester</h1>
 		<div>
-			<label for='email'><h3 class="inline">&nbspEmail Address</h3></label>
-			<%= text_field_tag('email', '', :type=>'email', :class=>'textField') %>
+			<label for='email'><h3 class="inline">Email Address</h3></label>
+			<%= text_field_tag('email', '', :type=>'email', :class=>'betaTextField') %>
 		</div>
 		<div>
 			<label for='username'><h3 class="inline">Username</h3></label>
-			<%= text_field_tag('username', '', :class=>'textField') %>
+			<%= text_field_tag('username', '', :class=>'betaTextField') %>
 		</div>
 		<div>
 			<label for='password'><h3 class="inline">Password</h3></label>
-			<%= text_field_tag('username', '', :type=>'password', :class=>'textField') %>
+			<%= text_field_tag('username', '', :type=>'password', :class=>'betaTextField') %>
 		</div>
 		<div>
 			<label for='repassword'><h3 class="inline">Re-Enter Password</h3></label>
-			<%= text_field_tag('repassword', '', :type=>'password', :class=>'textField') %>
+			<%= text_field_tag('repassword', '', :type=>'password', :class=>'betaTextField') %>
 		</div>
-		<%= submit_tag('submit', :class=>'button', :id=>'submit') %>
+		<%= submit_tag('submit', :class=>'button') %>
 		<p class="inline">Already a member? <%=link_to('Sign In here', '/login')%></p>
 	</div>
 </div>

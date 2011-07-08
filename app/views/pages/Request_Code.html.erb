@@ -14,15 +14,16 @@
 		color:#3f3f3f;
 	}
 	#boxContent h1 {
-		padding:40px 0 0 40px;
+		padding:40px 0 9px 40px;
 	}
 	#boxContent h2 {
 		padding:0 1px 0 39px;
 		font-size:24px;
 		position:relative;
-		top:5px;
+		top:4px;
 	}
 	#boxContent P {
+		margin:0 0 20px 40px;
 		color:#4D4D4D;
 	}
 	#boxContent A {
@@ -34,32 +35,12 @@
 	}
 	.textField {
 		width:302px;
-		height:28px;
-		margin-bottom:15px;
-		border:none;
-		background:transparent;
-		font-size:14px;
-	}
-	.textField:focus {
-		outline-color:#48B76A;
-	}
-	#submit {
-		width:80px;
 		height:29px;
-		
-		border:none;
-		border-left:1px solid #368A50;
-		
-		-webkit-border-top-right-radius:3px;
-		-webkit-border-bottom-right-radius:3px;
-		-moz-border-top-right-radius:3px;
-		-moz-border-bottom-right-radius:3px;
-		border-top-right-radius:3px;
-		border-bottom-right-radius:3px;
-		
-		-webkit-box-shadow:none;
-	  -moz-box-shadow:none;
-	  box-shadow:none;		
+		margin-bottom:30px;
+	}
+	.submitTextField {
+		width:80px;
+		height:28px;
 	}
 </style>
 
@@ -71,7 +52,7 @@
 		
 		<h2 class="inline">Email</h2>
 		<%= text_field_tag('email', '', :type=>'email', :class=>'textField') %>
-		<%= submit_tag('submit', :class=>'button', :id=>'submit') %>
+		<%= submit_tag('submit', :class=>'button submitTextField') %>
 		
 		<p>Already have a code? <%=link_to('Enter your code here', '/enter')%> </p>
 	</div>

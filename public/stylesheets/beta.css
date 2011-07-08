@@ -1,0 +1,52 @@
+.betaSubmitTextField {
+		border:none;
+		border-left:1px solid #368A50;
+		
+		-webkit-border-radius:0;
+		-moz-border-radius:0;
+		border-radius:0;
+	
+		-webkit-border-top-right-radius:3px;
+		-webkit-border-bottom-right-radius:3px;
+		-moz-border-top-right-radius:3px;
+		-moz-border-bottom-right-radius:3px;
+		border-top-right-radius:3px;
+		border-bottom-right-radius:3px;
+		
+		-webkit-box-shadow:none;
+	  -moz-box-shadow:none;
+	  box-shadow:none;		
+}
+.betaTextField {
+		border:none;
+		background:transparent;
+		font-size:16px;
+		padding-right:5px;
+		padding-left:5px;
+}
+.betaTextField:focus {
+		outline-color:#48B76A;
+}
+
+#boxContent {
+		color:#3F3F3F;
+}
+#boxContent h1 {
+		font-size:30px;
+}
+#boxContent h2 {
+		font-size:20px;
+}
+#boxContent div {
+		text-align:right;
+}
+	#boxContent P {
+		color:#4D4D4D;
+	}
+	#boxContent A {
+		color:#4D4D4D;
+		font-weight:500;
+	}
+	#boxContent A:hover {
+		color:#48B76A;
+	}

@@ -11,20 +11,16 @@
 	}
 	#boxContent {
 		padding:8px 20px 0 20px; 
-		color:#3F3F3F;
 	}
 	#boxContent h1 {
-		padding:50px 0 5px 30px;
-		font-size:42px;
+		padding:33px 0 4px 45px;
 	}
 	#boxContent h2 {
-		font-size:23px;
 		position:relative;
 		top:5px;
 	}
 	#boxContent div {
 		margin:30px 53px 0 0;
-		text-align:right;
 	}
 	#boxContent P {
 		color:#4D4D4D;
@@ -37,29 +33,18 @@
 		color:#48B76A;
 	}
 	
-	.textField {
+	.betaTextField {
 		position:relative;
 		top:2px;
 		left:7px;
-		width:502px;
+		width:492px;
 		height:28px;
-		border:none;
-		background:transparent;
-		font-size:14px;
-	}
-	.textField:focus {
-		outline-color:#48B76A;
 	}
 	
-	#submit {
+	.button {
 		width:90px;
 		height:29px;
-		
-		-webkit-border-radius:3px;
-		-moz-border-radius:3px;
-		border-radius:3px;
-
-		margin:20px 275px 0 151px;
+		margin:20px 250px 0 151px;
 	}
 </style>
 
@@ -68,14 +53,14 @@
 		<h1>Beta Member Login</h1>
 		<div>
 			<label for="username"><h2 class="inline">Username</h2></label>
-			<%= text_field_tag('username', '', :class=>'textField') %>
+			<%= text_field_tag('username', '', :class=>'betaTextField') %>
 		</div>
 		<div>	
 			<label for="password"><h2 class="inline">Password</h2></label>
-			<%= text_field_tag('password', '', :type=>'password', :class=>'textField') %>
+			<%= text_field_tag('password', '', :type=>'password', :class=>'betaTextField') %>
 		</div> 
 		
-			<%= submit_tag('submit', :class=>'button', :id=>'submit') %>
+			<%= submit_tag('submit', :class=>'button') %>
 			<%= link_to('Forgot your password?', '#')%>	
 			
 	</div>
