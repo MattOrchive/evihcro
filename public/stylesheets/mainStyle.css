@@ -23,12 +23,11 @@ BODY {
   background-repeat: no-repeat;
   background-size:100%;
   background-position:0 -6px;
-  padding-bottom:25px;
 }
 #content{
   width:1200px;
   margin:0 auto 0 auto;
-  padding-top:20px;
+  padding-top:45px;
 }
 h1{
   font-size:36px;
@@ -36,7 +35,8 @@ h1{
   margin-bottom:20px;
 }
 p {
-  font-size:14px;
+  line-height:21px;
+  font-size:15px;
 }
 
 .blue {

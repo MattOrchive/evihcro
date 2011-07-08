@@ -10,6 +10,7 @@
 #header #headerContent {
   width:1200px;
   margin: 0 auto 0 auto;
+  color: #555555;
 }
 #header #headerContent A {
   color: #555555;
@@ -28,7 +29,7 @@
 #topBar #logo {
   margin: 25px 0 0 5px;
 }
-#topBar #headPages {
+#topBar #headPages P{
   font-size:14px;
   margin:30px 0 0 0;
 }
