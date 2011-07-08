@@ -1,0 +1,90 @@
+<style type="text/css">
+	#main {
+		background-image:url('/images/background_betaPages.png');
+		height:586px;
+	}
+	#box {
+		background: url('/images/register_box.png') no-repeat;
+		width:827px;
+		height:527px;
+		margin:25px 0 0 60px;
+	}
+	#boxContent {
+		padding:5px 5px 0 20px;
+		color:#3F3F3F;
+	}
+	#boxContent h1 {
+		padding:20px 0 5px 80px;
+	}
+	#boxContent h2 {
+		padding:50px 0 10px 100px;
+		font-weight:300;
+		font-size:24px;
+	}
+	#boxContent div {
+		margin-right:76px;
+		margin-top:29px;
+		text-align:right;
+	}
+	#boxContent h3 {
+		font-size:18px;
+		padding-right:10px;
+	}
+	#boxContent P {
+		color:#4D4D4D;
+		padding:10px 0 14px 39px;
+	}
+	#boxContent A {
+		color:#4D4D4D;
+		font-weight:500;
+	}
+	#boxContent A:hover {
+		color:#48B76A;
+	}
+	.textField {
+		width:502px;
+		height:28px;
+		border:none;
+		background:transparent;
+		font-size:14px;
+	}
+	.textField:focus {
+		outline-color:#48B76A;
+	}
+	#submit {
+		width:90px;
+		height:29px;
+		
+		-webkit-border-radius:3px;
+		-moz-border-radius:3px;
+		border-radius:3px;
+
+		margin:20px 140px 0 222px;
+	}
+</style>
+
+<div id="box">
+	<div id="boxContent">
+		<h2>Create your account</h2>
+		
+		<h1>Become a beta tester</h1>
+		<div>
+			<label for='email'><h3 class="inline">&nbspEmail Address</h3></label>
+			<%= text_field_tag('email', '', :type=>'email', :class=>'textField') %>
+		</div>
+		<div>
+			<label for='username'><h3 class="inline">Username</h3></label>
+			<%= text_field_tag('username', '', :class=>'textField') %>
+		</div>
+		<div>
+			<label for='password'><h3 class="inline">Password</h3></label>
+			<%= text_field_tag('username', '', :type=>'password', :class=>'textField') %>
+		</div>
+		<div>
+			<label for='repassword'><h3 class="inline">Re-Enter Password</h3></label>
+			<%= text_field_tag('repassword', '', :type=>'password', :class=>'textField') %>
+		</div>
+		<%= submit_tag('submit', :class=>'button', :id=>'submit') %>
+		<p class="inline">Already a member? <%=link_to('Sign In here', '/login')%></p>
+	</div>
+</div>
