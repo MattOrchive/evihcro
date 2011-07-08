@@ -1,10 +1,5 @@
 OrchiveApp::Application.routes.draw do
-  get "pages/About"
-  get "pages/Contact"
-  get "pages/Privacy"
-  get "pages/Terms"
-  get "pages/Future"
-  get "home/index"
+  resources :pages
 
   resources :posts do 
     resources :comments
@@ -59,8 +54,8 @@ OrchiveApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "home#index"
-  #root :to => "posts#index"
+  root :to => "Pages#Home"
+  
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
