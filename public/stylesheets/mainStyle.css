@@ -22,18 +22,21 @@ BODY {
   background-image: url("/images/background_content.png");
   background-repeat: no-repeat;
   background-size:100%;
-	background-position:0 -6px;
-  padding: 0 0 2% 0;
+  background-position:0 -6px;
+  padding-bottom:25px;
 }
 #content{
   width:1200px;
-	height:550px;
   margin:0 auto 0 auto;
   padding-top:20px;
 }
-#content h1{
+h1{
   font-size:36px;
   font-weight:500;
+  margin-bottom:20px;
+}
+p {
+  font-size:14px;
 }
 
 .blue {
