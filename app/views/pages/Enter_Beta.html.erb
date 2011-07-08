@@ -11,32 +11,26 @@
 	}
 	#boxContent {
 		padding:0 20px 5px 20px;
-		color:#3f3f3f;
 	}
 	#boxContent h1 {
-		padding:30px 0 0 45px;
-		font-size:48px;
+		padding-left:45px;
 	}
 	#boxContent h2 {
-		padding:40px 0 0 39px;
+		padding:48px 0 5px 39px;
 	}
 	#boxContent P {
-		color:#4D4D4D;
 		padding:20px 0 0 39px;
 	}
-	#boxContent A {
-		color:#4D4D4D;
-		font-weight:500;
+	#boxContent div {
+		margin-right:170px;
 	}
-	#boxContent A:hover {
-		color:#48B76A;
-	}
-	.textField {
-		width:339px;
+	
+	.betaTextField {
+		width:330px;
 		height:28px;
 		margin:11px 0 0 43px;
 	}
-	.submitTextField {
+	.betaSubmitTextField {
 		width:80px;
 		height:29px;
 		position:relative;
@@ -46,11 +40,13 @@
 
 <div id="box">
 	<div id="boxContent">
-		<h2>Enter you beta code</h2>
+		<h2>Enter your beta code</h2>
 		<h1>Join Orchive</h1>
 		
-		<%= text_field_tag('enterBetaCode', '', :class=>"textField") %>
-		<%= submit_tag('submit', :class=>'button submitTextField') %>
+		<div>
+			<%= text_field_tag('enterBetaCode', '', :class=>"betaTextField") %>
+			<%= submit_tag('submit', :class=>'button betaSubmitTextField') %>
+		</div>
 		
 		<p>Don't have a code? <%= link_to('SUCKS FOR YOU!', '/request') %> </p>
 	</div>

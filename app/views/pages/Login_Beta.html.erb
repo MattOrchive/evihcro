@@ -15,28 +15,17 @@
 	#boxContent h1 {
 		padding:33px 0 4px 45px;
 	}
-	#boxContent h2 {
+	.betaLabelTextField {
 		position:relative;
 		top:5px;
 	}
 	#boxContent div {
-		margin:30px 53px 0 0;
-	}
-	#boxContent P {
-		color:#4D4D4D;
-	}
-	#boxContent A {
-		color:#4D4D4D;
-		font-weight:500;
-	}
-	#boxContent A:hover {
-		color:#48B76A;
+		margin:30px 46px 0 0;
 	}
 	
 	.betaTextField {
 		position:relative;
 		top:2px;
-		left:7px;
 		width:492px;
 		height:28px;
 	}
@@ -52,11 +41,11 @@
 	<div id="boxContent">
 		<h1>Beta Member Login</h1>
 		<div>
-			<label for="username"><h2 class="inline">Username</h2></label>
+			<label class='inline betaLabelTextField' for="username">Username</label>
 			<%= text_field_tag('username', '', :class=>'betaTextField') %>
 		</div>
 		<div>	
-			<label for="password"><h2 class="inline">Password</h2></label>
+			<label class='inline betaLabelTextField' for="password">Password</label>
 			<%= text_field_tag('password', '', :type=>'password', :class=>'betaTextField') %>
 		</div> 
 		

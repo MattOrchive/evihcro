@@ -11,67 +11,58 @@
 	}
 	#boxContent {
 		padding:5px 5px 0 20px;
-		color:#3F3F3F;
 	}
 	#boxContent h1 {
-		padding:20px 0 5px 80px;
+		padding:0px 0 17px 80px;
 	}
 	#boxContent h2 {
 		padding:50px 0 10px 100px;
-		font-weight:300;
-		font-size:24px;
 	}
 	#boxContent div {
-		margin-right:76px;
-		margin-top:29px;
-		text-align:right;
+		margin-right:77px;
+		margin-bottom:30px;
 	}
-	#boxContent h3 {
-		font-size:18px;
-		padding-right:10px;
-	}
+	
 	#boxContent P {
-		color:#4D4D4D;
 		padding:10px 0 14px 39px;
 	}
-	#boxContent A {
-		color:#4D4D4D;
-	}
-	#boxContent A:hover {
-		color:#48B76A;
-	}
+	
 	.betaTextField {
-		width:502px;
-		height:28px;
-		}
+		width:491px;
+		height:27px;
+	}
 	.button {
 		width:90px;
 		height:29px;
-		margin:20px 140px 0 222px;
+		margin:0 140px 0 222px;
 	}
 </style>
 
 <div id="box">
 	<div id="boxContent">
-		<h2>Create your account</h2>
-		
+	
+		<h2>Create your account</h2>		
 		<h1>Become a beta tester</h1>
+		
 		<div>
-			<label for='email'><h3 class="inline">Email Address</h3></label>
+			<label for='email' class='inline betaLabelTextField'>Email Address</label>
 			<%= text_field_tag('email', '', :type=>'email', :class=>'betaTextField') %>
 		</div>
 		<div>
-			<label for='username'><h3 class="inline">Username</h3></label>
+			<label for='username' class='inline betaLabelTextField'>Username</label>
 			<%= text_field_tag('username', '', :class=>'betaTextField') %>
 		</div>
+		
 		<div>
-			<label for='password'><h3 class="inline">Password</h3></label>
-			<%= text_field_tag('username', '', :type=>'password', :class=>'betaTextField') %>
+			<label for='password' class='inline betaLabelTextField'>Password</label>
+			<%= text_field_tag('password', '', :type=>'password', :class=>'betaTextField') %>
 		</div>
+		
 		<div>
-			<label for='repassword'><h3 class="inline">Re-Enter Password</h3></label>
+			<label for='repassword' class='inline betaLabelTextField'>Re-Enter Password</label>
 			<%= text_field_tag('repassword', '', :type=>'password', :class=>'betaTextField') %>
 		</div>
+		
 		<%= submit_tag('submit', :class=>'button') %>
 		<p class="inline">Already a member? <%=link_to('Sign In here', '/login')%></p>
 	</div>

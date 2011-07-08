@@ -1,4 +1,4 @@
-.betaSubmitTextField {
+#boxContent .betaSubmitTextField {
 		border:none;
 		border-left:1px solid #368A50;
 		
@@ -17,14 +17,18 @@
 	  -moz-box-shadow:none;
 	  box-shadow:none;		
 }
-.betaTextField {
+#boxContent .betaLabelTextField {
+		font-size:20px;
+		padding-right:9px;
+}
+#boxContent .betaTextField {
 		border:none;
 		background:transparent;
 		font-size:16px;
 		padding-right:5px;
 		padding-left:5px;
 }
-.betaTextField:focus {
+#boxContent .betaTextField:focus {
 		outline-color:#48B76A;
 }
 
@@ -35,18 +39,19 @@
 		font-size:30px;
 }
 #boxContent h2 {
-		font-size:20px;
+		font-size:24px;
 }
+
 #boxContent div {
 		text-align:right;
 }
-	#boxContent P {
+#boxContent P {
 		color:#4D4D4D;
-	}
-	#boxContent A {
+}
+#boxContent A {
 		color:#4D4D4D;
 		font-weight:500;
-	}
-	#boxContent A:hover {
+}
+#boxContent A:hover {
 		color:#48B76A;
-	}
+}

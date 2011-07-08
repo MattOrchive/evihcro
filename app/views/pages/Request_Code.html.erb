@@ -7,40 +7,36 @@
 		background: url('/images/request_box.png') no-repeat;
 		width:677px;
 		height:267px;
-		margin:100px 0 0 180px;
+		margin:100px 0 0 170px;
 	}
 	#boxContent {
 		padding:8px 20px 5px 20px;
-		color:#3f3f3f;
 	}
 	#boxContent h1 {
-		padding:40px 0 9px 40px;
-	}
-	#boxContent h2 {
-		padding:0 1px 0 39px;
-		font-size:24px;
-		position:relative;
-		top:4px;
+		padding:40px 0 0 40px;
 	}
 	#boxContent P {
-		margin:0 0 20px 40px;
-		color:#4D4D4D;
+		margin:0 0 21px 40px;
 	}
-	#boxContent A {
-		color:#4D4D4D;
-		font-weight:500;
+	#boxContent div {
+		margin-right:145px;
+		margin-bottom:20px;
+		padding-top:3px;
 	}
-	#boxContent A:hover {
-		color:#48B76A;
+	.betaLabelTextField {
+		padding-left:45px;
+		position:relative;
+		top:2px;
 	}
-	.textField {
-		width:302px;
-		height:29px;
-		margin-bottom:30px;
+	.betaTextField {
+		width:290px;
+		height:27px;
 	}
-	.submitTextField {
+	.button {
 		width:80px;
 		height:28px;
+		position:relative;
+		top:-1px;
 	}
 </style>
 
@@ -50,9 +46,11 @@
 		
 		<p>Want to be a beta tester? Simply submit your email below and we will send you<br />your very own beta code.</p> 
 		
-		<h2 class="inline">Email</h2>
-		<%= text_field_tag('email', '', :type=>'email', :class=>'textField') %>
-		<%= submit_tag('submit', :class=>'button submitTextField') %>
+		<div>
+			<label for='email' class='betaLabelTextField'>Email</label>
+			<%= text_field_tag('email', '', :type=>'email', :class=>'betaTextField') %>
+			<%= submit_tag('submit', :class=>'button betaSubmitTextField') %>
+		</div>
 		
 		<p>Already have a code? <%=link_to('Enter your code here', '/enter')%> </p>
 	</div>
