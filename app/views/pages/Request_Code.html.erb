@@ -1,0 +1,79 @@
+<style type="text/css">
+	#main {
+		background: url('/images/background_betaPages.png') 0 -6px no-repeat;
+		height:590px;
+	}
+	#box {
+		background: url('/images/request_box.png') no-repeat;
+		width:677px;
+		height:267px;
+		margin:100px 0 0 180px;
+	}
+	#boxContent {
+		padding:8px 20px 5px 20px;
+		color:#3f3f3f;
+	}
+	#boxContent h1 {
+		padding:40px 0 0 40px;
+	}
+	#boxContent h2 {
+		padding:0 1px 0 39px;
+		font-size:24px;
+		position:relative;
+		top:5px;
+	}
+	#boxContent P {
+		color:#4D4D4D;
+		padding:10px 0 20px 39px;
+	}
+	#boxContent A {
+		color:#4D4D4D;
+		font-weight:500;
+	}
+	#boxContent A:hover {
+		color:#48B76A;
+	}
+	#email {
+		width:302px;
+		height:28px;
+		margin-bottom:15px;
+		border:none;
+		background:transparent;
+		font-size:14px;
+	}
+	#email:focus {
+		outline-color:#48B76A;
+	}
+	#submit {
+		width:80px;
+		height:29px;
+		
+		border:none;
+		border-left:1px solid #368A50;
+		
+		-webkit-border-top-right-radius:3px;
+		-webkit-border-bottom-right-radius:3px;
+		-moz-border-top-right-radius:3px;
+		-moz-border-bottom-right-radius:3px;
+		border-top-right-radius:3px;
+		border-bottom-right-radius:3px;
+		
+		-webkit-box-shadow:none;
+	  -moz-box-shadow:none;
+	  box-shadow:none;		
+	}
+</style>
+
+<div id="box">
+	<div id="boxContent">
+		<h1>Request a Beta Code</h1>
+		
+		<p>Want to be a beta tester? Simply submit your email below and we will send you<br />your very own beta code.</p> 
+		
+		<h2 class="inline">Email</h2>
+		<%= text_field_tag('email', '', :type=>'email') %>
+		<%= submit_tag('submit', :class=>'button', :id=>'submit') %>
+		
+		<p>Already have a code? <%=link_to('Enter your code here', '/enter')%> </p>
+	</div>
+</div>

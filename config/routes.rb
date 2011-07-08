@@ -1,9 +1,6 @@
 OrchiveApp::Application.routes.draw do
   resources :pages
-
-  resources :posts do 
-    resources :comments
-  end
+	resources :posts
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -67,4 +64,11 @@ OrchiveApp::Application.routes.draw do
   match '/privacy' => 'Pages#Privacy'
   match '/terms' => 'Pages#Terms'
   match '/future' => 'Pages#Future'
+	
+	match '/enter' => 'Pages#Enter_Beta'
+	match '/request' => 'Pages#Request_Code'
+	match '/tys' => 'Pages#TY_Signup'
+	match '/tyo' => 'Pages#TY_Open'
+	match '/tyf' => 'Pages#TY_Full'
+	
 end

@@ -1,0 +1,77 @@
+<style type="text/css">
+	#main {
+		background-image:url('/images/background_enter.png');
+		height:590px;
+	}
+	#box {
+		background: url('/images/enter_box.png') no-repeat;
+		width:677px;
+		height:267px;
+		margin:100px 0 0 180px;
+	}
+	#boxContent {
+		padding:0 20px 5px 20px;
+		color:#3f3f3f;
+	}
+	#boxContent h1 {
+		padding:30px 0 0 45px;
+		font-size:48px;
+	}
+	#boxContent h2 {
+		padding:40px 0 0 39px;
+	}
+	#boxContent P {
+		color:#4D4D4D;
+		padding:20px 0 0 39px;
+	}
+	#boxContent A {
+		color:#4D4D4D;
+		font-weight:500;
+	}
+	#boxContent A:hover {
+		color:#48B76A;
+	}
+	#enterBetaCode {
+		width:339px;
+		height:28px;
+		margin:11px 0 0 43px;
+		border:none;
+		background:transparent;
+		font-size:15px;
+	}
+	#enterBetaCode:focus {
+		outline-color:#48B76A;
+	}
+	#submit {
+		width:80px;
+		height:29px;
+			
+		border:none;
+		border-left:1px solid #368A50;
+		
+		-webkit-border-top-right-radius:3px;
+		-webkit-border-bottom-right-radius:3px;
+		-moz-border-top-right-radius:3px;
+		-moz-border-bottom-right-radius:3px;
+		border-top-right-radius:3px;
+		border-bottom-right-radius:3px;
+		
+		-webkit-box-shadow:none;
+	  -moz-box-shadow:none;
+	  box-shadow:none;		
+		
+		/*background:transparent url('/images/enter_submit.png') no-repeat;	*/
+	}
+</style>
+
+<div id="box">
+	<div id="boxContent">
+		<h2>Enter you beta code</h2>
+		<h1>Join Orchive</h1>
+		
+		<%= text_field_tag('enterBetaCode', '') %>
+		<%= submit_tag('submit', :class=>'button', :id=>'submit') %>
+		
+		<p>Don't have a code? <%= link_to('SUCKS FOR YOU!', '/request') %> </p>
+	</div>
+</div>
