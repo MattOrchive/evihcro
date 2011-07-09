@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+
+	
   def new
 		@user = User.new
 		@title = "Sign Up"
@@ -13,11 +15,12 @@ class UsersController < ApplicationController
 		@user = User.new(params[:user])
 		
 		if @user.save
-			redirect_to '/login'
+			redirect_to '/thankyou'
 		else
 			@title = 'Sign Up'
 			render 'new'
 		end
 	end
+	
 	
 end

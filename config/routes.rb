@@ -1,6 +1,6 @@
 OrchiveApp::Application.routes.draw do	
-  
-
+	
+	resources :beta_pages
 	resources :users
   resources :pages
 	resources :posts
@@ -68,13 +68,13 @@ OrchiveApp::Application.routes.draw do
   match '/terms' => 'Pages#Terms'
   match '/future' => 'Pages#Future'
 	
-	match '/enter' => 'Pages#Enter_Beta'
-	match '/request' => 'Pages#Request_Code'
-	match '/login' => 'Pages#Login_Beta'
-
-	match '/tys' => 'Pages#TY_Signup'
-	match '/tyo' => 'Pages#TY_Open'
-	match '/tyf' => 'Pages#TY_Full'
+	match '/enter' => 'beta_Pages#Enter_Beta'
+	match '/request' => 'beta_Pages#Request_Code'
+	match '/login' => 'beta_Pages#Login_Beta'
+	match '/thankyou' => 'beta_Pages#Thank_You'
+	match '/tys' => 'beta_Pages#_signup'
+	match '/tyo' => 'beta_Pages#_open'
+	match '/tyf' => 'beta_pages#_full'
 	
 	match '/signup' => 'Users#new'
 	

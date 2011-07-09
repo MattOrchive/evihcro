@@ -14,16 +14,20 @@
 		padding:5px 5px 0 20px;
 	}
 	#boxContent h1 {
-		padding:0px 0 17px 80px;
+		padding:0px 0 13px 80px;
 	}
 	#boxContent h2 {
 		padding:50px 0 10px 100px;
 	}
+	
 	#boxContent div {
-		margin-right:77px;
-		margin-bottom:30px;
+		margin-right:45px;
+		margin-bottom:26px;
 	}
-
+	#boxContent div img {
+		position:relative;
+		top:5px;
+	}
 	#boxContent P {
 		padding:10px 0 14px 39px;
 	}
@@ -37,6 +41,14 @@
 		height:29px;
 		margin:0 140px 0 222px;
 	}
+	
+	#boxContent div.field_with_errors {
+		display:inline;
+		margin-right:0;
+	}
+	#boxContent div.field_with_errors img {
+		src = '/images/signup_x.png';
+	}
 </style>
 
 <div id="box">
@@ -49,21 +61,25 @@
 			<div>
 				<%= f.label :email, "Email Address", :class=>'inline betaLabelTextField' %>
 				<%= f.text_field :email, :class=>'betaTextField' %>
+				<%= image_tag('signup_blank.png') %>
 			</div>
 		
 			<div>
 				<%= f.label :name, :class=>'inline betaLabelTextField' %>
 				<%= f.text_field :name, :class=>'betaTextField' %>
+				<%= image_tag('signup_blank.png') %>
 			</div>
 
 			<div>
 				<%= f.label :password, :class=>'inline betaLabelTextField' %>
 				<%= f.password_field :password, :class=>'betaTextField' %>
+				<%= image_tag('signup_blank.png') %>
 			</div>
 
 			<div>
 				<%= f.label :password_confirmation, "Re-Enter Password", :class=>'inline betaLabelTextField' %>
 				<%=f.password_field :password_confirmation,:class=>'betaTextField'%>
+				<%= image_tag('signup_blank.png') %>
 			</div>
 			
 			<%= f.submit 'submit', :class=>'button'%>

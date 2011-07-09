@@ -1,4 +1,4 @@
-<style type="text/css">
+<style type='text/css'>
 	#main {
 		background: url('/images/background_betaPages.png') 0 -6px no-repeat;
 		height:590px;
@@ -22,11 +22,6 @@
 		font-size:16px;
 		color:#4D4D4D;
 	}
-	#boxContent #redirect {
-		text-align:right;
-		font-size:10px;
-		margin-top:40px;
-	}
 	#boxContent A {
 		color:#4D4D4D;
 		font-weight:500;
@@ -34,12 +29,14 @@
 	#boxContent A:hover {
 		color:#48B76A;
 	}
-
+	#boxContent #redirect {
+		text-align:right;
+		font-size:10px;
+		margin-top:40px;
+	}
 </style>
 <div id="box">
 	<div id="boxContent">
-		<h1>Thank You for joining Orchive</h1>
-		<p>You will receive an email shortly with your new beta code<br />Please wait while we redirect you</p>
-		<p id="redirect">If you do not redirect in 10 seconds <%= link_to('click here', '/enter')%> </p>
+		<%= renderThankYou %>
 	</div>
 </div>
