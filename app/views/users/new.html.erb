@@ -45,26 +45,32 @@
 		<h2>Create your account</h2>		
 		<h1>Become a beta tester</h1>
 		
-		<div>
-			<label for='email' class='inline betaLabelTextField'>Email Address</label>
-			<%= text_field_tag('email', '', :type=>'email', :class=>'betaTextField') %>
-		</div>
-		<div>
-			<label for='username' class='inline betaLabelTextField'>Username</label>
-			<%= text_field_tag('username', '', :class=>'betaTextField') %>
-		</div>
+		<%= form_for(@user) do |f| %>
+			<div>
+				<%= f.label :email, "Email Address", :class=>'inline betaLabelTextField' %>
+				<%= f.text_field :email, :class=>'betaTextField' %>
+			</div>
+		
+			<div>
+				<%= f.label :name, :class=>'inline betaLabelTextField' %>
+				<%= f.text_field :name, :class=>'betaTextField' %>
+			</div>
 
-		<div>
-			<label for='password' class='inline betaLabelTextField'>Password</label>
-			<%= text_field_tag('password', '', :type=>'password', :class=>'betaTextField') %>
-		</div>
+			<div>
+				<%= f.label :password, :class=>'inline betaLabelTextField' %>
+				<%= f.password_field :password, :class=>'betaTextField' %>
+			</div>
 
-		<div>
-			<label for='repassword' class='inline betaLabelTextField'>Re-Enter Password</label>
-			<%= text_field_tag('repassword', '', :type=>'password', :class=>'betaTextField') %>
-		</div>
-
-		<%= submit_tag('submit', :class=>'button') %>
-		<p class="inline">Already a member? <%=link_to('Sign In here', '/login')%></p>
+			<div>
+				<%= f.label :password_confirmation, "Re-Enter Password", :class=>'inline betaLabelTextField' %>
+				<%=f.password_field :password_confirmation,:class=>'betaTextField'%>
+			</div>
+			
+			<%= f.submit 'submit', :class=>'button'%>
+		
+			<p class="inline">Already a member? <%=link_to('Sign In here', '/login')%></p>
+		<% end %>
+		
+		
 	</div>
 </div>

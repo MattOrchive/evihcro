@@ -78,5 +78,4 @@ OrchiveApp::Application.routes.draw do
 	
 	match '/signup' => 'Users#new'
 	
-	
 end
