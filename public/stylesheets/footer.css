@@ -4,7 +4,7 @@
 	background:url('/images/background_footer.png') 0 -3px no-repeat;
 	background-size:100%;
 	border-top:1px solid #EAEAEA;
-	height:190px;
+	height:180px;
 }
 #footerContent {
 	background: url('/images/footer_dividers.png') 0 30px no-repeat;
@@ -17,6 +17,14 @@
 	
 	color:#fff;
 }
+#footerContent #bottom {
+	margin-left:0;
+	height:30px;
+}
+#footerContent #bottom p {
+	font-size:10px;
+}
+
 #footerContent A {
 		color:#fff;
 		font-weight:400;
@@ -26,32 +34,31 @@
 		color:#000;		
 }
 #footerContent div {
-	margin-left:25px;
+	margin-left:30px;
 	margin-top:7px;
-	height:110px;
 }
-#footerContent #bottom {
-	height:35px;
-}
-#footerContent table td {
-	padding-bottom:10px;
-	font-size:13px;
-	padding-right:60px;
-}
-#footerContent th {
+
+#footerContent table th {
 	color:#000;
 	font-weight:500;
+	font-size:14px;
+	padding-bottom:10px;
+}
+#footerContent table td {
 	padding-bottom:15px;
+	font-size:11px;
+	padding-right:85px;
 }
-#footerContent h2 {
+#footerContent table th h2 {
 	font-size:16px;
-	display:inline;
+	padding-left:4px;
+	color:#fff;
 }
-#footerContent span {
-	position:relative;
-	top:-105px;
-	left:480px;
+#footerContent table #textFieldCell {
+	padding-right:0;
+	padding-bottom:0;
 }
+
 #footerContent #invite {
 	background: transparent url('/images/footer_textField.png') no-repeat;
 	border:none;
@@ -60,13 +67,14 @@
 	width:305px;
 	height:35px;
 	padding:0 35px 0 5px;
-	margin-top:20px;
 }
+
 #footerContent #invite:focus {
 	outline:none;
 }
 #footerContent #submit {
-	background:#fff url('/images/footer_submit.png') 1px 2px no-repeat;
+	display:inline;
+	background:#fff url('/images/footer_submit.png') 2px 2px no-repeat;
 	border:none;
 	
 	position:relative;
@@ -80,6 +88,7 @@
 	background-color:#E0E0E0;
 	background-image:url('/images/footer_submitActive.png');
 }
+
 #footerContent img {
 	position:relative;
 	top:4px;
@@ -89,17 +98,27 @@
 	font-weight:300;
 	font-size:12px;
 }
+
+
+
+
+
 #footerContent #google_translate_element {
 	position:relative;
-	top:-25px;
+	top:-35px;
 	left:300px;
 }
 #footerContent #google_translate_element, #google_translate_element div {
 	margin:0;
 	height:auto;
+	width:200px;
 }
 #footerContent #google_translate_element span{
 	position:static;
+}
+
+#footerContent #google_translate_element div {
+	 width:200px;
 }
 #footerContent #google_translate_element div div select {
 	border: 1px solid #E9E9E9;

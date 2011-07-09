@@ -1,17 +1,23 @@
-<div id="footer" class="clearBoth">
+<div id="footer">
 	<div id="footerContent">
+	
 		<div id="top">
 			<table>
 				<tr>
 					<th>Support</th>
 					<th>About</th>
 					<th>Updates</th>
+					<th><h2>SEND AN INVITATION TO A FRIEND</h2></th>
 				</tr>
 				
 				<tr>
 					<td><%=link_to('Help Center', '/#')%></td>
 					<td><%=link_to('About Orchive', '/about')%></td>
 					<td><%=link_to('Orchive on Facebook', '/about')%></td>
+					<td rowspan='2' id="textFieldCell">
+						<%= text_field_tag('invite', 'Enter recipient\'s email address')%>
+						<%= submit_tag('', :id=>'submit') %>
+					</td>
 				</tr>
 				
 				<tr>
@@ -26,18 +32,14 @@
 					<td><%=link_to('Orchive in the Press', '/#')%></td>
 				</tr>
 			</table>
-			
-			<span>
-				<h2>SEND AN INVITATION TO A FRIEND<br /></h2>
-				<%= text_field_tag('invite', 'Enter recipient\'s email address') %>
-				<%= submit_tag('', :id=>'submit') %>
-			</span>
 		</div>
 		
 		<div id="bottom">
 			<p class="inline">Copyright 2011 &copy Orchive, All Rights Reserved</p>
 				<p class="inline floatRight">t:16095555555 e:info@orchive.com</p>
 			
+			
+
 			<div id="google_translate_element"></div>
 			<script>
 				function googleTranslateElementInit() {
@@ -46,7 +48,6 @@
 				}
 		</script>
 		<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 
 		
 		</div>
