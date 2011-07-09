@@ -23,11 +23,11 @@
 		margin-right:77px;
 		margin-bottom:30px;
 	}
-	
+
 	#boxContent P {
 		padding:10px 0 14px 39px;
 	}
-	
+
 	.betaTextField {
 		width:491px;
 		height:27px;
@@ -41,7 +41,7 @@
 
 <div id="box">
 	<div id="boxContent">
-	
+
 		<h2>Create your account</h2>		
 		<h1>Become a beta tester</h1>
 		
@@ -53,17 +53,17 @@
 			<label for='username' class='inline betaLabelTextField'>Username</label>
 			<%= text_field_tag('username', '', :class=>'betaTextField') %>
 		</div>
-		
+
 		<div>
 			<label for='password' class='inline betaLabelTextField'>Password</label>
 			<%= text_field_tag('password', '', :type=>'password', :class=>'betaTextField') %>
 		</div>
-		
+
 		<div>
 			<label for='repassword' class='inline betaLabelTextField'>Re-Enter Password</label>
 			<%= text_field_tag('repassword', '', :type=>'password', :class=>'betaTextField') %>
 		</div>
-		
+
 		<%= submit_tag('submit', :class=>'button') %>
 		<p class="inline">Already a member? <%=link_to('Sign In here', '/login')%></p>
 	</div>

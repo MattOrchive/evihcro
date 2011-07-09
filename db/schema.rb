@@ -10,17 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110616200316) do
-
-  create_table "comments", :force => true do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.date     "date"
-    t.time     "time"
-    t.integer  "post_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20110709172255) do
 
   create_table "posts", :force => true do |t|
     t.string   "name"
@@ -28,17 +18,24 @@ ActiveRecord::Schema.define(:version => 20110616200316) do
     t.text     "content"
     t.string   "user_location"
     t.string   "post_location"
+    t.integer  "pageviews"
+    t.integer  "accuracy_rating"
     t.integer  "accuracy"
     t.integer  "inaccuracy"
+    t.integer  "trending_value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "tags", :force => true do |t|
+  create_table "users", :force => true do |t|
     t.string   "name"
-    t.integer  "post_id"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "encrypted_password"
+    t.string   "salt"
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end
