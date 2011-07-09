@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* Footer CSS Document */
+#footer {
+	background:url('/images/background_footer.png') no-repeat;
+	background-size:100%;
+	height:196px;
+}
+#dropDownDiv {
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+#dropDown{
+  background-image: url("./../images/dropDownIcon.png");
+  background-repeat: no-repeat;
+  vertical-align:middle;
+  color:#555555;
+  font-size: 10px;
+  padding: 0% 0% 0% 1%;
+  margin:0;
+  -webkit-appearance: menulist-text;}
+#copy {
+  font-size:11px;
+  margin:0%;
+  margin-right:2%;
+}
+#pageNav {
+  margin-right:8%;
+}
+#pageNav P {
+  margin:0%;
+}
+#pageNav P A {
+  color:#555555;
+  text-decoration:none;
+  font-size:13px;
+}
+#pageNav P A:hover {
+  color:#00BE69;
+}

@@ -4,8 +4,8 @@
 html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,abbr,article,aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,summary,time { margin: 0; padding: 0; }
 h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th,figcaption { font-size: 1em; font-weight: normal; font-style: normal; }
 fieldset,iframe { border: none; }
-caption,th { text-align: left; }
 table { border-collapse: collapse; border-spacing: 0; }
+caption,th { text-align: left; }
 article,aside,footer,header,hgroup,nav,section,figure,figcaption { display: block; }
 
 
@@ -22,12 +22,13 @@ BODY {
   background-repeat: no-repeat;
   background-size:100%;
   background-position:0 -6px;
-	padding-bottom:50px;
 }
 #content{
   width:1200px;
+	
   margin:0 auto 0 auto;
   padding-top:45px;
+	padding-bottom:75px;
 }
 h1{
   font-size:32px;
@@ -41,6 +42,7 @@ h2{
 p {
   line-height:21px;
   font-size:15px;
+	font-weight:400;
 }
 
 .blue {
@@ -63,6 +65,9 @@ p {
 }
 .clearRight {
   clear:right;
+}
+.clearBoth {
+	clear:both;
 }
 .button {
   background: #48B76A;
