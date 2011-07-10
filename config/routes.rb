@@ -54,7 +54,7 @@ OrchiveApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "Beta_Pages#home"
+  root :to => "beta_Pages#home"
   
   # See how all your routes lay out with "rake routes"
 
