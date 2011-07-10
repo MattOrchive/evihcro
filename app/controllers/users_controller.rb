@@ -22,5 +22,12 @@ class UsersController < ApplicationController
 		end
 	end
 	
-	
+	def enter
+		@title = "Enter Beta"
+		@code = nil
+		
+		redirect_to '/signup' if @code == 'AAA'
+		
+		
+	end
 end

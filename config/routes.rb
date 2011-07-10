@@ -2,7 +2,7 @@ OrchiveApp::Application.routes.draw do
 	
 	resources :beta_pages
 	resources :users
-  resources :pages
+	resources :pages
 	resources :posts
 
   # The priority is based upon order of creation:
@@ -68,7 +68,6 @@ OrchiveApp::Application.routes.draw do
   match '/terms' => 'Pages#Terms'
   match '/future' => 'Pages#Future'
 	
-	match '/enter' => 'beta_Pages#Enter_Beta'
 	match '/request' => 'beta_Pages#Request_Code'
 	match '/login' => 'beta_Pages#Login_Beta'
 	match '/thankyou' => 'beta_Pages#Thank_You'
@@ -76,6 +75,7 @@ OrchiveApp::Application.routes.draw do
 	match '/tyo' => 'beta_Pages#_open'
 	match '/tyf' => 'beta_pages#_full'
 	
+	match '/enter' => 'Users#enter'
 	match '/signup' => 'Users#new'
 	
 end
