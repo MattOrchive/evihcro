@@ -1,6 +1,7 @@
 <header>
-		<%= image_tag('logo.png', :alt=>'Orchive') %>
+		<%=link_to(image_tag('logo.png', :alt=>'Orchive'), '/') %>
 		<span class="floatRight">
+			<%= link_to('Home', '/') %>
 			<%= link_to('About', '#') %>
 			<%= link_to('Beta', '/login') %>
 			<%= link_to('Join', '/enter') %>
