@@ -40,6 +40,7 @@
 <div id="box">
 	<div id="boxContent">
 		<h1>Beta Member Login</h1>
+		<form>
 		<div>
 			<label class='inline betaLabelTextField' for="username">Username</label>
 			<%= text_field_tag('username', '', :class=>'betaTextField') %>
@@ -48,6 +49,7 @@
 			<label class='inline betaLabelTextField' for="password">Password</label>
 			<%= text_field_tag('password', '', :type=>'password', :class=>'betaTextField') %>
 		</div> 
+		</form>
 		
 			<%= submit_tag('submit', :class=>'button') %>
 			<%= link_to('Forgot your password?', '#')%>	

@@ -1,0 +1,29 @@
+<style type='text/css'>
+  #main {
+		height:610px;
+	}
+	h1 {
+		color:#555555;
+    margin:75px 0 70px 0;
+    text-align:center;
+  }
+  #links {
+		width:650px;
+    margin-left:auto;
+		margin-right:auto;
+  }
+	#links a img {
+		margin-right:55px;
+	}
+	#links a #join {
+		margin-right:0;
+	}
+</style>
+
+<h1>Welcome to Orchive</h1>
+
+<div id="links">
+	<%= link_to(image_tag('homeButtons/about.png', :id=>'about'), '#')%>
+	<%= link_to(image_tag('homeButtons/beta.png', :id=>'beta'), '#')%>
+	<%= link_to(image_tag('homeButtons/join.png', :id=>'join'), '/enter')%>
+</div>

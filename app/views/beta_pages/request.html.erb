@@ -18,7 +18,7 @@
 	#boxContent P {
 		margin:0 0 21px 40px;
 	}
-	#boxContent div {
+	#boxContent form {
 		margin-right:209px;
 		margin-bottom:20px;
 		padding-top:3px;
@@ -46,11 +46,11 @@
 		
 		<p>Want to be a beta tester? Simply submit your email below and we will send you<br />your very own beta code.</p> 
 		
-		<div>
+		<%=form_tag('/request') %>
 			<label for='email' class='betaLabelTextField'>Email</label>
 			<%= text_field_tag('email', '', :type=>'email', :class=>'betaTextField') %>
 			<%= submit_tag('submit', :class=>'button betaSubmitTextField') %>
-		</div>
+		</form>
 		
 		<p>Already have a code? <%=link_to('Enter your code here', '/enter')%> </p>
 	</div>

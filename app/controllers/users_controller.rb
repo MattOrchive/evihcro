@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+	layout 'beta', :except =>['show']
 	
   def new
 		@user = User.new
@@ -16,6 +16,7 @@ class UsersController < ApplicationController
 		
 		if @user.save
 			redirect_to '/thankyou'
+			Notifier.welcome(@user).deliver
 		else
 			@title = 'Sign Up'
 			render 'new'
@@ -24,10 +25,16 @@ class UsersController < ApplicationController
 	
 	def enter
 		@title = "Enter Beta"
-		@code = nil
 		
-		redirect_to '/signup' if @code == 'AAA'
 		
+		#redirect_to '/signup' if @code == 'AAA'
+		
+		if %w('AAA').include?(params[:input])
+			redirect_to '/signup'
+		else
+			@title ='Enter Beta'
+			render 'enter'
+		end
 		
 	end
 end

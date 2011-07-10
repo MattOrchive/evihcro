@@ -1,3 +1,21 @@
+#beta header {
+	padding:20px 0 20px 0;
+	width:1200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#beta header span {
+	padding-top:15px;
+}
+#beta header span a {
+	font-size:16px;
+	color:#555;
+	text-decoration:none;
+	margin-right:20px;
+}
+#beta header span a:hover {
+	color:#48B76A;
+}
 #boxContent .betaSubmitTextField {
 		border:none;
 		border-left:1px solid #368A50;
@@ -42,7 +60,7 @@
 		font-size:24px;
 }
 
-#boxContent div {
+#boxContent form {
 		text-align:right;
 }
 #boxContent P {
