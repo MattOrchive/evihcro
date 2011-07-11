@@ -2,8 +2,7 @@
 #   gem install sqlite3
 development:
   adapter: sqlite3
-  database: db/development.sqlite3
-#  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  database: db/development.sqlite3  
   pool: 5
   timeout: 5000
 

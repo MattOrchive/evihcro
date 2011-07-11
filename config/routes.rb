@@ -1,7 +1,8 @@
 OrchiveApp::Application.routes.draw do	
 	
-#  devise_for :users
-
+	devise_for :user, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "join" }, :controllers => { :sessions => "users/sessions", :registrations => 'users/registrations' }
+	
+        
 	resources :beta_pages
 	resources :users
 	resources :pages
@@ -56,7 +57,10 @@ OrchiveApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'beta_pages#index'
+	root :to => 'beta_pages#index'
+	namespace :user do
+		root :to => 'beta_pages#index'
+	end
   
   # See how all your routes lay out with "rake routes"
 
@@ -78,9 +82,11 @@ OrchiveApp::Application.routes.draw do
 	match '/tyo' => 'beta_pages#_open'
 	match '/tyf' => 'beta_pages#_full'
 	
-	match '/login' => 'Users#login'
-	match '/join' => 'Users#join'
-	match '/signup' => 'Users#new'
+	#match '/login' => 'Users#login'
+	#match '/join' => 'Users#join'
+	#match '/signup' => 'Users#new'
+	
+	
 	
 	
 	

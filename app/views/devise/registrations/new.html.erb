@@ -38,7 +38,7 @@
 	.button {
 		width:90px;
 		height:29px;
-		margin:0 140px 0 222px;
+		margin:0 160px 0 222px;
 	}
 	
 	#boxContent div.field_with_errors {
@@ -56,7 +56,7 @@
 		<h2>Create your account</h2>		
 		<h1>Become a beta tester</h1>
 		
-		<%= form_for(@user) do |f| %>
+		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 			<div>
 				<%= f.label :email, "Email Address", :class=>'inline betaLabelTextField' %>
 				<%= f.text_field :email, :class=>'betaTextField' %>
@@ -81,9 +81,9 @@
 				<%= image_tag('signup_blank.png') %>
 			</div>
 			
-			<%= f.submit 'submit', :class=>'button'%>
+			<%= f.submit 'submit', :class=>'button floatLeft'%>
 		
-			<p class="inline">Already a member? <%=link_to('Sign In here', '/login')%></p>
+			<p class="floatLeft">Already a member? <%=link_to('Sign In here', '/login')%></p>
 		<% end %>
 		
 		

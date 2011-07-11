@@ -1,5 +1,9 @@
 #beta #main {
 	background-image:url('/images/background_betaPages.png');
+	height:595px;
+}
+#beta #main #content {
+	padding-bottom:0;
 }
 #beta header {
 	padding:20px 0 20px 0;
