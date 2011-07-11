@@ -1,6 +1,6 @@
 OrchiveApp::Application.routes.draw do	
 	
-	devise_for :user, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "join" }#, :controllers => { :sessions => "users/sessions", :registrations => 'users/registrations' }
+	devise_for :user, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "join" }, :controllers => { :sessions => "users/sessions", :registrations => 'users/registrations' }
 	
         
 	resources :beta_pages
@@ -78,11 +78,6 @@ OrchiveApp::Application.routes.draw do
 	match '/tys' => 'beta_pages#_signup'
 	match '/tyo' => 'beta_pages#_open'
 	match '/tyf' => 'beta_pages#_full'
-	
-	#match '/login' => 'Users#login'
-	#match '/join' => 'Users#join'
-	#match '/signup' => 'Users#new'
-	
 	
 	
 	
