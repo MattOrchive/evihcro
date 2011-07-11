@@ -77,7 +77,7 @@ OrchiveApp::Application.routes.draw do
 	match '/tyf' => 'beta_pages#_full'
 	
 	match '/login' => 'Users#login'
-	match '/enter' => 'Users#enter'
+	match '/join' => 'Users#enter'
 	match '/signup' => 'Users#new'
 	
 end

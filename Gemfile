@@ -7,6 +7,8 @@ gem 'rails', '3.0.8'
 
 gem 'sqlite3', :require => 'sqlite3'
 
+#gem 'mysql2', '0.2.6'
+
 group :development do
 end
 
