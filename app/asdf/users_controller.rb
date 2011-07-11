@@ -23,14 +23,14 @@ class UsersController < ApplicationController
 		end
 	end
 	
-	def enter
-		@title = "Enter Beta"
+	def join
+		@title = "Join Beta"
 		
 		
 		#redirect_to '/signup' if @code == 'AAA'
 		
 		if %w('AAA').include?(params[:input])
-			redirect_to '/signup'
+			render 'new'
 		else
 			@title ='Enter Beta'
 			render 'enter'

@@ -1,5 +1,7 @@
 OrchiveApp::Application.routes.draw do	
 	
+#  devise_for :users
+
 	resources :beta_pages
 	resources :users
 	resources :pages
@@ -77,7 +79,9 @@ OrchiveApp::Application.routes.draw do
 	match '/tyf' => 'beta_pages#_full'
 	
 	match '/login' => 'Users#login'
-	match '/join' => 'Users#enter'
+	match '/join' => 'Users#join'
 	match '/signup' => 'Users#new'
+	
+	
 	
 end

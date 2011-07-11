@@ -42,10 +42,14 @@
 		<h2>Enter your beta code</h2>
 		<h1>Join Orchive</h1>
 		
-		<%= form_tag() do |f| %>
+		<%= form_for(@user) do |f| %>
+			<%= f.password_field :beta_code, :class=>'betaTextField' %>
+			<%= f.submit :submit, :class=>'button betaSubmitTextField' %>
+		<% end %>
+		<!--<%= form_tag() do |f| %>
 			<%= text_field_tag('enterBetaCode', '', :class=>"betaTextField") %>
 			<%= submit_tag('submit', :class=>'button betaSubmitTextField') %>
-		<% end %>
+		<% end %>-->
 		
 		<p>Don't have a code? <%= link_to('SUCKS FOR YOU!', '/request') %> </p>
 	</div>

@@ -1,26 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
-    }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>404 Error</title>
+  <meta name="description" content="Orchive 404 Error">
+
+  <meta name="author" content="Orchive">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <Style type="text/css">
+  	@import "navBar.css";
+	@import "footer.css";
+	@import "mainStyle.css";
+	
+	#links a {
+		color:#000;
+		font-weight:600;
+		font-size:18px;
+		text-decoration:none;
+		margin:0px;
+	}
+	#links a:visited {
+		color:#555555;
+	}
+	#main{
+		color:#000;
+	}
+	#main h1 {
+		font-size:45px;
+	}
+	#main p {
+		font-size:14px;
+	}
   </style>
+  
+
+  <!--<script>
+    var _gaq=[["_setAccount","UA-22870953-1"],["_trackPageview"]]; // Change UA-XXXXX-X to be your site's ID 
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>-->
+
+<!-- This is for Translating 
+This Does Not Work
+NEED To find a working translation
+
+!!!!!TRANSLATIONS WILL NOT WORK WITH IMAGES
+!!!!!IF CONTENT IS IMAGES, THEN IT WILL HAVE TO BE DONE IN ALL LANGUAGES
+!!!!!THEREFORE, CONTENT SHOULD BE HTML CODE!!!!!-->
+
 </head>
 
 <body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <h1>The page you were looking for doesn't exist.</h1>
-    <p>You may have mistyped the address or the page may have moved.</p>
-  </div>
+
+<div id="wrapper">
+
+
+<div id="header">
+ 	<img src="images/Logo/topLogo_Spacer.jpg"/><img src="images/Logo/leftLogo_Spacer.jpg"/><a href="http://orchive.com"><img src="images/Logo/Logo.jpg" alt="[or]chive"/></a><img class="floatRight" src="images/Logo/rightLogo_Spacer.jpg"/><img src="images/Logo/botLogo_Spacer.jpg"/>      
+</div>
+
+
+    
+<div id="main">
+	
+    <div id="oops">
+    	<img class="floatLeft" src="images/content/404error/Spacer_leftOops.jpg"/>
+        <h1 class="floatLeft">Oops!</h1>
+        <img src="images/content/404error/Spacer_rightOops.jpg"/>
+    </div>
+    <div id="clock">
+    	<img class="floatLeft" src="images/content/404error/Spacer_leftClock.jpg"/>
+    	<img src="images/content/404error/Clock.jpg"/>
+    </div>
+    <div id="textDiv">
+    	<img class="floatLeft" src="images/content/404error/Spacer_leftText.jpg"/>
+    	<p id="text" class="textCenter floatLeft">It looks like you wandered off into a <b>non-existent</b> page.<br />Down here the folks aren't really the friendly type. We<br />highly recommend spending your stay in the more<br />pleasant parts of town</p>
+        
+        <img src="images/content/404error/Spacer_subText.jpg"/>
+    </div>
+    <div id="links">
+    	<img class="floatLeft" src="images/content/404error/Spacer_leftLinks.jpg"/>
+        <a href="home.html" class="floatLeft">Home</a>
+        <img class="floatLeft" src="images/content/404error/Spacer_Home%3ASignIn.jpg"/>
+        <a href="signin.html" class="floatLeft">Sign in</a>
+        <img class="floatLeft" src="images/content/404error/Spacer_SignIn%3ASignUp.jpg"/>
+        <a href="signup.html">Sign up</a>
+	</div>
+    <img src="images/content/404error/Spacer_bottom.jpg"/>
+</div>
+
+<div id="footer">
+   	<p id="copy" class="inline"><a class="green">Orchive</a> &copy 2011-20XX</p>
+        
+    <div id="dropDownDiv" class="inline">
+    
+    	<img src="images/dropDownIcon.jpg"/>
+    	<select name="dropDown" id="dropDown">
+        	<option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="de">Deutsch</option>
+            <option value="ja">日本語</option>
+			<option value="ar">عَرَبيْ</option>
+			<option value="it">Italiano</option>
+			<option value="ru">Pусский</option>
+			<option value="po">Polski</option>
+			<option value="zh-CN">中文</option>
+			<option value="es">Español</option>
+			<option value="ko">한국어</option>
+			<option value="nl">Nederlands</option>
+			<option value="hi">हिन्दी </option>
+			<option value="el">Ελληνική</option>
+			<option value="ro">Română</option>
+        </select>
+	</div>
+    
+    <span id="pageNav" class="floatRight">
+        	<p><a href="home.html">Home</a> &#65793 <a href="aboutUs.html">About Us</a> &#65793 <a href="contactUs.html">Contact Us</a> &#65793 <a href="help.html">Help</a> &#65793 <a href="signUp.html">Sign Up</a> &#65793 <a href="signIn.html">Sign In</a></p>
+    </span>
+    
+	
+ 	
+</div>
+</div>
+
 </body>
-</html>
+</html> 
