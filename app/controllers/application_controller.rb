@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
 		posts_path
 	end
 	
+	
 #	def signed_in?
 #		if user_signed_in? && request.path != '/posts'
 #			

@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+	before_filter :authenticate_user!
 
   def About
     @title = "About Us"
@@ -15,5 +16,5 @@ class PagesController < ApplicationController
   def Terms
     @title = "Terms of Use"
   end
-
+	
 end

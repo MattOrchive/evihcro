@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
-  # GET /posts
+  before_filter :authenticate_user!, :redirect_to=>'/'
+	
+	# GET /posts
   # GET /posts.xml
   def index
     @posts = Post.all
