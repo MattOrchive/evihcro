@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :redirect_to=>'/'
+  before_filter :authenticate_user!, :alert => 'You must be Logged In to continue'
 	
 	# GET /posts
   # GET /posts.xml
