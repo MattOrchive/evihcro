@@ -1,0 +1,93 @@
+<!-- SIGN UP -->
+<style type="text/css">
+	#box {
+		background: url('/images/register_box.png') no-repeat;
+		width:827px;
+		height:517px;
+		margin:35px 0 0 60px;
+	}
+	#boxContent {
+		padding:5px 5px 0 20px;
+	}
+	#boxContent h1 {
+		padding:0px 0 13px 80px;
+	}
+	#boxContent h2 {
+		padding:50px 0 10px 100px;
+	}
+	
+	#boxContent div {
+		margin-right:45px;
+		margin-bottom:26px;
+	}
+	#boxContent div img {
+		position:relative;
+		top:5px;
+	}
+	#boxContent P {
+		padding:10px 0 14px 39px;
+	}
+
+	.betaTextField {
+		width:491px;
+		height:27px;
+	}
+	.button {
+		width:90px;
+		height:29px;
+		margin:0 160px 0 222px;
+	}
+	
+	#boxContent div.field_with_errors {
+		display:inline;
+		margin-right:0;
+	}
+	#boxContent div.field_with_errors img {
+		src = '/images/signup_x.png';
+	}
+</style>
+
+<div id="box">
+	<div id="boxContent">
+
+		<h2>Create your account</h2>		
+		<h1>Become a beta tester</h1>
+		
+		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+			<div>
+				<%= f.label :beta_code, 'Beta Code', :class=>'inline betaLabelTextField' %>
+				<%= f.text_field :beta_code, :class=>'betaTextField' %>
+				<%= image_tag('signup_blank.png') %>
+			</div>
+			<div>
+				<%= f.label :email, "Email Address", :class=>'inline betaLabelTextField' %>
+				<%= f.text_field :email, :class=>'betaTextField' %>
+				<%= image_tag('signup_blank.png') %>
+			</div>
+		
+			<div>
+				<%= f.label :name, :class=>'inline betaLabelTextField' %>
+				<%= f.text_field :name, :class=>'betaTextField' %>
+				<%= image_tag('signup_blank.png') %>
+			</div>
+
+			<div>
+				<%= f.label :password, :class=>'inline betaLabelTextField' %>
+				<%= f.password_field :password, :class=>'betaTextField' %>
+				<%= image_tag('signup_blank.png') %>
+			</div>
+
+			<div>
+				<%= f.label :password_confirmation, "Re-Enter Password", :class=>'inline betaLabelTextField' %>
+				<%=f.password_field :password_confirmation,:class=>'betaTextField'%>
+				<%= image_tag('signup_blank.png') %>
+			</div>
+			
+			<%= f.submit 'submit', :class=>'button floatLeft'%>
+		
+			<p class="floatLeft">Already a member? <%=link_to('Sign In here', '/login')%></p>
+		<% end %>
+		
+		
+	</div>
+</div>
