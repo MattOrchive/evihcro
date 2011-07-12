@@ -7,4 +7,20 @@ module ApplicationHelper
       "#{base_title} | #{@title}"
     end
   end
+  
+  def errorImage(user, field)
+    if user.errors.any?
+      registrationsErrorImage(user.errors[field].blank?)
+    else
+      image_tag('errors_blank.png')
+    end
+  end
+  
+  def registrationsErrorImage(is_error)
+      if is_error
+        image_tag('errors_check.png', :class=>'withError')
+      else
+        image_tag('errors_x.png', :class=>'withError')
+      end
+  end
 end

@@ -2,19 +2,51 @@
 	#main {
 		background:none;
 	}
-	#content h1 {
-	  margin-left:174px;
+	#content #topArea{
+		
+		margin-left:auto;
+		margin-right:auto;
+		width:1000px;
+		height:500px;
+		background:#fff url('/images/contact_content.png') no-repeat;
+	}	
+	#content #topArea #topContent h1 {
+		color:#7c9758;
+		font-weight:400;
 	}
-	#content p {
-		line-height:18px;
-	  margin:5px 0 75px 174px;
+	#content #topArea #topContent {
+		padding:30px 70px 0px 60px;
 	}
+	#content #topArea #topContent span {
+		float:left;
+		width:410px;
+	}
+	#content #topArea #topContent p {
+		color:#818181;
+		font-size:18px;	 
+		line-height:25px;
+	}
+	#content #topArea #topContent form {
+		width:436px;
+		float:right;
+	}
+	#content #topArea #topContent form input {
+		width:415px;
+		height:25px;
+		font-size:15px;
+		margin-bottom:21px;
+		padding-left:10px;
+		padding-right:10px;
+		border:none;	
+	}
+	#content #topArea #topContent form input:focus {
+		outline-color:#48B76A;
+	}
+	#content #topArea #topContent form textarea {
+		width:415px;
+		height:210px;
 	
-	#suggestionBox {
-	  width:358px;
-		height:235px;
-	
-	  margin: 10px 20px 10px 105px;
+	  margin-bottom:10px;
 	  padding:5px 10px 5px 10px;
 	  
 		resize:none;
@@ -26,19 +58,16 @@
 		color:#7E7E7E;
 	  
 	  font: 15px 'Ubuntu', sans-serif;
-	}	
-	#suggestionBox:focus {
-	  outline-color:#DDDDDD;
+	}
+		#content #topArea #topContent form textarea:focus {
+	  outline-color:#48B76A;
 	  outline-width:8px;
 	  background:#fff;
 	}	
-	#content .button {
+	#content #topArea #topContent form	.button {
 	  height:30px;
 	  width:56px;
 	  
-		position:relative;
-	  top:222px;
-	  right:79px;
 		
 		-webkit-border-top-left-radius:15px 15px;
 	  -moz-border-top-left-radius:15px 15px;
@@ -52,16 +81,13 @@
 	  border-bottom:none;
 	}
 	
-	#socialDiv {
-	  margin-left:174px;
-	  clear:both;
-	}
+	
 </style>
-
+<div id="topArea">
+	<div id="topContent">
   <h1>Contact Us</h1>  
-
-  <p class="floatLeft">
-		<span>
+  <span>
+		<p>
 			We would love to hear your constructive criticism. 
 			<br />
 			Any thoughts regarding any aspect of the project 
@@ -72,11 +98,14 @@
 			<br />
 			product when we release Orchive 1.0
 			<br /><br />
-		</span>
-	
-		<span>
-			<b>Contact Info</b>
+			Looking forward to working with you,
 			<br /><br />
+			The Orchive team.
+			<br />
+		</p>
+	
+		<p>
+			<br />
 			Orchive
 			<br />
 			165 Grover Avenue
@@ -86,16 +115,24 @@
 			USA
 			<br /><br />
 			General Information: info@orchive.com
-		</span>
-  </p>
-       
-	<%= text_area_tag('suggestionBox', 'Leave a nice message', :class => "floatLeft")%> 
-
-  <%= submit_tag('Submit', :class => "button") %>
+		</p>
+  </span>
 	
-	<div id="socialDiv">
-		<%= link_to(image_tag("SN/twitter.png", :size=>"30x30")) %>
-		<%= link_to(image_tag("SN/facebook.png", :size=>"30x30")) %>
-		<%= link_to(image_tag("SN/linkedin.png", :size=>"30x30")) %>
-		<%= link_to(image_tag("SN/tumblr.png", :size=>"30x30")) %>
+	<%= form_for(:contact) do |f| %>
+		<%= f.text_field :name, :value =>'Enter your name'%>
+		<%= f.text_field :email, :value =>'Enter your email address' %>
+		<%= f.text_area :content, :value =>'Leave a nice message' %> 
+
+		<%= f.submit :class=>'button', :value=>'submit' %>
+	<% end %>
 	</div>
+</div>
+<div id="social">
+	<div id="socialContent">
+		<%= link_to(image_tag("SN/twitter.png"), 'http://twitter.com/#!/InfoOrchive') %>
+		<%= link_to(image_tag("SN/facebook.png"), 'http://www.facebook.com/Orchive') %>
+		<%= link_to(image_tag("SN/linkedin.png"), 'http://www.linkedin.com/company/orchive?trk=ppro_cprof') %>
+		<%= link_to(image_tag("SN/tumblr.png"), 'http://orchive.tumblr.com/') %>
+		<%= link_to(image_tag("SN/youtube.png"), 'http://www.youtube.com/orchive') %>
+	</div>
+</div>
