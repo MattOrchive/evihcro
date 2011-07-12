@@ -1,0 +1,13 @@
+<div id="sidee" class="floatLeft">
+  <div id="sidebar">
+    <%= image_tag('sidebar_profile.png', :id=>'profile') %>
+    <div id="postingInterface">
+      <h1>Posting Interface</h1>
+      <p>Contribute to the community</p>
+      <%= link_to((submit_tag('New Post  +', :class=>'button', :id=>'postButton')), new_post_path)%>
+      <%= image_tag('sidebar_notification.png') %>
+      <%= image_tag('sidebar_follow.png') %>
+    </div>
+  </div>
+</div>
+

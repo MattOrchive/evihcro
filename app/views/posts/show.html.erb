@@ -1,60 +1,125 @@
+<style type='text/css'>
+	#wrapper {
+		background:#FAFCF9;
+	}
+	#main {
+		background:none;
+	}
+	#content {
+		padding-top:0;
+		margin-left:0;
+	}
+	
+	/* Actual Post */
+	#rightBar { 
+		margin-left:auto;
+		margin-right:auto;
+		padding-top:40px; 
+		width:765px; 
+	}	
+	#rightBar #post { 
+		padding:10px;
+		border:3px solid #FDFDFD;
+		-webkit-border-radius:10px;
+		-moz-border-radius:10px;
+		border-radius:10px;
+	}
+	#rightBar #post #postTitle {
+		font-size:30px; 
+		font-weight:500;
+		vertical-align:50%;
+	}
+	#rightBar #post #postContent{
+		font-size:16px;
+		margin-bottom:20px;
+	}
+	#rightBar #post img {
+		-webkit-border-radius:2px;
+		-moz-border-radius:2px;
+		border-radius:2px;
+	}
+	#rightBar #post #postInfo {
+		height:60px;
+	}
+	#rightBar #post #postInfo p {
+		color:#555;
+		line-height:18px;
+		text-align:left;
+		font-size:15px;
+	}
+	#rightBar #post #postInfo section p img {
+		width:13px;
+		height:14px;
+	}
+	#rightBar #post #postInfo section {
+		text-align:left;
+	}
+	
+	#rightBar #comments h2 {
+		font-size:24px;
+	}
+</style>
+<%= render '/layouts/sideBar' %>
+
 <p class="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @post.name %>
-</p>
-
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
-
-<p>
-  <b>Content:</b>
-  <%= @post.content %>
-</p>
-
-<p>
-  <b>User location:</b>
-  <%= @post.user_location %>
-</p>
-
-<p>
-  <b>Post location:</b>
-  <%= @post.post_location %>
-</p>
-
-<p>
-  <b>Accuracy:</b>
-  <%= @post.accuracy %>
-</p>
-
-<p>
-  <b>Inaccuracy:</b>
-  <%= @post.inaccuracy %>
-</p>
-
-
-
-<p>
-  <b>Tags:</b>
-  <!--<= join_tags(@post) %>-->
-</p>
-
-
-
-<h2>Comments</h2>
-<!--<= #render :partial => "comments/comment",
+<div id='rightBar' class='floatRight'>
+	<div id='post'>
+		<%= image_tag('default_photo.png', :size=>'60x60')%>
+		<h1 class="inline" id="postTitle"><%= @post.title %></h1>
+		
+		<p id="postContent"><%= @post.content %></p>
+		
+		<section id="postInfo">
+			<section class="floatLeft">
+				<p id="postName">
+					<%=image_tag('NFIcons/reporter.png') %> 
+					Reporter: <a class="blue"><%= @post.name %></a>
+				</p>
+			
+				<p id="userLoc">
+					<%=image_tag('NFIcons/userLoc.png') %> 
+					Location: <a class="blue"><%= @post.user_location %></a>
+				</p>
+			
+				<p id="source">
+					<%=image_tag('NFIcons/source.png') %> 
+					Source: <a class='blue'>Source</a>
+				</p>
+			</section>
+		
+			<section class="floatRight">
+				<p id="tags">
+					<%=image_tag('NFIcons/tags.png') %> 
+					Tags: <a class="blue">Politics, Sports, Nature, Social</a>
+				</p>
+	
+				<p id="postLoc">
+					<%=image_tag('NFIcons/postLoc.png') %> 
+					Occuring In: <a class="blue"><%= @post.post_location %></a>
+				</p>	  
+				  
+				<p id="time">
+					<%=image_tag('NFIcons/time.png') %> 
+					Date Created: <a class='blue'>
+					<%=@post.created_at.strftime("%B %e %l:%M %p %Y")%>
+					(<%=distance_of_time_in_words(@post.created_at,	Time.now)%> ago)
+					</a>
+				</p>
+			</section>
+		</section>
+	</div>
+			
+	<div id="comments">
+		<h2>Comments:</h2>
+		<!--<= #render :partial => "comments/comment",
            #:collection => @post.comments %>-->
 
 
-<h2>Add a comment:</h2>
-<!--<= #render "comments/form" %> -->
- 
-<br />
-
-<!-- Cannot Edit Posts!
-  %= link_to 'Edit', edit_post_path(@post) %>-->
-
-<%= link_to 'Back', posts_path %>
+		<p>Add a Comment:</p>
+		<!--<= #render "comments/form" %> -->
+		
+		<%= link_to 'News Feed', posts_path %>
+	</div>
+	
+</div>

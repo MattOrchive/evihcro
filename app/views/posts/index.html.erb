@@ -1,139 +1,97 @@
-  <style type="text/css">
-		#main {
-			background:none;
-		}
-		#wrapper {
-			background:#FAFCF9;
-		}
-		#content {
-			padding-top:0;
-			margin-left:0;
-		}
-  
-  /* Sidebar */
-    #sidee {
-			width:402px;
-			border-bottom: 1px solid #E7E7E7;
-			background-color:#F2F7F3;
-      margin-right:30px;
-      background-image:url("/images/background_sideBar.png");
-      background-repeat:no-repeat;
-    }
-    #sidebar { 
-			margin:10px 50px 0 10%;
-		}
-    #sidebar #profile {
-			margin-top:4%;
-		}
-    #sidebar #postingInterface h1 {
-			font-size:18px; font-weight:600; margin-top:7px;
-		}
-    #sidebar #postingInterface p {
-			font-size:13px; margin-bottom:10px; 
-		}
-    #sidebar #postingInterface #postButton {
-			margin:4% auto 5% auto; padding:1%;
-			height:30px;
-		}
-
+<style type="text/css">
+	#main {
+		background:none;
+	}
+	#wrapper {
+		background:#FAFCF9;
+	}
+	#content {
+		padding-top:0;
+		margin-left:0;
+	}
 	/* Feed */
-	#feed { 
+	#rightBar { 
 		margin-left:auto;
 		margin-right:auto;
 		padding-top:20px; 
 		width:745px; 
 		background-color:#F9F9F9;
 	}
-	#feed h1{
+	#rightBar h1{
 		font-size:30px; font-weight:400;
 	}
-	#feed p{ 
+	#rightBar p{ 
 		padding-left:8px; 
 		font-size:11px;
 	}
-	#feed a{ 
+	#rightBar a{ 
 		text-decoration:none; 
-		
 	}
-	#feed div {
+	#rightBar div {
 		padding-left:2px;
 		margin-bottom:5px;
 	}
-	#feed div #filters {
+	#rightBar div #filters {
 		padding-top:4px;
 		line-height:14px;
 	}
-	#feed div p a {		
+	#rightBar div p a {		
 		margin-left:20px;
 	}
     
 		
 		
-	#feed #post {
+	#rightBar #post {
 		padding: 8px; 
 		margin-bottom:10px;
 		height:143px;
 		background-image:url('images/background_post.png');
 		background-repeat:no-repeat;
 	}
-	#feed #photo {
+	#rightBar #photo {
 		margin:18px 8px 8px 8px;
-		width:60px;
-		height:60px;
 	}
-	#feed #postTitle {
+	#rightBar #postTitle {
 		font-size:18px; 
 		font-weight:500;
 		margin-bottom:0;
 	}
-	#feed #postContent {
+	#rightBar #postContent {
 		font-size:13px;
 		line-height:normal;
 		padding-left:76px;
 	}
-	#feed #postInfo {
+	#rightBar #postInfo {
 		color:#555555;
 	}
-	#feed #postInfo p {
+	#rightBar #postInfo p {
 		line-height:18px;
 		text-align:left;
 		font-size:12px;
 	}
-	#feed #postInfo p img {
+	#rightBar #postInfo p img {
 		width:9px;
 		height:10px;
 	}
-	#feed #postInfo p a{
+	#rightBar #postInfo p a{
 		margin-left:0;
 	}
-	#feed #post #postInfo #postName, #feed #post #postInfo  #userLoc, #feed #post #postInfo #source {
+	#rightBar #post #postInfo #postName, #rightBar #post #postInfo  #userLoc, #rightBar #post #postInfo #source {
 		width:200px;
 	}
 	
-	#feed #omitText {
+	#rightBar #omitText {
 		color:#00BE69;
 		margin-left:1px;
 	}
-	#feed #delete {
+	#rightBar #delete {
 		font-size:12px;
 	}
 </style>
 
-<div id="sidee" class="floatLeft">
-  <div id="sidebar">
-    <%= image_tag('sidebar_profile.png', :id=>'profile') %>
-    <div id="postingInterface">
-      <h1>Posting Interface</h1>
-      <p>Contribute to the community</p>
-      <%= link_to((submit_tag('New Post  +', :class=>'button', :id=>'postButton')), new_post_path)%>
-      <%= image_tag('sidebar_notification.png') %>
-      <%= image_tag('sidebar_follow.png') %>
-    </div>
-  </div>
-</div>
+<%= render '/layouts/sideBar' %>
 
-<div id="feed" class="floatRight">
-
+<div id="rightBar" class="floatRight">
 	<div>
 		<h1 class="floatLeft">News Feed</h1>
 		<p id="filters">
@@ -146,9 +104,10 @@
 	<% @posts.reverse.each do |post| %>
 		<div id="post">
 			<%=link_to  post.title, post, :class=>'blue'%>
-			<%= link_to'Delete', post, :id=>'delete', :class=>'floatRight', :confirm=>'Are you sure?', :method=>:delete %>
-			
-			<%= image_tag('default_photo.png',:id=>"photo", :class=>"floatLeft")%>
+			<% if user_signed_in? %>
+				<%= link_to'Delete', post, :id=>'delete', :class=>'floatRight', :confirm=>'Are you sure?', :method=>:delete %>
+			<% end %>
+			<%= image_tag('default_photo.png',:id=>"photo", :class=>"floatLeft", :size=>'60x60')%>
 
 
       <p id="postContent">
