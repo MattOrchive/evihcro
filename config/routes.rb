@@ -1,6 +1,6 @@
 OrchiveApp::Application.routes.draw do	
 	
-	devise_for :user, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "join" }, :controllers => { :sessions => "users/sessions", :registrations => 'users/registrations' }
+  devise_for :users, :path=> '', :path_names => {:sign_in => 'login', :sign_up => 'join'}
 	
         
 	resources :beta_pages

@@ -64,7 +64,7 @@ Devise.setup do |config|
   config.stretches = 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "bfa9c2a9027e208d3a06d8cdea1755915e0d5eaf74fc3d702ca97a8984ae6fd4bcd470edb91af56f1b015387a6bf00154eb9f8f31b7942b0a785735225418c90"
+  # config.pepper = "55761ef5ae59ec82233990e605301ca4a3bfde35294c43a96098b29a888eaedfb337cdfddf8441fd6799bd50f0e2a72e776819de7b9759d2bb0d608705e30fbe"
 
   # ==> Configuration for :confirmable
   # The time you want to give your user to confirm his account. During this time
@@ -98,10 +98,10 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length. Default is 6..128.
-    config.password_length = 7..20
+  # config.password_length = 6..128
 
   # Regex to use to validate the email address
-    config.email_regexp = /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+  # config.email_regexp = /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
 
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
@@ -161,11 +161,11 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-		config.scoped_views = true
+  # config.scoped_views = false
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
-    config.default_scope = :user
+  # config.default_scope = :user
 
   # Configure sign_out behavior.
   # Sign_out action can be scoped (i.e. /users/sign_out affects only :user scope).
