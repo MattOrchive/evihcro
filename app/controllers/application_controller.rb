@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-# before_filter :signed_in?
+	
+	before_filter :check_login, :only => :index
 	
 	# Devise, way of using a different Layout for all the devise/non-signed in Views
 #  layout :layout_by_resource
@@ -20,12 +21,8 @@ class ApplicationController < ActionController::Base
 	end
 	
 	
-#	def signed_in?
-#		if user_signed_in? && request.path != '/posts'
-#			
-#		else
-#			redirect_to 'beta_pages#index'				
-#		end
-#	end
+	def check_login
+		redirect_to posts_path if user_signed_in?
+	end
 
 end
