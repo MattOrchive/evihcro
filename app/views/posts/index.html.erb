@@ -45,7 +45,7 @@
 		padding: 8px; 
 		margin-bottom:10px;
 		height:143px;
-		background-image:url('images/post_background.png');
+		background-image:url('/images/post_background.png');
 		background-repeat:no-repeat;
 	}
 	#rightBar #photo {
@@ -106,9 +106,11 @@
 	<% @posts.each do |post| %>
 		<div id="post">
 			<%=link_to  post.title, post, :class=>'blue'%>
-			<% if user_signed_in? %>
+			
+			<% if current_user.admin? %>
 				<%= link_to'Delete', post, :id=>'delete', :class=>'floatRight', :confirm=>'Are you sure?', :method=>:delete %>
 			<% end %>
+			
 			<%= image_tag('default_photo.png',:id=>"photo", :class=>"floatLeft", :size=>'60x60')%>
 
 

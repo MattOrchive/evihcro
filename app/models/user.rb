@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
 	
 	name_regex = /\A[a-zA-Z .-]+\z/
 	
+	validates :beta_code, :presence => true
+	
 	validates :name, :presence=> true,
 									 :length => {:within => 5..25},
 									 :format => {:with => name_regex }
