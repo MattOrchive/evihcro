@@ -20,7 +20,7 @@ input, textarea {
 }
 
 #main{
-  background-image: url("/images/background_content.png");
+  background-image: url("/images/background.png");
   background-repeat: no-repeat;
   background-size:100%;
   background-position:0 -6px;

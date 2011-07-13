@@ -1,9 +1,7 @@
 /* Header CSS (Logo + Nav Bar)*/
 #header {
-  
-  background-image: url('/images/background_header.png');
+  background-image: url('/images/header_background.png');
   background-repeat: no-repeat;
-  
   padding-bottom:15px;
   border-bottom:1px solid #E8E8E8;
 }
@@ -40,7 +38,7 @@
 
 /* Navbar CSS */
 #navBar{
-  background-image:url('/images/background_navBar.png');
+  background-image:url('/images/navBar_background.png');
   background-repeat:no-repeat;
 }
 

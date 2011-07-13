@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* Footer CSS Document */
 #footer {
-	background:url('/images/background_footer.png') 0 -3px no-repeat;
+	background:url('/images/footer_background.png') 0 -3px no-repeat;
 	background-size:100%;
 	border-top:1px solid #EAEAEA;
 	height:180px;

@@ -3,8 +3,10 @@ class PagesController < ApplicationController
 	
 	layout :layout_by_resource
   def layout_by_resource
-    if current_user == nil
-      'beta'
+    if signed_in?
+      'application'
+		else
+			'beta'
     end
   end
   

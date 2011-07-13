@@ -1,10 +1,15 @@
 #beta #main {
-	background-image:url('/images/background_betaPages.png');
+	background-image:url('/images/betaPages_background.png');
 }
 #beta #main #content {
 	padding-bottom:0;
 }
 #beta header {
+	height:75px;
+	border-top:3px solid #80CD97;
+}
+#beta header header{
+	border:none;
 	padding:20px 0 20px 0;
 	width:1200px;
 	margin-left:auto;
