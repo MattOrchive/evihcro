@@ -9,7 +9,7 @@
       <%= link_to 'Home', '/' %>
       <%= link_to 'About', '/about' %>
       <%= link_to 'Contact', '/contact' %>
-      <%= link_to 'Help', '/future' %>
+      <%= link_to 'Help', '/help' %>
     </p>
   </span>
 	<p class="floatRight">Welcome, <%= link_to(current_user.name, user_path(current_user)) %></a> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
