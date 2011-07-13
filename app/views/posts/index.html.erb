@@ -100,8 +100,10 @@
 			<a id="filterTags">Results are Based off of the Tags: Javascript</a>
 		</p>
 	</div>
+	
+	<%= paginate @posts %>
 
-	<% @posts.reverse.each do |post| %>
+	<% @posts.each do |post| %>
 		<div id="post">
 			<%=link_to  post.title, post, :class=>'blue'%>
 			<% if user_signed_in? %>

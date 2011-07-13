@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 	before_filter :authenticate_user!
-
+	
   def About
     @title = "About Us"
   end

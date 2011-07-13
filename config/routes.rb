@@ -75,4 +75,6 @@ OrchiveApp::Application.routes.draw do
 	match '/tys' => 'beta_pages#_signup'
 	match '/tyo' => 'beta_pages#_open'
 	match '/tyf' => 'beta_pages#_full'
+	
+	match '/users/:id', :to => 'users#show',    :as => :user,         :via => :get
 end
