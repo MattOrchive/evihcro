@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  #before_filter :check_beta_code
+  before_filter :check_beta_code
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
@@ -19,4 +19,7 @@ class User < ActiveRecord::Base
 	
 	validates :password, :presence => true
   
+	def check_beta_code
+		errors.add(:beta_code, "Invalid Beta Code") if :beta_code != 'AAA'
+	end
 end
