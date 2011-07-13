@@ -7,6 +7,7 @@ class PagesController < ApplicationController
 
   def Contact
     @title = "Contact Us"
+		
 		@name = 'Default'
 		@email = 'example@example.com'
 		@content = 'Orchive is great!'

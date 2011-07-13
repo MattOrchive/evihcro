@@ -11,7 +11,7 @@
 		padding:44px 5px 0 20px;
 	}
 	#boxContent h1 {
-		padding:0px 0 24px 80px;
+		padding:0px 0 22px 80px;
 	}
 	#boxContent h2 {
 		padding:50px 0 10px 100px;
@@ -21,27 +21,25 @@
 		margin-right:45px;
 		margin-bottom:27px;
 	}
+	#boxContent #name {
+		margin-bottom:25px;
+	}
 	#boxContent #email {
-		margin-bottom:26px;
+		margin-bottom:25px;
 	}
 	#boxContent div img {
 		position:relative;
 		top:5px;
 	}
-	#boxContent div img.withError {
-		position:relative;
-		top:5px;
-		margin-bottom:1px;
-	}
 	#boxContent P {
 		padding:0 85px 0 0;
 	}
-
-	.betaTextField {
+	
+	#boxContent .betaTextField {
 		width:491px;
 		height:27px;
 	}
-	.button {
+	#boxContent .button {
 		width:90px;
 		height:29px;
 		margin:0 160px 0 222px;
@@ -66,13 +64,13 @@
 				<%= errorImage(@user, :beta_code)%>
 			</div>
 
-			<div>
+			<div id="name">
 				<%= f.label :name, :class=>'inline betaLabelTextField' %>
 				<%= f.text_field :name, :class=>'betaTextField' %>
 				<%= errorImage(@user, :name)%>
 			</div>
 
-			<div id='email'>
+			<div id="email">
 				<%= f.label :email, "Email Address", :class=>'inline betaLabelTextField' %>
 				<%= f.text_field :email, :class=>'betaTextField' %>
 				<%= errorImage(@user, :email)%>

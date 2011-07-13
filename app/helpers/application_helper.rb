@@ -18,9 +18,9 @@ module ApplicationHelper
   
   def registrationsErrorImage(is_error)
       if is_error
-        image_tag('errors_check.png', :class=>'withError')
+        image_tag('errors_check.png')
       else
-        image_tag('errors_x.png', :class=>'withError')
+        image_tag('errors_x.png')
       end
   end
 end
