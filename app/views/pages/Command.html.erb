@@ -1,0 +1,110 @@
+<style type='text/css'>
+	#wrapper #main {
+		padding-top:40px;
+		background:none;
+	}
+	#wrapper #main #content {
+		background:transparent url('/images/help_background.png') no-repeat;
+		padding:15px 0 0 15px;
+		width:790px;
+	}
+	#wrapper #main #content h1 {
+		margin-bottom:40px;
+	}
+	#wrapper #main #content div {
+		height:190px;
+		margin-bottom:41px;
+	}
+	#wrapper #main #content div h2 a {
+		padding-left:30px;
+		color:#383838;
+		text-decoration:none;
+	}
+	#wrapper #main #content div h2 a:hover {
+		color:#00BE69;
+	}
+	#wrapper #main #content div table {
+		font-size:14px;
+		margin:40px 0 0 200px;
+	}
+	#wrapper #main #content div #future {
+		margin-top:50px;
+	}
+	#wrapper #main #content div table td {
+		width:295px;
+		padding-bottom:8px;
+	}
+	#wrapper #main #content div table td a {
+		color:#666666;
+		text-decoration:none;
+	}
+	#wrapper #main #content div table td a:hover {
+		color:#00BE69;
+	}
+</style>
+<h1>Command Center</h1>
+
+<div>
+	<h2><%= link_to("Getting Started with Orchive", '/help')%></h2>
+	<!--READ ON BUTTON -->
+	<table>
+		<tr>
+			<td><%= link_to("Making a New Post", '/help#newPost')%></td>
+			<td><%= link_to("Contact Us", '/help#contact')%></td>
+		</tr>
+		<tr>
+			<td><%= link_to("Commenting", '/help#commenting')%></td>
+			<td><%= link_to("Feeds (Story Filters)", '/help#feeds')%></td>
+		</tr>
+		<tr>	
+			<td><%= link_to("Accuracy Rating", '/help#accuracyRating')%></td>
+			<td><%= link_to("Filters (Topic Filters)", '/help#filters')%></td>
+		</tr>
+		<tr>	
+			<td><%= link_to("Sign Up", '/help#signUp')%></td>
+			<td><%= link_to("Intellectual Property", '/help#intellectualProperty')%></td>
+		</tr>
+	</table>
+</div>
+
+<div>
+	<h2><%= link_to("Account Settings", '/edit') %></h2>
+	<!--READ ON BUTTON -->
+	<table>
+		<tr>
+			<td><%= link_to('Name', '/edit') %></td>
+			<td><%= link_to(current_user.name, '/edit') %></td>
+		</tr>
+		<tr>
+			<td><%= link_to('Email Address', '/edit') %></td>
+			<td><%= link_to(current_user.email, '/edit') %></td>
+		</tr>
+		<tr>	
+			<td><%= link_to('Password', '/edit') %></td>
+			<td><%= link_to('¤¤¤¤¤¤¤¤¤¤', '/edit')%></td>
+		</tr>
+		<tr>	
+			<td><%= link_to('Location', '/edit') %></td>
+			<td><%= link_to('Location', '/edit')  %></td>
+		</tr>
+	</table>
+</div>
+
+<div>
+	<h2><%= link_to('Future Features', '/future') %></h2>
+	<!--READ ON BUTTON -->
+	<table id="future">
+		<tr>
+			<td><%= link_to('Profile', '/future#profile') %></td>
+			<td><%= link_to("World Map", '/future#worldMap') %></td>
+		</tr>
+		<tr>
+			<td><%= link_to("News Updates", '/future#updates') %></td>
+			<td><%= link_to("Interests", '/future#interests') %></td>
+		</tr>
+		<tr>	
+			<td><%= link_to("Following", '/future#following') %></td>
+			<td><%= link_to("Interest Feed", '/future#interestFeed') %></td>
+		</tr>
+	</table>
+</div>

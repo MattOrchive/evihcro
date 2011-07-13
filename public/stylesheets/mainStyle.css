@@ -10,6 +10,11 @@ article,aside,footer,header,hgroup,nav,section,figure,figcaption { display: bloc
 
 
 /* Main CSS Document */
+@font-face { 
+	font-family: Delicious; 
+ 	src: url('/fonts/Delicious-Roman.otf');
+}
+
 BODY {
   margin:0px;
   color:#000; 
@@ -33,12 +38,14 @@ input, textarea {
 	padding-bottom:75px;
 }
 h1{
+	font-family:Delicious, sans-serif;
   font-size:32px;
   font-weight:500;
   margin-bottom:10px;
 }
 h2{
-	font-size:30px;
+	font-family:Delicious, sans-serif;
+	font-size:28px;
 	font-weight:500;
 }
 p {

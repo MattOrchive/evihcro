@@ -2,14 +2,14 @@
 <div id="headerContent">
 
 <div id="topBar"> 
-  <%= link_to(image_tag('logo.png', :alt=>'Orchive', :id=>'logo'), '/') %>
+  <%= link_to(image_tag('logo.png', :alt=>'Orchive', :id=>'logo'), '/posts') %>
   
   <span id="headPages" class="floatRight">
     <p>
-      <%= link_to 'Home', '/' %>
+      <%= link_to 'Home', '/posts' %>
       <%= link_to 'About', '/about' %>
       <%= link_to 'Contact', '/contact' %>
-      <%= link_to 'Help', '/help' %>
+      <%= link_to 'Command', '/command' %>
 			<% if current_user.admin?%>
 				<%= link_to 'Dashboard', '/dashboard'%>
 			<%end%>

@@ -67,6 +67,7 @@ OrchiveApp::Application.routes.draw do
   match '/contact' => 'Pages#Contact'
   match '/about' => 'Pages#About'
 	match '/help' => 'Pages#Help'
+	match '/command' => 'Pages#Command'
   match '/privacy' => 'Pages#Privacy'
   match '/terms' => 'Pages#Terms'
   match '/future' => 'Pages#Future'
