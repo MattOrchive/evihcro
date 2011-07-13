@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
 	
 	
 	def check_beta_code
-		errors.add(:beta_code, "Invalid Beta Code") if :beta_code != 'AAA'
+		beta_code_array = ['AAAAAAAAAA', 'BBBBBBBBBB', 'CCCCCCCCCC', 'DDDDDDDDDD', 'EEEEEEEEEE']
+		
+		unless beta_code_array.include?(beta_code)
+			errors.add(:beta_code, "Invalid Beta Code")
+		end
 	end
 end

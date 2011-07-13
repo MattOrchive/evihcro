@@ -1,70 +1,139 @@
   <style type='text/css'>
-	#main {
-	  background-image:url('/images/background_about.png');
-	  background-position:0 -100px;
+	html body #beta #main, html body #content #main {
+	  background:url('/images/background_about.png') no-repeat;
 	}
-	#content h1, #content p {
-	  margin-left:100px;
+	#main #content {
+		padding-top:210px;
 	}
-  </style>
+	#main #content #top {
+		width:1115px;
+		margin:40px auto 320px auto;
+	}
+	#main #content #top div {
+		margin:0 30px 0 30px;
+		color:#666666;
+		float:left;
+	}
+	
+	#main #content #top #box1 {
+		margin-left:0;
+		background:transparent url('/images/about_box1.png') no-repeat;
+		padding:35px 0 0 95px;
+		width:212px;
+		height:88px;
+	}
+	#main #content #top #box2 {
+		background:transparent url('/images/about_box2.png') no-repeat;
+		padding:25px 0 0 90px;
+		width:218px;
+		height:98px;
+	}
+	#main #content #top #box3 {
+		margin-right:0;
+		background:transparent url('/images/about_box3.png') no-repeat;
+		padding:35px 0 0 85px;
+		width:222px;
+		height:90px;
+	}
+	#main #content #top img {
+		margin-top:40px;
+	}
+	#main #content #top #map {
+		margin-left:5px;
+		margin-right:106px;
+	}
+	#main #content #top #cpu {
+		position:relative;
+		top:25px;
+		margin-right:100px;
+	}
+	
+	#main #content #bottom {
+		width:1115px;
+		height:700px;
+		margin:0 auto 0 auto;
+	}
+	#main #content #bottom img {
+		margin-right:45px;
+	}
+	#main #content #bottom #home {
+		margin-right:0;
+	}
+	#main #content #bottom p {
+		float:left;
+		margin-right:107px;
+		color:#444444;
+	}
+	#main #content #bottom #homeText {
+		margin-right:0;
+	}
+	#main #content #bottom p a {
+		text-decoration:none;
+	}
+</style>
   
-  <h1>About Us</h1>
-  
-    <p id="info">
-          Orchive seeks to create an alternative way to
-      access breaking news stories
-	  <br />
-      through an international networking website.
-      <br /><br />
-      Recognizing the importance of documenting the voices of those affected by 
-      <br />
-      an issue, Orchive provides a much-needed medium for people to share their own
-      <br />
-      experiences with significant events.
-      <br /><br />
-      The site provides a way for everyday people facing newsworthy events to
-      <br />
-      speak, be heard, and listen.
-      <br /><br />
-      Removing the filter that can sometimes distort the news in conventional media, 
-      <br />
-      Ochive presents users with a more pure and fair look at all sides of the story
-      <br />
-      from the voices of different people.
-    </p>
-    
-  
-  
-  <!-- This is another format for the text (Not used)
-    Orchive seeks to create an alternative way to
-      <br />
-      access breaking news stories through an interna-
-      <br />
-      tional networking website.
-      <br /><br />
-      Recognizing the importance of documenting the
-      <br />
-      voices of those affected by an issue,
-      Orchive pro-
-      <br />
-      vides a much-needed medium for people to share
-      <br />
-      their own experiences with significant events.
-      <br /><br />
-      The site provides a way for everyday people
-      <br />
-      facing newsworthy events to speak, be heard, and
-      <br />
-      listen.
-      <br /><br />
-      Removing the filter that can sometimes distort the
-      <br />
-      news in conventional media, Ochive presents
-      <br />
-      users with a more pure and fair look at all sides of
-      <br />the story from the voices of different people.
-	  
-	  <br />
-	  <br />
-	  <br /><br /><br /><br />
-	  -->
+<div id="top">
+	<div id="box1">
+		<p>People report what's going<br />on around them</p>
+	</div>
+	
+	<%= image_tag('about_arrow.png', :class=>'floatLeft')%>
+	
+	<div id="box2">
+		<p>Everyone can access and<br />evaluate other people's posts<br />about what's going on</p>
+	</div>
+	
+	<%= image_tag('about_arrow.png', :class=>'floatLeft')%>
+	
+	<div id="box3">
+		<p>Each user gains a new, clear<br />sense of the news</p>
+	</div>
+	
+	<%= image_tag('about_map1.png', :id=>'map')%>   
+	<%= image_tag('about_cpu2.png', :id=>'cpu')%>
+	<%= image_tag('about_chest3.png', :id=>'chest')%>
+</div>
+
+<div id="bottom">
+	<%=image_tag('about_idea.png')%>
+	<%=link_to(image_tag('about_people.png', :id=>'people', :onmouseover=>'this.src="/images/about_peopleHover.png"', :onmousedown=>'this.src="/images/about_peopleActive.png"', :onmouseout=>'this.src="/images/about_people.png"'), '/team')%>
+	<%=image_tag('about_home.png', :id=>'home')%>
+	
+	<p>
+		Orchive is a medium for everyday people
+		<br />
+		facing newsworthy events to speak,
+		<br />
+		be heard, and listen.
+		<br /><br />
+		By removing the filter that can distort news
+		<br />
+		in conventional media, Orchive presents a
+		<br />
+		purer view of news form the voices of
+		<br />
+		different people.
+	</p>
+	
+	<p>
+		Orchive is made by a group of high school
+		<br />
+		students who are thinkers and dreamers.
+		<br />
+		we are a small group of talented people
+		<br />
+		who strive to deliver the best experience
+		<br />
+		we can. <%=link_to('Meet the team', '/team', :class=>'green')%>
+	</p>
+	
+	<p id="homeText">
+		We are based in Princeton, New Jersey. If
+		<br />
+		you'd like to <%=link_to('contact us', '/contact', :class=>'green')%>, whether in
+		<br />
+		person, by mail or over the web, we would
+		<br />
+		much appreciate it.
+	</p>
+</div>
