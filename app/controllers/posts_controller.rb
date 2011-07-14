@@ -1,11 +1,10 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :alert => 'You must be Logged In to continue'
+  before_filter :authenticate_user!, :alert => 'You must be logged in to continue'
 	
 	# GET /posts
   # GET /posts.xml
   def index
     @posts = Post.order("name").page(params[:page]).per(5)
-    #@posts = Post.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -44,6 +43,7 @@ class PostsController < ApplicationController
   # POST /posts.xml
   def create
     @post = Post.new(params[:post])
+		@post.name = current_user.name
 
     respond_to do |format|
       if @post.save
@@ -83,4 +83,5 @@ class PostsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+	
 end

@@ -1,0 +1,8 @@
+<div id="comment">
+	<p><%= comment.content %></p>
+	<p>Name: <%= comment.name %></p>
+	
+	<p><%=distance_of_time_in_words(comment.created_at, Time.now)%> ago</p>
+	
+	<%= link_to 'Delete Comment', [comment.post, comment], :confirm => 'Are you sure?',:method => :delete %>
+</div>

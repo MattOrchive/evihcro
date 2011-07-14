@@ -15,7 +15,7 @@ class CreatePosts < ActiveRecord::Migration
       t.integer :inaccuracy
       
       t.integer :trending_value
-
+			
       t.timestamps
     end
   end

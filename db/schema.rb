@@ -10,24 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110713163337) do
+ActiveRecord::Schema.define(:version => 20110714034815) do
 
-  create_table "admins", :force => true do |t|
-    t.string   "email",                             :default => "", :null => false
-    t.string   "encrypted_password", :limit => 128, :default => "", :null => false
-    t.integer  "sign_in_count",                     :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.integer  "failed_attempts",                   :default => 0
-    t.string   "unlock_token"
-    t.datetime "locked_at"
+  create_table "comments", :force => true do |t|
+    t.string   "name"
+    t.text     "content"
+    t.integer  "post_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
 
   create_table "posts", :force => true do |t|
     t.string   "name"
@@ -40,6 +32,23 @@ ActiveRecord::Schema.define(:version => 20110713163337) do
     t.integer  "accuracy"
     t.integer  "inaccuracy"
     t.integer  "trending_value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "tags", :force => true do |t|
+    t.boolean  "politics"
+    t.boolean  "technology"
+    t.boolean  "entertainment"
+    t.boolean  "sports"
+    t.boolean  "science"
+    t.boolean  "crime"
+    t.boolean  "business"
+    t.boolean  "social"
+    t.boolean  "nature"
+    t.boolean  "other"
+    t.integer  "post_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

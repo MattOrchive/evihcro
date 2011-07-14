@@ -112,12 +112,12 @@
 			
 	<div id="comments">
 		<h2>Comments:</h2>
-		<!--<= #render :partial => "comments/comment",
-           #:collection => @post.comments %>-->
+		<%= render :partial => "comments/comment",
+		           :collection => @post.comments %>
 
 
 		<p>Add a Comment:</p>
-		<!--<= #render "comments/form" %> -->
+		<%= render "comments/form" %>
 		
 		<%= link_to 'News Feed', posts_path %>
 	</div>

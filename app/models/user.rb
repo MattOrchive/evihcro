@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
-  validate :check_beta_code
+  validate :check_beta_code, :except => 'update'
+	
+	has_many :posts
+	has_many :comments
 	  
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
@@ -8,7 +11,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
 	attr_accessor :beta_code
-  attr_accessible :beta_code, :email, :name, :password, :password_confirmation, :remember_me
+  attr_accessible :beta_code, :email, :name, :password, :password_confirmation, :admin, :remember_me
 	
 	name_regex = /\A[a-zA-Z .-]+\z/
 	

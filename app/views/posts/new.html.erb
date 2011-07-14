@@ -1,12 +1,10 @@
+<% @post.tags.build %>
 <h1>New post</h1>
-
-<!--< @post.tags.build %> -->
 
 <%= form_for(@post) do |post_form| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
       <ul>
       <% @post.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -15,10 +13,6 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= post_form.label :name %><br />
-    <%= post_form.text_field :name %>
-  </div>
   <div class="field">
     <%= post_form.label :title %><br />
     <%= post_form.text_field :title %>
@@ -45,10 +39,9 @@
   </div>
 
   <h2>Tags</h2>
-  <!--<= #render :partial => 'tags/form',
-             #:locals => {:form => post_form} %>-->
-
-  <div class="actions">
+	<%= render :partial => 'tags/form', :locals => {:form => post_form} %>
+  
+	<div class="actions">
     <%= post_form.submit %>
   </div>
 <% end %>

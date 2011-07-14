@@ -1,4 +1,4 @@
-module PagesHelper
+ module PagesHelper
   #Return the Correct Title
   def title
     base_title = "Orchive"

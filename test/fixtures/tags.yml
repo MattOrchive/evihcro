@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  politics: false
+  tech: false
+  entertainment: false
+  sports: false
+  science: false
+  crime: false
+  business: false
+  social: false
+  nature: false
+  other: false
+  post: 
+
+two:
+  politics: false
+  tech: false
+  entertainment: false
+  sports: false
+  science: false
+  crime: false
+  business: false
+  social: false
+  nature: false
+  other: false
+  post: 

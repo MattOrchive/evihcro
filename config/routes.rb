@@ -1,11 +1,21 @@
 OrchiveApp::Application.routes.draw do	
         
-  devise_for :admins
+  resources :comments
 
   devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "join" }, :controllers => {:registrations => 'users/registrations', :sessions=> 'users/sessions'}  
+	
 	resources :beta_pages
 	resources :pages
-	resources :posts
+	
+	resources :users do
+		resources :comments
+		resources :posts
+	end
+	
+	resources :posts do
+		resources :comments
+		resources :tags
+	end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -81,5 +91,5 @@ OrchiveApp::Application.routes.draw do
 	match '/tyf' => 'beta_pages#_full'
 	
 	match '/users/:id', :to => 'users#show',    :as => :user,         :via => :get
-	match '/dashboard', :to => 'admins#index'
+	match '/dashboard' => 'users#adminUI'
 end
