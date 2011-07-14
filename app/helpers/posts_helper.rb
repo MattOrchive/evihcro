@@ -11,16 +11,16 @@ module PostsHelper
 
 	def showTags(post)
 		tagString = ''
-		tagString += "Politics " if post.tags(:politics)
-		tagString += "Technology " if post.tags(:technology)
-		tagString += "Entertainment " if post.tags(:entertainment)
-		tagString += "Sports " if post.tags(:sports)
-		tagString += "Science " if post.tags(:science)
-		tagString += "Crime " if post.tags(:crime)
-		tagString += "Business " if post.tags(:business)
-		tagString += "Social " if post.tags(:social)
-		tagString += "Nature " if post.tags(:nature)
-		tagString += "Other " if post.tags(:other)
+		tagString += "Politics " if post.tag[:politics]
+		tagString += "Technology " if post.tag(:technology)
+		tagString += "Entertainment " if post.tag(:entertainment)
+		tagString += "Sports " if post.tag(:sports)
+		tagString += "Science " if post.tag(:science)
+		tagString += "Crime " if post.tag(:crime)
+		tagString += "Business " if post.tag(:business)
+		tagString += "Social " if post.tag(:social)
+		tagString += "Nature " if post.tag(:nature)
+		tagString += "Other " if post.tag(:other)
 		
 		return tagString
 	end
