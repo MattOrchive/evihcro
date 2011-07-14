@@ -1,8 +1,13 @@
 class User < ActiveRecord::Base
-  validate :check_beta_code, :except => 'update'
+  validate :check_beta_code, :on => 'create'
 	
+	has_and_belongs_to_many :roles
 	has_many :posts
 	has_many :comments
+	
+	def role?(role)
+      return !!self.roles.find_by_name(role.to_s.camelize)
+  end
 	  
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable

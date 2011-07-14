@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user!, :alert => 'You must be logged in to continue'
+	load_and_authorize_resource
 	
 	# GET /posts
   # GET /posts.xml

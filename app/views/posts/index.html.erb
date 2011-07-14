@@ -110,7 +110,7 @@
 			<% if current_user.admin? %>
 				<%= link_to('Delete', post, :id=>'delete', :class=>'floatRight', :confirm=>'Are you sure?', :method=>:delete)%>
 			<% else %>	
-				<%= link_to('Flag', flagPost(post), :id=>'delete', :class=>'floatRight', :confirm=>'Are you sure?')%>
+				<!--=# link_to "Flag", :controller => "posts", :action => "update", #:method => :put, :post => {:flag => true}%>-->
 			<% end %>
 			
 			<%= image_tag('default_photo.png',:id=>"photo", :class=>"floatLeft", :size=>'60x60')%>
@@ -128,7 +128,7 @@
 
 				<p id="tags" class="floatLeft">
 					<%=image_tag('NFIcons/tags.png') %> 
-					Tags: <a class="blue"><%= showTags(post) %></a>
+					Tags: <a class="blue"></a>
 				</p>
 	  
 				<p id="userLoc" class="clearLeft floatLeft">

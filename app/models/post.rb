@@ -1,11 +1,10 @@
 class Post < ActiveRecord::Base
+	acts_as_taggable_on
+	acts_as_taggable_on :tags
 	belongs_to :user
 	
 	has_many :comments, :dependent => :destroy
-	has_one :tag
-	
-	accepts_nested_attributes_for :tag, :allow_destroy => :true,
-    :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
+	#has_one :tag
 	
 	title_regex = /\A[a-zA-Z ,.-\/\[\]\{\}\'\"]+\z/
 

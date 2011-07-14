@@ -7,8 +7,11 @@ gem 'rails', '3.0.8'
 
 gem 'sqlite3', :require => 'sqlite3'
 gem 'devise'
+gem 'cancan'
 gem 'kaminari'
 gem 'rake', '0.9.2'
+gem 'acts-as-taggable-on'
+
 #gem 'mysql2', '0.2.6'
 
 group :development do
