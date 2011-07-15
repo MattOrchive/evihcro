@@ -7,16 +7,11 @@ class Ability
 		
 		if user.role? :admin
 			can :manage, :all
-			
 		else		
-			can :create, Post
-			
-			can :read, Post
+			can :create, [Post, Comment]			
+			can :read, [Post, Comment]
 		end
-		
-		def role?(role)
-			return !!self.roles.find_by_name(role.to_s.camelize)
-		end
+
 	end
     #
     # The first argument to `can` is the action you are giving the user permission to do.

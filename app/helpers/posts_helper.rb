@@ -29,4 +29,8 @@ module PostsHelper
 		flagged = true
 	end
 	
+	def displayIcon(num)
+    image_tag("header/icon#{num}.png", :class=>'icon')
+  end
+  
 end

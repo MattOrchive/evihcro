@@ -6,56 +6,43 @@
   
   <span id="headPages" class="floatRight">
     <p>
-      <%= link_to 'Home', '/posts' %>
-      <%= link_to 'About', '/about' %>
-      <%= link_to 'Contact', '/contact' %>
-      <%= link_to 'Command', '/command' %>
-			<% if current_user.admin?%>
-				<%= link_to 'Dashboard', '/dashboard'%>
-			<%end%>
+      <%= link_to 'Feed', '/posts' %>
+			
+			<% if current_user.role?('admin') %>
+				<%= link_to('Dashboard', '/dashboard') %>
+			<% end %>
     </p>
   </span>
-	<p class="floatRight">Welcome, <%= link_to(current_user.name, user_path(current_user)) %></a> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+
+	<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 </div>
 
 <div id="navBar">
-  <%= text_field_tag('searchField', 'Start a search', :class => "floatLeft") %>
-  
-  <span id="newsFeed" class="floatLeft">
-    <%= link_to 'World Map', '/future' %> | 
-    <%= link_to 'News Feed', posts_path %>
+	<%= form_for(:search) do |f|%>
+  	<%= f.text_field :searchValue, :id => 'searchField', :value=>'Start a search'%>
+		<%= f.submit :id => 'submit', :value => '' %>
+  <% end %>
+	
+	<%= link_to(submit_tag('New Post', :class=>'floatLeft'), new_post_path)%>
+
+	<%= image_tag('header/divider.png', :class=>'floatLeft divider')%>
+<section>
+  <span id="feeds" class="floatLeft" >
+		<a>Feeds</a>
+		<% [1, 2, 3, 4].each do |num| %>
+			<%= displayIcon(num) %>
+		<% end %>
   </span>
 
-  <span id="storiesDiv" class="floatLeft" >
-	<div id="upStories">
-	  <a href="#topStories" id="topStories">Top Stories</a>
-	  <a href="#followStories">Stalker Stories</a>
-	</div>
-	
-	<div id="downStories">
-	  <a href="#localStories"id="localStories">Local Stories</a>
-	  <a href="#recentStories" >Recent Stories</a>
-	</div>
+	<%= image_tag('header/divider.png', :class=>'floatLeft divider')%>
+  
+  <span id="filters" class='floatLeft'>
+    <a>Filters</a>
+		<% [5, 6, 7, 8, 9, 10, 11, 12, 13, 14].each do |num| %>
+			<%= displayIcon(num) %>
+		<% end %>
   </span>
-  
-  <span id="filtersDiv">
-    <div id="upFilters">
-      <a href="#politics">Politics</a>
-	  <a href="#business">Business</a>
-      <a href="#nature">Nature</a>
-      <a href="#sports">Sports</a>
-      <a href="#science">Science</a>
-    </div>
-  
-    <div id="downFilters">
-      <a href="#crime">Crime</a>
-	  <a href="#tech">Technology</a>
-      <a href="#social">Social</a>
-      <a href="#entertainment">Entertainment</a>
-      <a href="#other">Other</a>
-    </div>
-  </span>
-  
+  </section>
   </div>
   </div>
 </div>

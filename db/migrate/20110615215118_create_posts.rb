@@ -10,14 +10,17 @@ class CreatePosts < ActiveRecord::Migration
 
       t.integer :pageviews
 
-      t.integer :accuracy_rating
       t.integer :accuracy
       t.integer :inaccuracy
+			
+			t.references :user
       
       t.integer :trending_value
+      t.integer :accuracy_rating
 			
       t.timestamps
     end
+		add_index :posts, :user_id
   end
 
   def self.down

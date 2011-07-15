@@ -2,11 +2,13 @@ class User < ActiveRecord::Base
   validate :check_beta_code, :on => 'create'
 	
 	has_and_belongs_to_many :roles
-	has_many :posts
 	has_many :comments
 	
+	has_many :posts, :dependent => :destroy
+	
+	
 	def role?(role)
-      return !!self.roles.find_by_name(role.to_s.camelize)
+    self.role.to_sym == role.to_sym
   end
 	  
   # Include default devise modules. Others available are:
@@ -16,7 +18,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
 	attr_accessor :beta_code
-  attr_accessible :beta_code, :email, :name, :password, :password_confirmation, :admin, :remember_me
+  attr_accessible :beta_code, :email, :name, :password, :password_confirmation, :remember_me
 	
 	name_regex = /\A[a-zA-Z .-]+\z/
 	

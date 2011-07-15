@@ -13,9 +13,9 @@ OrchiveApp::Application.routes.draw do
 	end
 	
 	resources :posts do
-		resources :comments
-		resources :tags
-	end
+			resources :comments
+			resources :tags
+		end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

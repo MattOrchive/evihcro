@@ -1,9 +1,8 @@
 /* Header CSS (Logo + Nav Bar)*/
 #header {
-  background-image: url('/images/header_background.png');
-  background-repeat: no-repeat;
-  padding-bottom:15px;
-  border-bottom:1px solid #E8E8E8;
+	background: #fff url('/images/header/background.png') 0 87px no-repeat;
+	height:174px;
+	border-top:3px solid #80CD97;
 }
 #header #headerContent {
   width:1200px;
@@ -22,7 +21,7 @@
 
 /* Top Bar CSS */
 #topBar {
-  margin:0 0 38px 0;
+  margin:0 0 50px 0;
 }
 #topBar #logo {
   margin: 25px 0 0 5px;
@@ -37,20 +36,73 @@
 }
 
 /* Navbar CSS */
-#navBar{
-  background-image:url('/images/navBar_background.png');
-  background-repeat:no-repeat;
+#header #headerContent #navBar {
+	color:#fff;
 }
-
-#searchField{
-  width:327px;
-  height:24px;
-  margin:8px 0 0 5px;
-  padding:0 6px 0 5px;
-  background-color: transparent;
+#header #headerContent #navBar form {
+	float:left;
+}
+#header #headerContent #searchField{
+  width:310px;
+  height:27px;
+	padding-left:5px;
+  background:transparent url('/images/header/search.png') -3px -3px no-repeat;
   color: #9E9E9E;
   border:none;
 }
+#header #headerContent #navBar #searchField:focus {
+	outline-color:#9E9E9E;
+}
+#header #headerContent #navBar #submit {
+	position:relative;
+	top:6px;
+	right:25px;
+	border:none;
+	background:transparent;
+	width:25px;
+	height:25px;
+}
+#header #headerContent #navBar #submit:active {
+	top:4px;
+	right:27px;
+	box-shadow:1px 1px #eee;
+}
+#header #headerContent #navBar input.floatLeft {
+	background:#fff url('/images/header/newPostButton.png') -3px -3px no-repeat;
+	border:none;
+	top:5px;
+	width:91px;
+	height:29px;
+	padding-left:5px;
+	text-align:left;
+	color:#4CB969;
+	font-size:14px;
+	margin-right:25px;
+}
+#header #headerContent #navBar input.floatLeft:hover {
+	border:1px solid #eee;
+}
+#header #headerContent #navBar input.floatLeft:active {
+	border:1px solid #ccc;
+}
+#header #headerContent #navBar img.divider {
+	position:relative;
+	top:-6px;
+	margin-right:20px;
+	margin-left:20px;
+}
+#header #headerContent #navBar section span a {
+	position:relative;
+	top:-5px;
+	margin-right:20px;
+	color:#fff;
+}
+#header #headerContent #navBar section span img.icon {
+	margin-left:12px;
+	padding-top:2px;
+}
+
+
 
 #newsFeed {
   margin:9px 23px 0 17px;
