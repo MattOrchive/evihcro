@@ -20,6 +20,4 @@ class ApplicationController < ActionController::Base
 		posts_path
 	end
 	
-	
-	
 end
