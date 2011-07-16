@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user!, :alert => 'You must be logged in to continue'
 	load_and_authorize_resource
-	
+
 	# GET /posts
   # GET /posts.xml
   def index
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   # GET /posts/new.xml
   def new
     @post = Post.new
-	
+	  
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @post }
@@ -46,7 +46,18 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
 		@post.user = current_user
 		@post.name = @post.user.name
-
+    
+    @post.tag_list << 'politics' if @post.politics
+    @post.tag_list << 'tech' if @post.tech
+    @post.tag_list << 'entertainment' if @post.entertainment
+    @post.tag_list << 'sports' if @post.sports
+    @post.tag_list << 'science' if @post.science
+    @post.tag_list << 'crime' if @post.crime
+    @post.tag_list << 'business' if @post.business
+    @post.tag_list << 'social' if @post.social
+    @post.tag_list << 'nature' if @post.nature
+    @post.tag_list << 'other' if @post.other
+    
     respond_to do |format|
       if @post.save
         format.html { redirect_to(@post, :notice => 'Post was successfully created.') }

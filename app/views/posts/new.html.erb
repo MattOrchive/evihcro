@@ -1,7 +1,6 @@
-
 <h1>New post</h1>
 
-<%= form_for(@post) do |post_form| %>
+<%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -14,35 +13,69 @@
   <% end %>
 
   <div class="field">
-    <%= post_form.label :title %><br />
-    <%= post_form.text_field :title %>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= post_form.label :content %><br />
-    <%= post_form.text_area :content %>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
   </div>
   <div class="field">
-    <%= post_form.label :user_location %><br />
-    <%= post_form.text_field :user_location %>
+    <%= f.label :user_location %><br />
+    <%= f.text_field :user_location %>
   </div>
   <div class="field">
-    <%= post_form.label :post_location %><br />
-    <%= post_form.text_field :post_location %>
+    <%= f.label :post_location %><br />
+    <%= f.text_field :post_location %>
   </div>
   <div class="field">
-    <%= post_form.label :accuracy %><br />
-    <%= post_form.text_field :accuracy %>
+    <%= f.label :accuracy %><br />
+    <%= f.text_field :accuracy %>
   </div>
   <div class="field">
-    <%= post_form.label :inaccuracy %><br />
-    <%= post_form.text_field :inaccuracy %>
+    <%= f.label :inaccuracy %><br />
+    <%= f.text_field :inaccuracy %>
   </div>
 
-  <!--<h2>Tags</h2>
-	<= render :partial => 'tags/form', :locals => {:form => post_form} %>-->
+	<h2>Tags</h2>	
+	
+	<!-- [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].each do |num| %>
+		<= f.check_box "filter#{num}".to_sym %>
+		<= f.label "filter#{num}".to_sym %>
+	< end %> -->
+
+	<%= f.check_box :politics %>
+	<%= f.label :politics %>
+   
+	<%= f.check_box :tech %>
+	<%= f.label :tech, 'Technology' %>
+   
+	<%= f.check_box :entertainment %>
+	<%= f.label :entertainment %>
+   
+	<%= f.check_box :sports %>
+	<%= f.label :sports %>
+   
+	<%= f.check_box :science %>
+	<%= f.label :science %>
+   
+	<%= f.check_box :crime %>
+	<%= f.label :crime %>
+   
+	<%= f.check_box :business %>
+	<%= f.label :business %>
+   
+	<%= f.check_box :social %>
+	<%= f.label :social %>
+   
+	<%= f.check_box :nature %>
+	<%= f.label :nature %>
+   
+	<%= f.check_box :other %>
+	<%= f.label :other %>
   
 	<div class="actions">
-    <%= post_form.submit %>
+    <%= f.submit %>
   </div>
 <% end %>
 
