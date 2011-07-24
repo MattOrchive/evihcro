@@ -1,0 +1,25 @@
+/* Sidebar */
+    #sidee {
+			width:402px;
+			border-bottom: 1px solid #E7E7E7;
+			background-color:#F2F7F3;
+      margin-right:30px;
+      background-image:url("/images/sideBar_background.png");
+      background-repeat:no-repeat;
+    }
+    #sidebar { 
+			margin:10px 50px 0 10%;
+		}
+    #sidebar #profile {
+			margin-top:4%;
+		}
+    #sidebar #postingInterface h1 {
+			font-size:18px; font-weight:600; margin-top:7px;
+		}
+    #sidebar #postingInterface p {
+			font-size:13px; margin-bottom:10px; 
+		}
+    #sidebar #postingInterface #postButton {
+			margin:4% auto 5% auto; padding:1%;
+			height:30px;
+		}

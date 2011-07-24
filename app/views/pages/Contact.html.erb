@@ -1,0 +1,132 @@
+<style type="text/css">
+	#main {
+		background:none;
+	}
+	#content #topArea{
+		margin-left:auto;
+		margin-right:auto;
+		width:1000px;
+		height:500px;
+		background:#fff url('/images/contact_content.png') no-repeat;
+	}	
+	
+	#content #topArea #topContent {
+		padding:30px 70px 0px 60px;
+	}
+	#content h1 {
+		color:#7c9758;
+		font-weight:400;
+	}
+	#content #topArea #topContent span {
+		float:left;
+		width:410px;
+	}
+	#content #topArea #topContent span p {
+		color:#818181;
+		font-size:15px;
+		margin-bottom:15px;
+		line-height:22px;
+	}
+	#content #topArea #topContent form {
+		width:436px;
+		float:right;
+	}
+	#content #topArea #topContent form input {
+		color:#7E7E7E;
+		width:415px;
+		height:25px;
+		font-size:15px;
+		margin-bottom:21px;
+		padding-left:10px;
+		padding-right:10px;
+		border:none;	
+	}
+	#content #topArea #topContent form textarea {
+		width:415px;
+		height:210px;
+	 	color:#7E7E7E;
+		font-size:15px;
+	  padding:5px 10px 5px 10px;
+		resize:none;
+	  border:none; 
+	}
+	#content #topArea #topContent form input:focus, #content #topArea #topContent form textarea:focus {
+		outline-color:#48B76A;
+	}
+	#content #topArea #topContent form	.button {
+	  height:30px;
+	  width:80px;
+		margin-top:15px;
+	  border-right:none;
+	  border-bottom:none;
+	}
+	
+	#content #social {
+		background:url('/images/contact_SNbox.png') no-repeat;
+		width:1000px;
+		height:230px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	#content #social #socialContent {
+		padding:30px 0 0 50px;
+	}
+	#content #social #socialContent img {
+		margin-left:60px;
+	}
+</style>
+<div id="topArea">
+	<div id="topContent">
+  <h1>Contact Us</h1>  
+  <span>
+		<p>
+			We would love to hear your constructive criticism. 
+			<br />
+			Any thoughts regarding any aspect of the project 
+			<br />
+			will be taken into consideration in order to deliver
+			<br />
+			a more efficient, beautiful and customer friendly 
+			<br />
+			product when we release Orchive 1.0
+			<br /><br />
+			Looking forward to working with you,
+			<br /><br />
+			The Orchive team.
+			<br />
+		</p>
+	
+		<p>
+			<br />
+			Orchive
+			<br />
+			165 Grover Avenue
+			<br />
+			Princeton, NJ 08540
+			<br />
+			USA
+			<br /><br />
+			General Information: info@orchive.com
+		</p>
+  </span>
+	
+	<%= form_for(:contact) do |f| %>
+		<%= f.text_field :name, :value =>'Enter your name'%>
+		<%= f.text_field :email, :value =>'Enter your email address' %>
+		<%= f.text_area :content, :value =>'Leave a nice message' %> 
+
+		<%= f.submit :class=>'button', :value=>'submit' %>
+	<% end %>
+	</div>
+</div>
+
+<div id="social">
+	<div id="socialContent">
+		<h1>Follow Us</h1>
+		<%= link_to(image_tag("SN/twitter.png"), 'http://twitter.com/#!/InfoOrchive') %>
+		<%= link_to(image_tag("SN/facebook.png"), 'http://www.facebook.com/Orchive') %>
+		<%= link_to(image_tag("SN/linkedin.png"), 'http://www.linkedin.com/company/orchive?trk=ppro_cprof') %>
+		<%= link_to(image_tag("SN/tumblr.png"), 'http://orchive.tumblr.com/') %>
+		<%= link_to(image_tag("SN/youtube.png"), 'http://www.youtube.com/orchive') %>
+	</div>
+</div>

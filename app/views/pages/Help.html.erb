@@ -1,0 +1,106 @@
+<style type='text/css'>
+	#wrapper #main {
+		padding-top:40px;
+		background:none;
+	}
+	#wrapper #main #content {
+		background:transparent url('/images/help_background.png') no-repeat;
+		padding:15px 0 0 15px;
+		width:790px;
+	}
+	#wrapper #main #content h1 {
+		margin-bottom:40px;
+	}
+	#wrapper #main #content div {
+		height:190px;
+		margin-bottom:41px;
+	}
+	#wrapper #main #content div h2 {
+		padding-left:30px;
+		color:#383838;
+	}
+	#wrapper #main #content div table {
+		color:#666666;
+		font-size:14px;
+		margin:40px 0 0 200px;
+	}
+	#wrapper #main #content div #future {
+		margin-top:50px;
+	}
+	#wrapper #main #content div table td {
+		width:295px;
+		padding-bottom:8px;
+	}
+	#wrapper #main #content div table td a {
+		text-decoration:none;
+	}
+	#wrapper #main #content div table td a:hover {
+		color:#00BE69;
+	}
+</style>
+<h1>Command Center</h1>
+
+<div>
+	<h2>Getting Started with Orchive</h2>
+	<!--READ ON BUTTON -->
+	<table>
+		<tr>
+			<td><%= link_to("Making a New Post", '/help#newPost')%></td>
+			<td>Contact Us</td>
+		</tr>
+		<tr>
+			<td>Commenting</td>
+			<td>Feeds (Story Filters)</td>
+		</tr>
+		<tr>	
+			<td>Accuracy Rating</td>
+			<td>Filters (Topic Filters)</td>
+		</tr>
+		<tr>	
+			<td>Sign Up</td>
+			<td>Intellectual Property</td>
+		</tr>
+	</table>
+</div>
+
+<div>
+	<h2>Account Settings</h2>
+	<!--READ ON BUTTON -->
+	<table>
+		<tr>
+			<td>Name</td>
+			<td><%= current_user.name %></td>
+		</tr>
+		<tr>
+			<td>Email Address</td>
+			<td><%= current_user.email %></td>
+		</tr>
+		<tr>	
+			<td>Password</td>
+			<td>&curren&curren&curren&curren&curren&curren&curren&curren&curren&curren</td>
+		</tr>
+		<tr>	
+			<td>Location</td>
+			<td><%= 'Location'  %></td>
+		</tr>
+	</table>
+</div>
+
+<div>
+	<h2>Future Features</h2>
+	<!--READ ON BUTTON -->
+	<table id="future">
+		<tr>
+			<td>Profile</td>
+			<td>World Map</td>
+		</tr>
+		<tr>
+			<td>News Updates</td>
+			<td>Interests</td>
+		</tr>
+		<tr>	
+			<td>Following</td>
+			<td>Interest Feed</td>
+		</tr>
+	</table>
+</div>

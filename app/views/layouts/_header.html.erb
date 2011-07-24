@@ -1,0 +1,48 @@
+<div id="header">
+<div id="headerContent">
+
+<div id="topBar"> 
+  <%= link_to(image_tag('logo.png', :alt=>'Orchive', :id=>'logo'), '/posts') %>
+  
+  <span id="headPages" class="floatRight">
+    <p>
+      <%= link_to 'Feed', '/posts' %>
+			
+			<% if current_user.role?('admin') %>
+				<%= link_to('Dashboard', '/dashboard') %>
+			<% end %>
+    </p>
+  </span>
+
+	<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+</div>
+
+<div id="navBar">
+	<%= form_for(:search) do |f|%>
+  	<%= f.text_field :searchValue, :id => 'searchField', :value=>'Start a search'%>
+		<%= f.submit :id => 'submit', :value => '' %>
+  <% end %>
+	
+	<%= link_to(submit_tag('New Post', :class=>'floatLeft'), new_post_path)%>
+
+	<%= image_tag('header/divider.png', :class=>'floatLeft divider')%>
+<section>
+  <span id="feeds" class="floatLeft" >
+		<a>Feeds</a>
+		<% [1, 2, 3, 4].each do |num| %>
+			<%= displayIcon(num) %>
+		<% end %>
+  </span>
+
+	<%= image_tag('header/divider.png', :class=>'floatLeft divider')%>
+  
+  <span id="filters" class='floatLeft'>
+    <a>Filters</a>
+		<% [5, 6, 7, 8, 9, 10, 11, 12, 13, 14].each do |num| %>
+			<%= displayIcon(num) %>
+		<% end %>
+  </span>
+  </section>
+  </div>
+  </div>
+</div>

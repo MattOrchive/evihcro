@@ -1,0 +1,31 @@
+<%= form.fields_for :filters do |f| %>
+		<%= f.check_box :politics %>
+		<%= f.label :politics %>
+<%= render :partial => 'tagForm', :locals => {:form => f} %>
+		<%= f.check_box :technology %>
+		<%= f.label :technology %>
+
+		<%= f.check_box :entertainment %>
+		<%= f.label :entertainment %>
+
+		<%= f.check_box :sports %>
+		<%= f.label :sports %>
+
+		<%= f.check_box :science %>
+		<%= f.label :science %>
+
+		<%= f.check_box :crime %>
+		<%= f.label :crime %>
+	
+		<%= f.check_box :business %>
+		<%= f.label :business %>
+
+		<%= f.check_box :social %>
+		<%= f.label :social %>
+
+		<%= f.check_box :nature %>
+		<%= f.label :nature %>
+
+		<%= f.check_box :other %>
+		<%= f.label :other %>
+<% end %>

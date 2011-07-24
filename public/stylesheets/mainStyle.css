@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/* Reset CSS Settings */
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,abbr,article,aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,summary,time { margin: 0; padding: 0; }
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th,figcaption { font-size: 1em; font-weight: normal; font-style: normal; }
+fieldset,iframe { border: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+caption,th { text-align: left; }
+article,aside,footer,header,hgroup,nav,section,figure,figcaption { display: block; }
+
+
+/* Main CSS Document */
+@font-face { 
+	font-family: Delicious; 
+ 	src: url('/fonts/Delicious-Roman.otf');
+}
+
+BODY {
+  margin:0px;
+  color:#000; 
+	font-family:'Helvetica', sans-serif;
+}
+input, textarea {
+	font-family:'Helvetica', sans-serif;
+}
+
+#main{
+  background-image: url("/images/background.png");
+  background-repeat: no-repeat;
+  background-size:100%;
+  background-position:0 -6px;
+}
+#content{
+  width:1200px;
+	
+  margin:0 auto 0 auto;
+  padding-top:45px;
+	padding-bottom:75px;
+}
+h1{
+	font-family:Delicious, sans-serif;
+  font-size:32px;
+  font-weight:500;
+  margin-bottom:10px;
+}
+h2{
+	font-family:Delicious, sans-serif;
+	font-size:28px;
+	font-weight:500;
+}
+p {
+  line-height:21px;
+  font-size:15px;
+	font-weight:400;
+}
+
+.blue {
+	color: #4877B7
+	}
+.green{
+	color: #00BE69
+}
+.inline {
+  display: inline;
+}
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
+.clearLeft {
+  clear:left;
+}
+.clearRight {
+  clear:right;
+}
+.clearBoth {
+	clear:both;
+}
+.button {
+  background: #48B76A;
+  border: 1px solid #3b9737;
+  
+	font-size:13px;
+	font-weight:600;
+  
+  color: #fff!important;
+  
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.3);  
+  
+  -webkit-box-shadow:1px 1px #D9D9D9;
+  -moz-box-shadow:1px 1px #D9D9D9;
+  box-shadow: 1px 1px #D9D9D9;
+  
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+		
+  cursor: pointer;
+}
+.button:hover {
+		background-image:none;
+    background: #a6DAb3;
+}
+.button:active {
+		background-image:none;
+    background: #E19460;
+		
+    box-shadow: 0 0 3px rgba(0,0,0,0);
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0);
+}

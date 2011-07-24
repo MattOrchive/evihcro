@@ -1,0 +1,132 @@
+/* Header CSS (Logo + Nav Bar)*/
+#header {
+	background: #fff url('/images/header/background.png') 0 87px no-repeat;
+	height:174px;
+	border-top:3px solid #80CD97;
+}
+#header #headerContent {
+  width:1200px;
+  margin: 0 auto 0 auto;
+  color: #555555;
+}
+#header #headerContent A {
+  color: #555555;
+  text-decoration: none;
+}
+/* Will become obsolete with js */
+#header #headerContent A:hover {
+  color:#00BE69;
+  cursor:pointer;
+}
+
+/* Top Bar CSS */
+#topBar {
+  margin:0 0 50px 0;
+}
+#topBar #logo {
+  margin: 25px 0 0 5px;
+}
+
+#topBar #headPages P{
+  font-size:14px;
+  margin:30px 0 0 0;
+}
+#topBar #headPages A {
+  margin-right:20px;
+}
+
+/* Navbar CSS */
+#header #headerContent #navBar {
+	color:#fff;
+}
+#header #headerContent #navBar form {
+	float:left;
+}
+#header #headerContent #searchField{
+  width:310px;
+  height:27px;
+	padding-left:5px;
+  background:transparent url('/images/header/search.png') -3px -3px no-repeat;
+  color: #9E9E9E;
+  border:none;
+}
+#header #headerContent #navBar #searchField:focus {
+	outline-color:#9E9E9E;
+}
+#header #headerContent #navBar #submit {
+	position:relative;
+	top:6px;
+	right:25px;
+	border:none;
+	background:transparent;
+	width:25px;
+	height:25px;
+}
+#header #headerContent #navBar #submit:active {
+	top:4px;
+	right:27px;
+	box-shadow:1px 1px #eee;
+}
+#header #headerContent #navBar input.floatLeft {
+	background:#fff url('/images/header/newPostButton.png') -3px -3px no-repeat;
+	border:none;
+	top:5px;
+	width:91px;
+	height:29px;
+	padding-left:5px;
+	text-align:left;
+	color:#4CB969;
+	font-size:14px;
+	margin-right:25px;
+}
+#header #headerContent #navBar input.floatLeft:hover {
+	border:1px solid #eee;
+}
+#header #headerContent #navBar input.floatLeft:active {
+	border:1px solid #ccc;
+}
+#header #headerContent #navBar img.divider {
+	position:relative;
+	top:-6px;
+	margin-right:20px;
+	margin-left:20px;
+}
+#header #headerContent #navBar section span a {
+	position:relative;
+	top:-5px;
+	margin-right:20px;
+	color:#fff;
+}
+#header #headerContent #navBar section span img.icon {
+	margin-left:12px;
+	padding-top:2px;
+}
+
+
+
+#newsFeed {
+  margin:9px 23px 0 17px;
+  font-size:20px;
+  padding:2px;
+}
+
+#storiesDiv {
+  margin: 0 25px 0 0;
+  font-size:13px;
+}
+#storiesDiv #upStories #topStories {
+  margin-right:20px;
+}
+#storiesDiv #downStories #localStories {
+  margin-right:13px;
+}
+
+#filtersDiv {
+  font-size: 13px;
+}
+#filtersDiv #upFilters A {
+  margin-right: 20px;
+}
+#filtersDiv #downFilters A {
+  margin-right:9px;
+}

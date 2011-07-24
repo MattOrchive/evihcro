@@ -1,0 +1,57 @@
+<style type="text/css">
+	#main {
+		background-image: url('/images/background_betaPages.png');
+		height:590px;
+	}
+	#box {
+		background: url('/images/request_box.png') no-repeat;
+		width:741px;
+		height:299px;
+		margin:100px 0 0 170px;
+	}
+	#boxContent {
+		padding:8px 20px 5px 20px;
+	}
+	#boxContent h1 {
+		padding:40px 0 0 40px;
+	}
+	#boxContent P {
+		margin:0 0 21px 40px;
+	}
+	#boxContent form {
+		margin-right:209px;
+		margin-bottom:20px;
+		padding-top:3px;
+	}
+	.betaLabelTextField {
+		padding-left:45px;
+		position:relative;
+		top:2px;
+	}
+	.betaTextField {
+		width:290px;
+		height:27px;
+	}
+	.button {
+		width:80px;
+		height:28px;
+		position:relative;
+		top:-1px;
+	}
+</style>
+
+<div id="box">
+	<div id="boxContent">
+		<h1>Request a Beta Code</h1>
+		
+		<p>Want to be a beta tester? Simply submit your email below and we will send you<br />your very own beta code.</p> 
+		
+		<%=form_tag('/request') %>
+			<label for='email' class='betaLabelTextField'>Email</label>
+			<%= text_field_tag('email', '', :type=>'email', :class=>'betaTextField') %>
+			<%= submit_tag('submit', :class=>'button betaSubmitTextField') %>
+		</form>
+		
+		<p>Already have a code? <%=link_to('Enter your code here', '/enter')%> </p>
+	</div>
+</div>

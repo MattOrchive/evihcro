@@ -1,0 +1,53 @@
+<style type="text/css">
+	#main {
+		height:590px;
+	}
+	#box {
+		background: url('/images/enter_box.png') no-repeat;
+		width:677px;
+		height:267px;
+		margin:100px 0 0 180px;
+	}
+	#boxContent {
+		padding:0 20px 5px 20px;
+	}
+	#boxContent h1 {
+		padding-left:45px;
+	}
+	#boxContent h2 {
+		padding:48px 0 5px 39px;
+	}
+	#boxContent P {
+		padding:20px 0 0 39px;
+	}
+	#boxContent form {
+		margin-right:170px;
+	}
+	
+	.betaTextField {
+		width:330px;
+		height:28px;
+		margin:11px 0 0 43px;
+	}
+	.betaSubmitTextField {
+		width:80px;
+		height:29px;
+		position:relative;
+		top:-2px;
+	}
+</style>
+
+<div id="box">
+	<div id="boxContent">
+		<h2>Enter your beta code</h2>
+		<h1>Join Orchive</h1>
+		
+		<%= form_for(@user.beta_code) do |f| %>
+			<%= f.password_field :beta_code, :class=>'betaTextField' %>
+			<%= f.submit :submit, :class=>'button betaSubmitTextField' %>
+		<% end %>
+		
+		
+		<p>Don't have a code? <%= link_to('SUCKS FOR YOU!', '/request') %> </p>
+	</div>
+</div>

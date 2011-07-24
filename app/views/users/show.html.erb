@@ -1,0 +1,5 @@
+<%= @user.name %>, <%= @user.email%>
+<%= @user.posts.each do |post|%>
+	<br /><br />
+	<%= post %>
+<% end %>

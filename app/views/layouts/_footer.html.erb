@@ -1,0 +1,55 @@
+<div id="footer" class="clearBoth">
+	<div id="footerContent">
+	
+		<div id="top">
+			<table>
+				<tr>
+					<th>Support</th>
+					<th>About</th>
+					<th>Updates</th>
+					<th><h2>SEND AN INVITATION TO A FRIEND</h2></th>
+				</tr>
+				
+				<tr>
+					<td><%=link_to('Command Center', '/command')%></td>
+					<td><%=link_to('About Orchive', '/about')%></td>
+					<td><%=link_to('Orchive on Facebook', 'http://www.facebook.com/Orchive')%></td>
+					<td id="textFieldCell" rowspan='2'>
+						<%= text_field_tag('invite', 'Enter recipient\'s email address')%>
+						<%= submit_tag('', :id=>'submit') %>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><%=link_to('FAQ', '/future')%></td>
+					<td><%=link_to('Terms of Use', '/terms')%></td>
+					<td><%=link_to('Orchive on Twitter', 'http://twitter.com/#!/InfoOrchive')%></td>
+				</tr>
+				
+				<tr>
+					<td><%=link_to('Contact Us', '/contact')%></td>
+					<td><%=link_to('Privacy Policy', '/privacy')%></td>
+					<td><%=link_to('Orchive in the Press', '/future')%></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="bottom">
+			<p class="inline">Copyright 2011 &copy Orchive, All Rights Reserved</p>
+				<p class="inline floatRight">t:16095555555 e:info@orchive.com</p>
+			
+			
+
+			<!--<div id="google_translate_element"></div>
+			<script>
+				function googleTranslateElementInit() {
+					new google.translate.TranslateElement({
+						pageLanguage: 'en'}, 'google_translate_element');
+				}
+		</script>
+		<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
+
+		
+		</div>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <%= stylesheet_link_tag 'beta.css', 'mainStyle.css' %>
+  
+  <%= csrf_meta_tag %>
+
+  <meta name="description" content= "Find the reporter in YOU">
+  <meta name="author" content="Orchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+ 	<link rel="icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&v2' rel='stylesheet' type='text/css'>
+  
+</head>
+<body>
+  <div id="beta">
+    <%= render "layouts/headerBeta" %>
+    
+    <div id="main"> 
+      <div id="content">
+				<p class="notice"><%= notice %></p>
+				<p class="alert"><%= alert %></p>
+        <%= yield %>
+      </div>
+    </div>
+
+    <%= render "layouts/footerBeta" %>
+  </div>  
+</body>
+</html>
