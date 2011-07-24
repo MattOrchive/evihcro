@@ -6,6 +6,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.rememberable
       t.trackable
 
+<<<<<<< HEAD
       #added by Jon
       t.integer :total_pageviews
       t.integer :total_comments_number
@@ -23,11 +24,17 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.double :peak_view_popularity
       t.double :peak_listeners #i.e. largest amount of people who voted on a submission you made
 
+=======
+>>>>>>> 8f777215bdebd86f4816ad82260125b7888dbed2
       # t.encryptable
       # t.confirmable
       # t.lockable :lock_strategy => :failed_attempts, :unlock_strategy => :both
       # t.token_authenticatable
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8f777215bdebd86f4816ad82260125b7888dbed2
       t.timestamps
     end
 

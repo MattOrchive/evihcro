@@ -1,8 +1,14 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user!, :alert => 'You must be logged in to continue'
+<<<<<<< HEAD
   load_and_authorize_resource
 
   # GET /posts
+=======
+	load_and_authorize_resource
+
+	# GET /posts
+>>>>>>> 8f777215bdebd86f4816ad82260125b7888dbed2
   # GET /posts.xml
   def index
     @posts = Post.order('id').page(params[:page]).per(5)
@@ -28,7 +34,11 @@ class PostsController < ApplicationController
   # GET /posts/new.xml
   def new
     @post = Post.new
+<<<<<<< HEAD
 
+=======
+	  
+>>>>>>> 8f777215bdebd86f4816ad82260125b7888dbed2
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @post }
@@ -44,6 +54,7 @@ class PostsController < ApplicationController
   # POST /posts.xml
   def create
     @post = Post.new(params[:post])
+<<<<<<< HEAD
     @post.user = current_user
     @post.name = @post.user.name
     
@@ -58,6 +69,22 @@ class PostsController < ApplicationController
     @post.tag_list << 'social' if params[:post][:social]
     @post.tag_list << 'nature' if params[:post][:nature]
     @post.tag_list << 'other' if params[:post][:other]
+=======
+		@post.user = current_user
+		@post.name = @post.user.name
+    
+		@post.tag_list.clear
+		@post.tag_list << 'politics' if params[:post][:politics]
+		@post.tag_list << 'tech' if params[:post][:tech]
+		@post.tag_list << 'entertainment' if params[:post][:entertainment]
+		@post.tag_list << 'sports' if params[:post][:sports]
+		@post.tag_list << 'science' if params[:post][:science]
+		@post.tag_list << 'crime' if params[:post][:crime]
+		@post.tag_list << 'business' if params[:post][:business]
+		@post.tag_list << 'social' if params[:post][:social]
+		@post.tag_list << 'nature' if params[:post][:nature]
+		@post.tag_list << 'other' if params[:post][:other]
+>>>>>>> 8f777215bdebd86f4816ad82260125b7888dbed2
     
     respond_to do |format|
       if @post.save
@@ -97,6 +124,7 @@ class PostsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+<<<<<<< HEAD
 
   # Jon's vote code -- may be glitchy
 
@@ -217,5 +245,7 @@ class PostsController < ApplicationController
     end
 
   end
+=======
+>>>>>>> 8f777215bdebd86f4816ad82260125b7888dbed2
 	
 end

@@ -1,1 +1,168 @@
+<<<<<<< HEAD
 <h1>Hello, Rails!</h1>
+=======
+<style type="text/css">
+	#main {
+		background:none;
+	}
+	#wrapper {
+		background:#FAFCF9;
+	}
+	#content {
+		padding-top:0;
+		margin-left:0;
+	}
+	/* Feed */
+	#rightBar { 
+		margin-left:auto;
+		margin-right:auto;
+		padding-top:20px; 
+		width:745px; 
+		background-color:#F9F9F9;
+	}
+	#rightBar h1{
+		font-size:30px; font-weight:400;
+	}
+	#rightBar p{ 
+		padding-left:8px; 
+		font-size:11px;
+	}
+	#rightBar a{ 
+		text-decoration:none; 
+	}
+	#rightBar div {
+		padding-left:2px;
+		margin-bottom:5px;
+	}
+	#rightBar div #filters {
+		padding-top:4px;
+		line-height:14px;
+	}
+	#rightBar div p a {		
+		margin-left:20px;
+	}
+    
+		
+		
+	#rightBar #post {
+		padding: 8px; 
+		margin-bottom:10px;
+		height:143px;
+		background-image:url('/images/post_background.png');
+		background-repeat:no-repeat;
+	}
+	#rightBar #photo {
+		margin:18px 8px 8px 8px;
+	}
+	#rightBar #postTitle {
+		font-size:18px; 
+		font-weight:500;
+		margin-bottom:0;
+	}
+	#rightBar #postContent {
+		font-size:13px;
+		line-height:normal;
+		padding-left:76px;
+	}
+	#rightBar #postInfo {
+		color:#555555;
+	}
+	#rightBar #postInfo p {
+		line-height:18px;
+		text-align:left;
+		font-size:12px;
+	}
+	#rightBar #postInfo p img {
+		width:9px;
+		height:10px;
+	}
+	#rightBar #postInfo p a{
+		margin-left:0;
+	}
+	#rightBar #post #postInfo #postName, #rightBar #post #postInfo  #userLoc, #rightBar #post #postInfo #source {
+		width:200px;
+	}
+	
+	#rightBar #omitText {
+		color:#00BE69;
+		margin-left:1px;
+	}
+	#rightBar #delete {
+		font-size:12px;
+	}
+</style>
+
+<%= render '/layouts/sideBar' %>
+
+<div id="rightBar" class="floatRight">
+	<div>
+		<h1 class="floatLeft">News Feed</h1>
+		<p id="filters">
+			<a id="filterStories">Results are Based off of the Stories: Javascript</a>
+			<br />
+			<a id="filterTags">Results are Based off of the Tags: Javascript</a>
+		</p>
+	</div>
+	
+	<%= paginate @posts %>
+
+	<% @posts.each do |post| %>
+		<div id="post">
+			<%=link_to  post.title, post, :class=>'blue'%>
+		
+				<%= link_to_if(can?(:delete, @post), 'Delete', post_path(post), :id=>'delete', :class=>'floatRight', :confirm => "Are you sure?", :method => :delete) {} %>
+				
+
+				<!--=# link_to "Flag", :controller => "posts", :action => "update", #:method => :put, :post => {:flag => true}%>-->
+			
+			
+			<%= image_tag('default_photo.png',:id=>"photo", :class=>"floatLeft", :size=>'60x60')%>
+
+
+      <p id="postContent">
+				<%= truncate_content(post, post.content)%>
+			</p>
+	  
+			<section id="postInfo">
+				<p id="postName" class="floatLeft clearLeft">
+					<%=image_tag('NFIcons/reporter.png') %> 
+					Reporter: <a class="blue"><%= post.name %></a>
+				</p>
+
+				<p id="tags" class="floatLeft">
+					<%=image_tag('NFIcons/tags.png') %> 
+					Tags: <a class="blue"></a>
+				</p>
+	  
+				<p id="userLoc" class="clearLeft floatLeft">
+					<%=image_tag('NFIcons/userLoc.png') %> 
+					Location: <a class="blue"><%= post.user_location %></a>
+				</p>
+
+				<p id="postLoc" class="floatLeft">
+					<%=image_tag('NFIcons/postLoc.png') %> 
+					Occuring In: <a class="blue"><%= post.post_location %></a>
+				</p>
+	  
+				<p id="source" class="clearLeft floatLeft">
+					<%=image_tag('NFIcons/source.png') %> 
+					Source: <a class='blue'>Source</a>
+				</p>
+	  
+				<p id="time" class="floatLeft">
+					<%=image_tag('NFIcons/time.png') %> 
+					Date Created: <a class='blue'><%=post.created_at.strftime("%B %e %l:%M %p %Y")%>(<%=distance_of_time_in_words(post.created_at, Time.now)%> ago)</a>
+				</p>
+			</section> 
+
+			
+	  
+			<%= post.accuracy %>
+			<%= post.inaccuracy %>
+		
+		</div>
+
+	<% end %>
+
+</div>
+>>>>>>> 8f777215bdebd86f4816ad82260125b7888dbed2

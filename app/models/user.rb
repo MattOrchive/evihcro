@@ -29,6 +29,7 @@ class User < ActiveRecord::Base
 									 :format => {:with => name_regex }
 	
 	validates :password, :presence => true
+<<<<<<< HEAD
 
   posts_upvoted_array = []
   posts_downvoted_array = []
@@ -36,6 +37,9 @@ class User < ActiveRecord::Base
 
   comments_upvoted_array = []
   comments_downvoted_array = []
+=======
+  
+>>>>>>> 8f777215bdebd86f4816ad82260125b7888dbed2
 	
 	
 	def check_beta_code

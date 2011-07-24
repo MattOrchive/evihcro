@@ -5,8 +5,11 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
 		@comment = @post.comments.create(params[:comment])
 		@comment.name = current_user.name
+<<<<<<< HEAD
     #Jon added
     @comment.user = current_user
+=======
+>>>>>>> 8f777215bdebd86f4816ad82260125b7888dbed2
 		
 		redirect_to post_path(@post)
 	end
@@ -19,6 +22,7 @@ class CommentsController < ApplicationController
     @comment.destroy
     redirect_to post_path(@post)
 	end
+<<<<<<< HEAD
 
   def vote_up
     @comment.points_up += 1
@@ -46,4 +50,6 @@ class CommentsController < ApplicationController
 
   end
 
+=======
+>>>>>>> 8f777215bdebd86f4816ad82260125b7888dbed2
 end

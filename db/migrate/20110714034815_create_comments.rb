@@ -7,10 +7,13 @@ class CreateComments < ActiveRecord::Migration
       t.references :post
       t.references :user
 
+<<<<<<< HEAD
       t.integer :points_up
       t.integer :points_down
       t.double :relative_value
 
+=======
+>>>>>>> 8f777215bdebd86f4816ad82260125b7888dbed2
       t.timestamps
     end
   end

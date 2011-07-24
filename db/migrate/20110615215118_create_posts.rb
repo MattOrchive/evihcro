@@ -10,6 +10,7 @@ class CreatePosts < ActiveRecord::Migration
 
       t.integer :pageviews
 
+<<<<<<< HEAD
       t.integer :accuracy #upvotes
       t.integer :inaccuracy #downvotes
 			
@@ -26,6 +27,17 @@ class CreatePosts < ActiveRecord::Migration
       t.integer :time_effective #Relevant to trending value algo
       t.integer :post_id
 
+=======
+      t.integer :accuracy
+      t.integer :inaccuracy
+			
+			t.references :user
+      
+      t.integer :trending_value
+      t.integer :accuracy_rating
+			
+      t.timestamps
+>>>>>>> 8f777215bdebd86f4816ad82260125b7888dbed2
     end
 		add_index :posts, :user_id
   end
