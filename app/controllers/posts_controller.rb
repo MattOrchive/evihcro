@@ -5,8 +5,8 @@ class PostsController < ApplicationController
 	# GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.order("name").page(params[:page]).per(5)
-
+    @posts = Post.order('id').page(params[:page]).per(5)
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
@@ -47,16 +47,17 @@ class PostsController < ApplicationController
 		@post.user = current_user
 		@post.name = @post.user.name
     
-    @post.tag_list << 'politics' if @post.politics
-    @post.tag_list << 'tech' if @post.tech
-    @post.tag_list << 'entertainment' if @post.entertainment
-    @post.tag_list << 'sports' if @post.sports
-    @post.tag_list << 'science' if @post.science
-    @post.tag_list << 'crime' if @post.crime
-    @post.tag_list << 'business' if @post.business
-    @post.tag_list << 'social' if @post.social
-    @post.tag_list << 'nature' if @post.nature
-    @post.tag_list << 'other' if @post.other
+		@post.tag_list.clear
+		@post.tag_list << 'politics' if params[:post][:politics]
+		@post.tag_list << 'tech' if params[:post][:tech]
+		@post.tag_list << 'entertainment' if params[:post][:entertainment]
+		@post.tag_list << 'sports' if params[:post][:sports]
+		@post.tag_list << 'science' if params[:post][:science]
+		@post.tag_list << 'crime' if params[:post][:crime]
+		@post.tag_list << 'business' if params[:post][:business]
+		@post.tag_list << 'social' if params[:post][:social]
+		@post.tag_list << 'nature' if params[:post][:nature]
+		@post.tag_list << 'other' if params[:post][:other]
     
     respond_to do |format|
       if @post.save
