@@ -16,7 +16,7 @@ class CreatePosts < ActiveRecord::Migration
 			t.references :user
       
       t.double :trending_value #note: changed to double
-      t.integer :accuracy_rating
+      #t.integer :accuracy_rating
 			
       t.timestamps
 
