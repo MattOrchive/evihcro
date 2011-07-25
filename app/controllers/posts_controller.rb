@@ -45,6 +45,8 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
     @post.user = current_user
     @post.name = @post.user.name
+    @post.accuracy_ratio = 1 #every post has a good start
+    @post.accuracy_percent = 100
     
     @post.tag_list.clear
     @post.tag_list << 'politics' if params[:post][:politics]
@@ -81,6 +83,10 @@ class PostsController < ApplicationController
         format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
       end
     end
+
+
+    update_status
+
   end
 
   # PUT /posts/1
@@ -219,6 +225,9 @@ class PostsController < ApplicationController
       (@post.accuracy/ 10)+
       (sqrt(@post.accuracy + @post.inaccuracy+400)) -
       @post.inaccuracy/10 + 5
+
+    @post.accuracy_ratio = post_accuracy_ratio
+    @post.accuracy_percent = post_accuracy_ratio * 100
     
   end
 

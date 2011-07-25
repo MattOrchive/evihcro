@@ -93,6 +93,12 @@
 					Trending Value: <a class="blue"><%= @post.trending_value %></a>
 				</p>	 
 
+				<p id="votesUp">
+					<%=image_tag('NFIcons/source.png') %> 
+					Accuracy: <a class="blue"><%= @post.accuracy %></a>
+				</p>	  
+
+
 			</section>
 		
 			<section class="floatRight">
@@ -118,8 +124,18 @@
 
 				<p id="accuracy">
 					<%=image_tag('NFIcons/source.png') %> 
-					Accuracy: <a class="blue"><%= @post.accuracy %></a>
+					Accuracy Percent: <a class="blue"><%= @post.accuracy_percent + "%" %></a>
 				</p>	  
+
+				<p id="votesDown">
+					<%=image_tag('NFIcons/source.png') %> 
+					Inaccuracy: <a class="blue"><%= @post.inaccuracy %></a>
+				</p>	  
+
+				<p id="karmaValue">
+					<%=image_tag('NFIcons/source.png') %> 
+					Inaccuracy: <a class="blue"><%= @post.karma %></a>
+				</p>	  				
 
 			</section>
 		</section>

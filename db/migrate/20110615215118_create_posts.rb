@@ -32,7 +32,8 @@ class CreatePosts < ActiveRecord::Migration
 			t.references :user
       
       t.integer :trending_value
-      t.integer :accuracy_rating
+      t.double :accuracy_ratio
+      t.double :accuracy_percent
 			
       t.timestamps
     end
