@@ -55,7 +55,7 @@ class PostsController < ApplicationController
     @post.trending_value = 1
 
     #TODO: update_status doesn't work?
-    update_status
+    #update_status
         
     @post.tag_list.clear
     @post.tag_list << 'politics' if params[:post][:politics]
