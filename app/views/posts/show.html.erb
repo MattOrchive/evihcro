@@ -9,7 +9,7 @@
 		padding-top:0;
 		margin-left:0;
 	}
-	
+
 	/* Actual Post */
 	#rightBar { 
 		margin-left:auto;
@@ -54,7 +54,7 @@
 	#rightBar #post #postInfo section {
 		text-align:left;
 	}
-	
+
 	#rightBar #comments h2 {
 		font-size:24px;
 	}
@@ -67,51 +67,45 @@
 	<div id='post'>
 		<%= image_tag('default_photo.png', :size=>'60x60')%>
 		<h1 class="inline" id="postTitle"><%= @post.title %></h1>
-		
+
 		<p id="postContent"><%= @post.content %></p>
-		
+
 		<section id="postInfo">
 			<section class="floatLeft">
 				<p id="postName">
 					<%=image_tag('NFIcons/reporter.png') %> 
 					Reporter: <a class="blue"><%= @post.name %></a>
 				</p>
-			
+
 				<p id="userLoc">
 					<%=image_tag('NFIcons/userLoc.png') %> 
 					Location: <a class="blue"><%= @post.user_location %></a>
 				</p>
-			
+
 				<p id="source">
 					<%=image_tag('NFIcons/source.png') %> 
 					Source: <a class='blue'>Source</a>
 				</p>
 
-				<!-- Jon's stuff>  <-->
+				<!-- Jon's stuff> <-->
 				<p id="trendingValue">
 					<%=image_tag('NFIcons/source.png') %> 
 					Trending Value: <a class="blue"><%= @post.trending_value %></a>
 				</p>	 
 
-				<p id="votesUp">
-					<%=image_tag('NFIcons/source.png') %> 
-					Accuracy: <a class="blue"><%= @post.accuracy %></a>
-				</p>	 
-
-
 			</section>
-		
+
 			<section class="floatRight">
 				<p id="tags">
 					<%=image_tag('NFIcons/tags.png') %> 
 					Tags: <a class="blue">Politics, Sports, Nature, Social</a>
 				</p>
-	
+
 				<p id="postLoc">
 					<%=image_tag('NFIcons/postLoc.png') %> 
 					Occuring In: <a class="blue"><%= @post.post_location %></a>
 				</p>	  
-				  
+
 				<p id="time">
 					<%=image_tag('NFIcons/time.png') %> 
 					Date Created: <a class='blue'>
@@ -119,28 +113,18 @@
 					(<%=distance_of_time_in_words(@post.created_at,	Time.now)%> ago)
 					</a>
 				</p>
-				 
+
 				 <!-- Jon's stuff> <-->
 
-				<p id="accuracyPercent">
+				<p id="accuracy">
 					<%=image_tag('NFIcons/source.png') %> 
-					Accuracy Percent: <a class="blue"><%= @post.accuracy_percent%></a>
+					Accuracy: <a class="blue"><%= @post.accuracy %></a>
 				</p>	  
-
-				<p id="votesDown">
-					<%=image_tag('NFIcons/source.png') %> 
-					Inaccuracy: <a class="blue"><%= @post.inaccuracy %></a>
-				</p>	  
-
-				 <p id="karmaValue">
-					<%=image_tag('NFIcons/source.png') %> 
-					Karma Value: <a class="blue"><%= @post.karma %></a>
-				</p>	 	
 
 			</section>
 		</section>
 	</div>
-			
+
 	<div id="comments">
 		<h2>Comments:</h2>
 		<%= render :partial => "comments/comment",
@@ -149,8 +133,8 @@
 
 		<p>Add a Comment:</p>
 		<%= render "comments/form" %>
-		
+
 		<%= link_to 'News Feed', posts_path %>
 	</div>
-	
+
 </div>
