@@ -1,167 +1,140 @@
-
-<h1>Hello, Rails!</h1>
-
-<style type="text/css">
-	#main {
-		background:none;
-	}
+<style type='text/css'>
 	#wrapper {
 		background:#FAFCF9;
+	}
+	#main {
+		background:none;
 	}
 	#content {
 		padding-top:0;
 		margin-left:0;
 	}
-	/* Feed */
+
+	/* Actual Post */
 	#rightBar { 
 		margin-left:auto;
 		margin-right:auto;
-		padding-top:20px; 
-		width:745px; 
-		background-color:#F9F9F9;
+		padding-top:40px; 
+		width:765px; 
+	}	
+	#rightBar #post { 
+		padding:10px;
+		border:3px solid #FDFDFD;
+		-webkit-border-radius:10px;
+		-moz-border-radius:10px;
+		border-radius:10px;
 	}
-	#rightBar h1{
-		font-size:30px; font-weight:400;
-	}
-	#rightBar p{ 
-		padding-left:8px; 
-		font-size:11px;
-	}
-	#rightBar a{ 
-		text-decoration:none; 
-	}
-	#rightBar div {
-		padding-left:2px;
-		margin-bottom:5px;
-	}
-	#rightBar div #filters {
-		padding-top:4px;
-		line-height:14px;
-	}
-	#rightBar div p a {		
-		margin-left:20px;
-	}
-    
-		
-		
-	#rightBar #post {
-		padding: 8px; 
-		margin-bottom:10px;
-		height:143px;
-		background-image:url('/images/post_background.png');
-		background-repeat:no-repeat;
-	}
-	#rightBar #photo {
-		margin:18px 8px 8px 8px;
-	}
-	#rightBar #postTitle {
-		font-size:18px; 
+	#rightBar #post #postTitle {
+		font-size:30px; 
 		font-weight:500;
-		margin-bottom:0;
+		vertical-align:50%;
 	}
-	#rightBar #postContent {
-		font-size:13px;
-		line-height:normal;
-		padding-left:76px;
+	#rightBar #post #postContent{
+		font-size:16px;
+		margin-bottom:20px;
 	}
-	#rightBar #postInfo {
-		color:#555555;
+	#rightBar #post img {
+		-webkit-border-radius:2px;
+		-moz-border-radius:2px;
+		border-radius:2px;
 	}
-	#rightBar #postInfo p {
+	#rightBar #post #postInfo {
+		height:60px;
+	}
+	#rightBar #post #postInfo p {
+		color:#555;
 		line-height:18px;
 		text-align:left;
-		font-size:12px;
+		font-size:15px;
 	}
-	#rightBar #postInfo p img {
-		width:9px;
-		height:10px;
+	#rightBar #post #postInfo section p img {
+		width:13px;
+		height:14px;
 	}
-	#rightBar #postInfo p a{
-		margin-left:0;
+	#rightBar #post #postInfo section {
+		text-align:left;
 	}
-	#rightBar #post #postInfo #postName, #rightBar #post #postInfo  #userLoc, #rightBar #post #postInfo #source {
-		width:200px;
-	}
-	
-	#rightBar #omitText {
-		color:#00BE69;
-		margin-left:1px;
-	}
-	#rightBar #delete {
-		font-size:12px;
+
+	#rightBar #comments h2 {
+		font-size:24px;
 	}
 </style>
-
 <%= render '/layouts/sideBar' %>
 
-<div id="rightBar" class="floatRight">
-	<div>
-		<h1 class="floatLeft">News Feed</h1>
-		<p id="filters">
-			<a id="filterStories">Results are Based off of the Stories: Javascript-Test</a>
-			<br />
-			<a id="filterTags">Results are Based off of the Tags: Javascript</a>
-		</p>
-	</div>
-	
-	<%= paginate @posts %>
+<p class="notice"><%= notice %></p>
 
-	<% @posts.each do |post| %>
-		<div id="post">
-			<%=link_to  post.title, post, :class=>'blue'%>
-		
-				<%= link_to_if(can?(:delete, @post), 'Delete', post_path(post), :id=>'delete', :class=>'floatRight', :confirm => "Are you sure?", :method => :delete) {} %>
-				
+<div id='rightBar' class='floatRight'>
+	<div id='post'>
+		<%= image_tag('default_photo.png', :size=>'60x60')%>
+		<h1 class="inline" id="postTitle"><%= @post.title %></h1>
 
-				<!--=# link_to "Flag", :controller => "posts", :action => "update", #:method => :put, :post => {:flag => true}%>-->
-			
-			
-			<%= image_tag('default_photo.png',:id=>"photo", :class=>"floatLeft", :size=>'60x60')%>
+		<p id="postContent"><%= @post.content %></p>
 
-
-      <p id="postContent">
-				<%= truncate_content(post, post.content)%>
-			</p>
-	  
-			<section id="postInfo">
-				<p id="postName" class="floatLeft clearLeft">
+		<section id="postInfo">
+			<section class="floatLeft">
+				<p id="postName">
 					<%=image_tag('NFIcons/reporter.png') %> 
-					Reporter: <a class="blue"><%= post.name %></a>
+					Reporter: <a class="blue"><%= @post.name %></a>
 				</p>
 
-				<p id="tags" class="floatLeft">
-					<%=image_tag('NFIcons/tags.png') %> 
-					Tags: <a class="blue"></a>
-				</p>
-	  
-				<p id="userLoc" class="clearLeft floatLeft">
+				<p id="userLoc">
 					<%=image_tag('NFIcons/userLoc.png') %> 
-					Location: <a class="blue"><%= post.user_location %></a>
+					Location: <a class="blue"><%= @post.user_location %></a>
 				</p>
 
-				<p id="postLoc" class="floatLeft">
-					<%=image_tag('NFIcons/postLoc.png') %> 
-					Occuring In: <a class="blue"><%= post.post_location %></a>
-				</p>
-	  
-				<p id="source" class="clearLeft floatLeft">
+				<p id="source">
 					<%=image_tag('NFIcons/source.png') %> 
 					Source: <a class='blue'>Source</a>
 				</p>
-	  
-				<p id="time" class="floatLeft">
-					<%=image_tag('NFIcons/time.png') %> 
-					Date Created: <a class='blue'><%=post.created_at.strftime("%B %e %l:%M %p %Y")%>(<%=distance_of_time_in_words(post.created_at, Time.now)%> ago)</a>
+
+				<!-- Jon's stuff> <-->
+				<p id="trendingValue">
+					<%=image_tag('NFIcons/source.png') %> 
+					Trending Value: <a class="blue"><%= @post.trending_value %></a>
+				</p>	 
+
+			</section>
+
+			<section class="floatRight">
+				<p id="tags">
+					<%=image_tag('NFIcons/tags.png') %> 
+					Tags: <a class="blue">Politics, Sports, Nature, Social</a>
 				</p>
-			</section> 
 
-			
-	  
-			<%= post.accuracy %>
-			<%= post.inaccuracy %>
-		
-		</div>
+				<p id="postLoc">
+					<%=image_tag('NFIcons/postLoc.png') %> 
+					Occuring In: <a class="blue"><%= @post.post_location %></a>
+				</p>	  
 
-	<% end %>
+				<p id="time">
+					<%=image_tag('NFIcons/time.png') %> 
+					Date Created: <a class='blue'>
+					<%=@post.created_at.strftime("%B %e %l:%M %p %Y")%>
+					(<%=distance_of_time_in_words(@post.created_at,	Time.now)%> ago)
+					</a>
+				</p>
+
+				 <!-- Jon's stuff> <-->
+
+				<p id="accuracy">
+					<%=image_tag('NFIcons/source.png') %> 
+					Accuracy: <a class="blue"><%= @post.accuracy %></a>
+				</p>	  
+
+			</section>
+		</section>
+	</div>
+
+	<div id="comments">
+		<h2>Comments:</h2>
+		<%= render :partial => "comments/comment",
+		           :collection => @post.comments %>
+
+
+		<p>Add a Comment:</p>
+		<%= render "comments/form" %>
+
+		<%= link_to 'News Feed', posts_path %>
+	</div>
 
 </div>
