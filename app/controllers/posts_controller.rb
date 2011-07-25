@@ -202,7 +202,7 @@ class PostsController < ApplicationController
 
     if @post.total_votes == 0
       tv = 1
-    else if (log(@post.total_votes)<1)
+    elsif (log(@post.total_votes)<1)
       tv=1
     else
       tv = log(@post.total_votes)
@@ -210,7 +210,7 @@ class PostsController < ApplicationController
     
     if @post.pageviews == 0
       pv = 1
-    else if log(@post.pageviews)<1
+    elsif log(@post.pageviews)<1
       pv=1
     else
       pv = log(@post.pageviews)
@@ -259,5 +259,5 @@ class PostsController < ApplicationController
     end
 
   end
-	
-end
+  
+  end
