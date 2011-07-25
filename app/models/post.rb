@@ -25,6 +25,7 @@
 	validates :content, :presence => true,
 											:length => {:within => 50..600}
 
+	
 	belongs_to :user
 	
 	has_many :comments, :dependent => :destroy
@@ -46,7 +47,6 @@
 	
 	validates :content, :presence => true,
 											:length => {:within => 50..600}
-											
 	private
 		def setFilters
 			self.tag_list.clear
