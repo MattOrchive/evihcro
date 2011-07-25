@@ -45,13 +45,17 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
     @post.user = current_user
     @post.name = @post.user.name
+
     @post.accuracy_ratio = 1 #every post has a good start
     @post.accuracy_percent = 100
 
-    @post.accuracy=0
-    @post.inaccuracy=0
-    @post.pageviews =0 
-    
+    @post.accuracy= 0 
+    @post.inaccuracy= 0
+    @post.pageviews =1 
+    @post.trending_value = 0
+
+    update_status
+        
     @post.tag_list.clear
     @post.tag_list << 'politics' if params[:post][:politics]
     @post.tag_list << 'tech' if params[:post][:tech]
@@ -87,9 +91,6 @@ class PostsController < ApplicationController
         format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
       end
     end
-
-
-    update_status
 
   end
 
@@ -189,9 +190,10 @@ class PostsController < ApplicationController
 
   def update_status
     @post.total_votes = @post.accuracy + @post.inaccuracy
+
     if @post.total_votes == 0
     @post.accuracy_percent = 100
-
+    else
     @post.accuracy_percent = (@post.accuracy/@post.total_votes)*100
     end
     # here is the amazing trending value algorithm
@@ -213,12 +215,18 @@ class PostsController < ApplicationController
       pv = log(@post.pageviews)
     end
 
-    @post.trending_value = tv*@post.accuracy_percent +
-      10*pv + @post.time_effective/600
-
+    
+    set_trending_value!
     post_update_karma
-    original_poster_update_karma
+    
+    # TODO: does op update karma work?
+    #original_poster_update_karma
 
+  end
+
+  def set_trending_value!
+  @post.trending_value = tv*@post.accuracy_percent +
+      10*pv + @post.time_effective/600
   end
 
   def post_update_karma #this function updates the "value" received from a post
@@ -238,7 +246,6 @@ class PostsController < ApplicationController
       (sqrt(@post.accuracy + @post.inaccuracy+400)) -
       @post.inaccuracy/10 + 5
 
-    @post.accuracy_ratio = post_accuracy_ratio
     @post.accuracy_percent = post_accuracy_ratio * 100
     
   end
