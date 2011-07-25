@@ -46,8 +46,8 @@ class PostsController < ApplicationController
     @post.user = current_user
     @post.name = @post.user.name
 
-    #@post.accuracy_ratio = 1 #every post has a good start
-    #@post.accuracy_percent = 100
+    @post.accuracy_ratio = 1 #every post has a good start
+    @post.accuracy_percent = 100
 
     #@post.accuracy= 0 
     #@post.inaccuracy= 0
