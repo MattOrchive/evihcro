@@ -124,7 +124,7 @@
 
 				<p id="accuracy">
 					<%=image_tag('NFIcons/source.png') %> 
-					Accuracy Percent: <a class="blue"><%= @post.accuracy_percent + "%" %></a>
+					Accuracy Percent: <a class="blue"><%= @post.accuracy_percent%><%= " %" %></a>
 				</p>	  
 
 				<p id="votesDown">
@@ -134,7 +134,7 @@
 
 				<p id="karmaValue">
 					<%=image_tag('NFIcons/source.png') %> 
-					Inaccuracy: <a class="blue"><%= @post.karma %></a>
+					Karma Value: <a class="blue"><%= @post.karma %></a>
 				</p>	  				
 
 			</section>

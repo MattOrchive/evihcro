@@ -47,6 +47,10 @@ class PostsController < ApplicationController
     @post.name = @post.user.name
     @post.accuracy_ratio = 1 #every post has a good start
     @post.accuracy_percent = 100
+
+    @post.accuracy=0
+    @post.inaccuracy=0
+    @post.pageviews =0 
     
     @post.tag_list.clear
     @post.tag_list << 'politics' if params[:post][:politics]
@@ -185,23 +189,31 @@ class PostsController < ApplicationController
 
   def update_status
     @post.total_votes = @post.accuracy + @post.inaccuracy
-    @post.accuracy_rating = (@post.accuracy/@post.total_votes)*100
+    if @post.total_votes == 0
+    @post.accuracy_percent = 100
+
+    @post.accuracy_percent = (@post.accuracy/@post.total_votes)*100
+    end
     # here is the amazing trending value algorithm
     # TODO: pageview counter, time_effective counter
 
-    if @post.total_votes == 0 or log(@post.total_votes)<1
+    if @post.total_votes == 0
       tv = 1
+    else if (log(@post.total_votes)<1)
+      tv=1
     else
       tv = log(@post.total_votes)
     end
     
-    if @post.pageviews == 0 or log(@post.pageviews)<1
+    if @post.pageviews == 0
       pv = 1
+    else if log(@post.pageviews)<1
+      pv=1
     else
       pv = log(@post.pageviews)
     end
 
-    @post.trending_value = tv*@post.accuracy_rating +
+    @post.trending_value = tv*@post.accuracy_percent +
       10*pv + @post.time_effective/600
 
     post_update_karma
