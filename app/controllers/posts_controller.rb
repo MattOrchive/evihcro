@@ -51,10 +51,11 @@ class PostsController < ApplicationController
 
     @post.accuracy= 0 
     @post.inaccuracy= 0
-    @post.pageviews =1 
-    @post.trending_value = 0
+    @post.pageviews = 1 
+    @post.trending_value = 1
 
-    update_status
+    #TODO: update_status doesn't work?
+    #update_status
         
     @post.tag_list.clear
     @post.tag_list << 'politics' if params[:post][:politics]
@@ -218,7 +219,7 @@ class PostsController < ApplicationController
     
     set_trending_value!
     post_update_karma
-    
+
     # TODO: does op update karma work?
     #original_poster_update_karma
 
