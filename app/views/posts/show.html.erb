@@ -86,6 +86,13 @@
 					<%=image_tag('NFIcons/source.png') %> 
 					Source: <a class='blue'>Source</a>
 				</p>
+
+				<!-- Jon's stuff> <-->
+				<p id="trendingValue">
+					<%=image_tag('NFIcons/source.png') %> 
+					Trending Value: <a class="blue"><%= @post.trending_value %></a>
+				</p>	 
+
 			</section>
 		
 			<section class="floatRight">
@@ -106,6 +113,14 @@
 					(<%=distance_of_time_in_words(@post.created_at,	Time.now)%> ago)
 					</a>
 				</p>
+				 
+				 <!-- Jon's stuff> <-->
+
+				<p id="accuracy">
+					<%=image_tag('NFIcons/source.png') %> 
+					Accuracy: <a class="blue"><%= @post.accuracy %></a>
+				</p>	  
+
 			</section>
 		</section>
 	</div>
