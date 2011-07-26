@@ -133,6 +133,7 @@ class PostsController < ApplicationController
   def vote_up
     #simplified for testing
     @post.accuracy+=1
+    render_text @post.accuracy
     
 #    check_votes_users
 #
@@ -159,6 +160,7 @@ class PostsController < ApplicationController
   def vote_down
     
     @post.inaccuracy += 1
+    render_text @post.inaccuracy
     
 #    check_votes_users
 #    
