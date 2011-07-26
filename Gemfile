@@ -11,6 +11,7 @@ gem 'cancan'
 gem 'kaminari'
 gem 'rake', '0.9.2'
 gem 'acts-as-taggable-on'
+gem 'gravtastic' #gravatar support
 
 #gem 'mysql2', '0.2.6'
 

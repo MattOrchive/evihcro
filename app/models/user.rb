@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
 	has_many :comments
 	
 	has_many :posts, :dependent => :destroy
+  
+  include Gravtastic
+  gravtastic
 	
 	
 	def role?(role)

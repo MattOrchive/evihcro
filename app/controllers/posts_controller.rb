@@ -107,6 +107,9 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(posts_url) }
       format.xml  { head :ok }
+      
+      
+      format.js { render :layout=>false }
     end
   end
 
