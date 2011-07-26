@@ -59,7 +59,7 @@
 		font-size:24px;
 	}
 </style>
-<%= javascript_include_tag :prototype %>
+<%= javascript_include_tag :defaults %>
 
 <%= render '/layouts/sideBar' %>
 
@@ -80,9 +80,8 @@
 				</p>	                           
 				<p id="voteInaccurate">
 					<%=image_tag('NFIcons/time.png') %> 
-                                  <b><a class="blue"><%= link_to_remote( "Inaccurate",
-                                                    :update => "inaccuracy",
-                                                    :url =>{ :action => :vote_down }) %></a></b>
+                                  <b><a class="blue"><%= link_to_remote 'Inaccurate', 
+                                      {:action => 'vote_down', :id => list, :update => 'inaccuracy'}%></a></b>
 				</p>	
 				<p id="Flag">
 					<%=image_tag('NFIcons/userLoc.png') %> 
