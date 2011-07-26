@@ -15,25 +15,17 @@ class CreatePosts < ActiveRecord::Migration
 			
 			t.references :user
       
-      t.double :trending_value #note: changed to double
+      t.decimal :trending_value #note: changed to dec
       #t.integer :accuracy_rating
-			
-      t.timestamps
 
       # Jon's code incoming
-      t.double :karma
+      t.decimal :karma
       t.integer :total_votes
       t.integer :time_effective #Relevant to trending value algo
       t.integer :post_id
-
-      t.integer :accuracy
-      t.integer :inaccuracy
 			
-			t.references :user
-      
-      t.integer :trending_value
-      t.double :accuracy_ratio
-      t.double :accuracy_percent
+      t.decimal :accuracy_ratio
+      t.decimal :accuracy_percent
 			
       t.timestamps
     end
