@@ -143,14 +143,18 @@
 		</section>
 	</div>
   
-  <br><br>
+  <br><br><br>
   
 	<div id="comments">
 		<h2>Comments:</h2>
-		<%= render :partial => "comments/comment",
+                <br>
+		<%=  render :partial => "comments/comment",
 		           :collection => @post.comments %>
 
 
+                <br>
+                <br>
+                
 		<p>Add a Comment:</p>
 		<%= render "comments/form" %>
 
