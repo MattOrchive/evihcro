@@ -48,7 +48,7 @@ class PostsController < ApplicationController
 
     #TODO: WEIIIRD errors here, i don't know why
     #TODO: accuracy_ratio doesn't appear in the smart variable check
-    @post.accuracy_ratio = 1.0 #every post has a good start
+    @post.accuracy_ratio = 1 #every post has a good start
     @post.accuracy_percent = 100
 
     @post.accuracy= 0 

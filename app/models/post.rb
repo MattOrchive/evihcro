@@ -32,9 +32,9 @@
 	
 #	attr_accessor :filter1, :filter2, :filter3, :filter4, :filter5, :filter6, :filter7, :filter8, :filter9, :filter10
 	attr_accessor :politics, :tech, :entertainment, :sports, :science, :crime, :business, :social, :nature, :other
-	attr_accessible :name, :title, :content, :user_location, :post_location, :user_id
-	
-	
+	attr_accessible :name, :title, :content, :user_location, :post_location, :user_id,
+    :post_id, :karma, :trending_value, :pageviews, :accuracy, :inaccuracy,   # <-- Jon's super code
+    :total_votes, :time_effective, :accuracy_ratio, :accuracy_percent
 	
 	
 	title_regex = /\A[a-zA-Z ,.-\/\[\]\{\}\'\"]+\z/

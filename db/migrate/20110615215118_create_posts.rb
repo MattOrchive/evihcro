@@ -4,6 +4,8 @@ class CreatePosts < ActiveRecord::Migration
       t.string :name
       t.string :title
       t.text :content
+      t.integer :post_id
+      t.references :user
 
       t.string :user_location
       t.string :post_location
@@ -12,20 +14,16 @@ class CreatePosts < ActiveRecord::Migration
 
       t.integer :accuracy #upvotes
       t.integer :inaccuracy #downvotes
-			
-			t.references :user
+      t.integer :total_votes
       
+      t.decimal :accuracy_ratio
+      t.decimal :accuracy_percent
+		
       t.decimal :trending_value #note: changed to dec
-      #t.integer :accuracy_rating
 
       # Jon's code incoming
       t.decimal :karma
-      t.integer :total_votes
       t.integer :time_effective #Relevant to trending value algo
-      t.integer :post_id
-			
-      t.decimal :accuracy_ratio
-      t.decimal :accuracy_percent
 			
       t.timestamps
     end
