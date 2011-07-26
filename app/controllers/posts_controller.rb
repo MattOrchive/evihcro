@@ -47,13 +47,13 @@ class PostsController < ApplicationController
     @post.name = @post.user.name
 
     #TODO: WEIIIRD errors here, i don't know why
-    #post.accuracy_ratio = 1 #every post has a good start
+    post.accuracy_ratio = 1 #every post has a good start
     @post.accuracy_percent = 100
 
-    #@post.accuracy= 0 
-    #@post.inaccuracy= 0
-    #@post.pageviews = 1 
-    #@post.trending_value = 1
+    @post.accuracy= 13 
+    @post.inaccuracy= 12
+    @post.pageviews = 9001 
+    @post.trending_value = 1337
 
     #TODO: update_status doesn't work?
     #update_status
