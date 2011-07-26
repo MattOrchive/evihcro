@@ -107,7 +107,7 @@
 
 			</section>
 
-			<section class="floatRight">
+			<section class="floatMid">
 				<p id="tags">
 					<%=image_tag('NFIcons/tags.png') %> 
 					Tags: <a class="blue">Politics, Sports, Nature, Social</a>
@@ -140,6 +140,18 @@
                                 
 
 			</section>
+                         <section class="floatRight">
+                           
+				<p id="voteAccurate">
+					<%=image_tag('NFIcons/source.png') %> 
+                                  <b><a class="blue"><%= "Accurate!" %></a></b>
+				</p>	                           
+				<p id="voteInaccurate">
+					<%=image_tag('NFIcons/source.png') %> 
+                                  <b><a class="blue"><%= "Inaccurate!" %></a></b>
+				</p>	
+                                
+                         </section>
 		</section>
 	</div>
   
@@ -147,12 +159,10 @@
   
 	<div id="comments">
 		<h2>Comments:</h2>
-                <br>
 		<%=  render :partial => "comments/comment",
 		           :collection => @post.comments %>
 
 
-                <br>
                 <br>
                 
 		<p>Add a Comment:</p>
