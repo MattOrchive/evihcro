@@ -69,6 +69,19 @@
 		<h1 class="inline" id="postTitle"><%= @post.title %></h1>
 
 		<p id="postContent"><%= @post.content %></p>
+                
+               <section class="floatRight">
+                           
+				<p id="voteAccurate">
+					<%=image_tag('NFIcons/source.png') %> 
+                                  <b><a class="blue"><%= "Accurate!" %></a></b>
+				</p>	                           
+				<p id="voteInaccurate">
+					<%=image_tag('NFIcons/source.png') %> 
+                                  <b><a class="blue"><%= "Inaccurate!" %></a></b>
+				</p>	
+                                
+                </section>                
 
 		<section id="postInfo">
 			<section class="floatLeft">
@@ -140,18 +153,6 @@
                                 
 
 			</section>
-                         <section class="floatRight">
-                           
-				<p id="voteAccurate">
-					<%=image_tag('NFIcons/source.png') %> 
-                                  <b><a class="blue"><%= "Accurate!" %></a></b>
-				</p>	                           
-				<p id="voteInaccurate">
-					<%=image_tag('NFIcons/source.png') %> 
-                                  <b><a class="blue"><%= "Inaccurate!" %></a></b>
-				</p>	
-                                
-                         </section>
 		</section>
 	</div>
   
