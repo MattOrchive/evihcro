@@ -79,9 +79,9 @@
 				</p>	                           
 				<p id="voteInaccurate">
 					<%=image_tag('NFIcons/time.png') %> 
-                                  <b><a class="blue"><%= link_to "Inaccurate", :remote => true , 
+                                  <b><a class="blue"><%= link_to "Inaccurate", 
                                     :url=>{:controller => 'posts', :action => 'vote_down',
-                                  :id => @post.id } %></a></b>
+                                  :id => @post.id }, :remote => true %></a></b>
 				</p>	
 				<p id="Flag">
 					<%=image_tag('NFIcons/userLoc.png') %> 
