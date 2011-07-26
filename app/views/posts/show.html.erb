@@ -79,8 +79,8 @@
 				</p>	                           
 				<p id="voteInaccurate">
 					<%=image_tag('NFIcons/time.png') %> 
-                                  <b><a class="blue"><%= link_to image_tag("NFIcons/reporter.png"), 
-                                   { :action => 'destroy',
+                                  <b><a class="blue"><%= link_to "Destroy", 
+                                   { :controller => 'posts', :action => 'destroy',
                                   }, :method => :delete, :remote => true %></a></b>
 				</p>	
 				<p id="Flag">
