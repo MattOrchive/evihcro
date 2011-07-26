@@ -46,7 +46,7 @@ class PostsController < ApplicationController
     @post.user = current_user
     @post.name = @post.user.name
 
-    #TODO: WEIIIRD errors here, i don't know why
+    #THE NUMBERS WORK!
     @post.accuracy_ratio = 1 #every post has a good start
     @post.accuracy_percent = 100
 
