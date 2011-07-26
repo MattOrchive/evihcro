@@ -9,7 +9,7 @@ class CreateComments < ActiveRecord::Migration
 
       t.integer :points_up
       t.integer :points_down
-      t.double :relative_value
+      t.decimal :relative_value
 
       t.timestamps
     end

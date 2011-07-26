@@ -14,14 +14,14 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer :total_downvotes
       t.integer :reliability
 
-      t.double :karma
+      t.decimal :karma
       t.integer :comment_karma
       t.integer :newsworthiness #have users "level up" w/ more posts
 
-      t.double :peak_hotness #how "hot" or "trendy" the user has ever gotten
-      t.double :peak_accuracy
-      t.double :peak_view_popularity
-      t.double :peak_listeners #i.e. largest amount of people who voted on a submission you made
+      t.decimal :peak_hotness #how "hot" or "trendy" the user has ever gotten
+      t.decimal :peak_accuracy
+      t.decimal :peak_view_popularity
+      t.decimal :peak_listeners #i.e. largest amount of people who voted on a submission you made
 
       # t.encryptable
       # t.confirmable
