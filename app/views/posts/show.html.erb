@@ -74,11 +74,11 @@
                            
 				<p id="voteAccurate">
 					<%=image_tag('NFIcons/source.png') %> 
-                                  <b><a class="blue"><%= button_to_function "Accurate", @post.accuracy += 1 %></a></b>
+                                  <b><a class="blue"><%= button_to_function "Accurate", "alert('Accurate')" %></a></b>
 				</p>	                           
 				<p id="voteInaccurate">
 					<%=image_tag('NFIcons/time.png') %> 
-                                  <b><a class="blue"><%= "Inaccurate" %></a></b>
+                                  <b><a class="blue"><%= button_to "Inaccurate", :action => @post.vote_down %></a></b>
 				</p>	
 				<p id="Flag">
 					<%=image_tag('NFIcons/userLoc.png') %> 
