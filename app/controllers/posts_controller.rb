@@ -131,48 +131,54 @@ class PostsController < ApplicationController
   end
 
   def vote_up
-    check_votes_users
-
-    if !$voted_up and !$voted_down #TODO: how to set it so this boolean maps to individual users?
-      #should there be an array that indexes "users who voted on this post"?
-    @post.accuracy += 1
-    $voted_down = false
-    $voted_up = true
-    @user.posts_upvoted_array << (@post.id)
-
-    elsif $voted_down #allow vote changes
-    @post.inaccuracy -= 1
-    @post.accuracy += 1
-    $voted_down = false
-    $voted_up = true
-
-    @user.posts_upvoted_array << (@post.id)
-    @user.posts_downvoted_array.delete(@post.id)
-    end
-    update_status
+    #simplified for testing
+    @post.accuracy+=1
+    
+#    check_votes_users
+#
+#    if !$voted_up and !$voted_down #TODO: how to set it so this boolean maps to individual users?
+#      #should there be an array that indexes "users who voted on this post"?
+#    @post.accuracy += 1
+#    $voted_down = false
+#    $voted_up = true
+#    @user.posts_upvoted_array << (@post.id)
+#
+#    elsif $voted_down #allow vote changes
+#    @post.inaccuracy -= 1
+#    @post.accuracy += 1
+#    $voted_down = false
+#    $voted_up = true
+#
+#    @user.posts_upvoted_array << (@post.id)
+#    @user.posts_downvoted_array.delete(@post.id)
+#    end
+#    update_status
 
   end
 
   def vote_down
-    check_votes_users
     
-    if !$voted_up and !$voted_down
     @post.inaccuracy += 1
-    $voted_down = true
-    $voted_up = false
-    @user.posts_downvoted_array << (@post.id)
-
-    elsif $voted_up
-    @post.inaccuracy += 1
-    @post.accuracy -= 1
-    $voted_down = true
-    $voted_up = false
-
-    @user.posts_downvoted_array << (@post.id)
-    @user.posts_upvoted_array.delete(@post.id)
     
-    end
-    update_status
+#    check_votes_users
+#    
+#    if !$voted_up and !$voted_down
+#    @post.inaccuracy += 1
+#    $voted_down = true
+#    $voted_up = false
+#    @user.posts_downvoted_array << (@post.id)
+#
+#    elsif $voted_up
+#    @post.inaccuracy += 1
+#    @post.accuracy -= 1
+#    $voted_down = true
+#    $voted_up = false
+#
+#    @user.posts_downvoted_array << (@post.id)
+#    @user.posts_upvoted_array.delete(@post.id)
+#    
+#    end
+#    update_status
 
   end
 
