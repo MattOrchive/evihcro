@@ -77,11 +77,7 @@
 					<%=image_tag('NFIcons/source.png') %> 
                                   <b><a class="blue"><%= button_to_function "Accurate", "alert('Accurate')" %></a></b>
 				</p>	                           
-				<p id="voteInaccurate">
-					<%=image_tag('NFIcons/time.png') %> 
-                                  <b><a class="blue"><%= link_to_remote "Inaccurate", 
-                                    :url => {:action => 'vote_down'}, :update => inaccuracy %></a></b>
-				</p>	
+
 				<p id="Flag">
 					<%=image_tag('NFIcons/userLoc.png') %> 
                                   <b><a class="blue"><%= "Flag" %></a></b>
@@ -108,6 +104,11 @@
 
 				<!-- Jon's stuff> <-->
                                 
+                                				<p id="voteInaccurate">
+					<%=image_tag('NFIcons/time.png') %> 
+                                  <b><a class="blue"><%= link_to_remote "Inaccurate", 
+                                    :url => {:action => 'vote_down'}, :update => inaccuracy %></a></b>
+				</p>	
                                  <p id="inaccuracy">
 					<%=image_tag('NFIcons/source.png') %> 
 					Inaccuracy: <a class="blue"><%= @post.inaccuracy %></a>
