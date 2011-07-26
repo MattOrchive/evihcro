@@ -50,8 +50,8 @@ class PostsController < ApplicationController
     post.accuracy_ratio = 1 #every post has a good start
     @post.accuracy_percent = 100
 
-    @post.accuracy= 13 
-    @post.inaccuracy= 12
+    #@post.accuracy= 13 
+    #@post.inaccuracy= 12
     @post.pageviews = 9001 
     @post.trending_value = 1337
 
