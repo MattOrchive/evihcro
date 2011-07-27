@@ -63,10 +63,10 @@
 
 <%= render '/layouts/sideBar' %>
 
-<%= image_tag @user.gravatar_url %><h1><%= @user.name %></h1>
-<%= @user.email%>
+<%= image_tag @user_on_page.gravatar_url %><h1><%= @user_on_page.name %></h1>
+<%= @user_on_page.email%>
 <br>
-<%  url_string = 'http://gravatar.com/'+ @user.gravatar_id.to_s %>
+<%  url_string = 'http://gravatar.com/'+ @user_on_page.gravatar_id.to_s %>
 <%= link_to "This user has a Gravatar account.", url_string %>
 
 <br>
@@ -74,7 +74,7 @@
 <div id='posts'>
 <h2>Posts:</h2>
 
- <%= @user.posts.each do |post|%>
+ <%= @user_on_page.posts.each do |post|%>
 <%= post %>
 <br />
 <% end %>
