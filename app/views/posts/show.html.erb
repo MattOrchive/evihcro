@@ -1,7 +1,7 @@
 <h1>Hello, bloob!</h1>
 <% #if @user.is_gravtastic %>
-<p><%= link_to "Go to Gravatar Profile", @user.gravatar_url %> </p>
-<% #end %>
+<p><%= link_to "Go to Gravatar Profile", @user.email %> </p>
+<% #end%>
 
 <style type='text/css'>
 	#wrapper {

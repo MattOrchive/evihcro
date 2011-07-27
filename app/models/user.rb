@@ -1,13 +1,14 @@
+require 'gravtastic'
 class User < ActiveRecord::Base
+  include Gravtastic
+  is_gravtastic!
+  
   validate :check_beta_code, :on => 'create'
 	
 	has_and_belongs_to_many :roles
 	has_many :comments
 	
 	has_many :posts, :dependent => :destroy
-  
-  include Gravtastic
-  gravtastic
 	
 	def role?(role)
     self.role.to_sym == role.to_sym
