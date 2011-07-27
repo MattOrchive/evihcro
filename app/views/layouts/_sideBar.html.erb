@@ -1,6 +1,8 @@
 <div id="sidee" class="floatLeft">
   <div id="sidebar">
-    <h1>Hello, <%= @user.name %>!</h1>
+    <h1><%= link_to "Your Profile", user_path(@user) %></h1>
+    <h2>Hello, <%= @user.name %>!</h2>
+    <%= link_to "Edit Profile", '/edit' %>
     <%= image_tag('sidebar_profile.png', :id=>'profile') %>
     <div id="postingInterface">
       <h1>Posting Interface</h1>
