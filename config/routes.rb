@@ -13,7 +13,12 @@ OrchiveApp::Application.routes.draw do
 	end
 	
 	resources :posts do
-			resources :comments
+    resources :comments
+    
+       member do
+       post 'vote_up'
+       post 'vote_down'
+       delete 'destroy'
 	end
 
   # The priority is based upon order of creation:
