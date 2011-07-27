@@ -69,14 +69,13 @@
 <br>
 
 <div id="posts">
-        <h2>Comments:</h2>
-        <%=  render :partial => "posts/post",
-                   :collection => @user.posts %>
-
+        <h2>Posts:</h2>
+        
+        <%= @user.posts.each do |post|%>
+	<br /><br />
+	<%= render post %>
+        <% end %>
+        
         <br>
 </div>
 
-<%= @user.posts.each do |post|%>
-	<br /><br />
-	<%= render post %>
-<% end %>
