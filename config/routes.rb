@@ -18,9 +18,8 @@ OrchiveApp::Application.routes.draw do
     #Jon's modifications
        member do
        post 'vote_up'
-       post 'vote_down'
        delete 'destroy'
-	end
+    end
   end
 
   # The priority is based upon order of creation:
