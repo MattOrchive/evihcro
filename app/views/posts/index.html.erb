@@ -125,7 +125,7 @@
 			<section id="postInfo">
 				<p id="postName" class="floatLeft clearLeft">
 					<%=image_tag('NFIcons/reporter.png') %> 
-					Reporter: <a class="blue"><%= link_to post.name, post_user_path %></a>
+					Reporter: <a class="blue"><%= link_to post.name, user_path(post.user) %></a>
 				</p>
 
 				<p id="tags" class="floatLeft">
