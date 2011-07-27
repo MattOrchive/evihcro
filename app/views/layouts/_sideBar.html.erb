@@ -3,9 +3,12 @@
     <h2><%= link_to "Your Profile", user_path(@user) %></h2>
    Welcome, <%= @user.name %>!
     <%= link_to "Edit Profile", '/edit' %>
-    <%= image_tag(@user.gravatar_url) %> 
+    <%= link_to image_tag(@user.gravatar_url), user_path(@user) %> <br>
+    Favorite Tags: <br>
+    Location: <br>
     
-    <%= image_tag('sidebar_profile.png', :id=>'profile') %>
+    <%= #image_tag('sidebar_profile.png', :id=>'profile') %>
+    
     <div id="postingInterface">
       <h1>Posting Interface</h1>
       <p>Contribute to the community</p>
