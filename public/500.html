@@ -1,27 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
   <title>Orchive has encountered a problem (500)</title>
-  <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
-    }
-    h1 { font-size: 100%; color: #0f4; line-height: 1.5em; }
+  <meta name="description" content="404 Error">
+
+  <meta name="author" content="Orchive">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <Style type="text/css">
+  	@import "/stylesheets/header.css";
+		@import "/stylesheets/footer.css";
+		@import "/stylesheets/mainStyle.css";
+		
+	#header #headerContent img {
+		padding-top:15px;
+	}
+	#content {
+		width:380px;
+		height:480px;
+	}
+	#main #content a {
+		color:#555;
+		font-weight:600;
+		font-size:14px;
+		text-decoration:none;
+		margin-left:170px;
+	}
+	#main #content a:hover {
+		color:#00BE69;
+	}
+	#main #content h1 {
+		font-size:36px;
+		font-weight:600;
+		margin:50px 0 0 140px;
+	}
+	#main #content img {
+		margin:20px 0 30px 80px;
+	}
+	#main p {
+		text-align:center;
+		font-size:14px;
+		margin-bottom:10px;
+	}
   </style>
 </head>
-
 <body>
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <h1>Sorry, we have encountered a problem.</h1>
-    <p>The Orchive development team has been notified about this issue and will take a look at it shortly.</p>
-    <p style="color:rgb(20,255,200)"><a href="/posts">Return to main page</a></p>
-  </div>
+<div id="wrapper">
+<header id="header">
+	<div id="headerContent">
+ 		<a href="/"><img src='/images/logo.png'/></a>
+	</div>
+</header>
+    
+<div id="main">
+	<div id="content">
+    <h1 class="floatLeft">Oops!</h1>
+
+    <img src="/images/404_clock.png"/>    	
+    <p>
+	Orchive has encountered a <b>backend page rendering</b> problem.
+        <br />The Orchive development team has been notified of this issue, and<br />
+        will soon fix the bug. Rest assured that Orchive<br />only hires the most talented of code monkeys.
+		</p>
+    <a href="/">Home</a>
+	</div>
+</div>
+
 </body>
-</html>
+</html> 
