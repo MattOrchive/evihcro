@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
   include Gravtastic
   gravtastic
 	
-	
 	def role?(role)
     self.role.to_sym == role.to_sym
   end
