@@ -47,8 +47,6 @@
 	
 	validates :content, :presence => true,
 											:length => {:within => 50..600}
-                    
-   
 	private
 		def setFilters
 			self.tag_list.clear
