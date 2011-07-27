@@ -70,10 +70,7 @@
 	<div id='post'>
 		<%= image_tag('default_photo.png', :size=>'60x60')%>
 		<h1 class="inline" id="postTitle"><%= @post.title %></h1>
-                <% #if @user.is_gravtastic %>
-                <p><%= #link_to "Go to Gravatar Profile", @post.title %> </p>
                 <%= @user.name %>
-                <% #end%>
 
 		<p id="postContent"><%= @post.content %></p>
                 
