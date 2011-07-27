@@ -64,14 +64,15 @@
 <%= render '/layouts/sideBar' %>
 
 <h1><%= @user.name %></h1>
-<br>
 <%= @user.email%>
+<%= @user.email%>
+<%= @user.gravatar_url %>
 <br>
 
 <div id='posts'>
-<h1>Posts:</h1>
+<h2>Posts:</h2>
 <%= @user.posts.each do |post|%>
-	<br /><br />
+	<br />
 	<%= post %>
 <% end %>
 </div>
