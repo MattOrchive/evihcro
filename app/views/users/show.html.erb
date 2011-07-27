@@ -63,8 +63,7 @@
 
 <%= render '/layouts/sideBar' %>
 
-<h1><%= @user.name %></h1>
-<%= image_tag @user.gravatar_url %>
+<%= image_tag @user.gravatar_url %><h1><%= @user.name %></h1>
 <%= @user.email%>
 <br>
 <%  url_string = 'http://gravatar.com/'+ @user.gravatar_id.to_s %>
