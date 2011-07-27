@@ -48,13 +48,6 @@
 	validates :content, :presence => true,
 											:length => {:within => 50..600}
                     
-   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-    
-    redirect_to '/posts'
-     
-   end
    
 	private
 		def setFilters
