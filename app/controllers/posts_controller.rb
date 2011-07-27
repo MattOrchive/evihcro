@@ -106,12 +106,13 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
 
+    redirect_to '/posts'
     respond_to do |format|
-      format.html { redirect_to('/posts') }
+      format.html { redirect_to(posts_url) }
       format.xml  { head :ok }
       
       
-      format.js { redirect_to('/posts') }
+      format.js { redirect_to(posts_url) }
     end
   end
 
