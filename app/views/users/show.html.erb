@@ -68,14 +68,11 @@
 <%= @user.email%>
 <br>
 
-<div id="posts">
-        <h2>Posts:</h2>
-        
-        <%= @user.posts.each do |post|%>
+
+<h2>Posts:</h2>
+<br>
+
+<%= @user.posts.each do |post|%>
 	<br /><br />
 	<%= render post %>
-        <% end %>
-        
-        <br>
-</div>
-
+<% end %>
