@@ -107,11 +107,11 @@ class PostsController < ApplicationController
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to(posts_url) }
+      format.html { redirect_to('/posts') }
       format.xml  { head :ok }
       
       
-      format.js { redirect_to(posts_url) }
+      format.js { redirect_to('/posts') }
     end
   end
 
