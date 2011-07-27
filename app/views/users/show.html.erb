@@ -1,3 +1,4 @@
+<h1>Hello, bloob!</h1>
 <style type='text/css'>
 	#wrapper {
 		background:#FAFCF9;
@@ -66,7 +67,16 @@
 <br>
 <%= @user.email%>
 <br>
+
+<div id="posts">
+        <h2>Comments:</h2>
+        <%=  render :partial => "posts/post",
+                   :collection => @user.posts %>
+
+        <br>
+</div>
+
 <%= @user.posts.each do |post|%>
 	<br /><br />
-	<%= post %>
+	<%= render post %>
 <% end %>
