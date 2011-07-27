@@ -101,7 +101,7 @@
 		</p>
 	</div>
 
-        <% @posts = Post.order('created_at_DESC').page(params[:page]).per(5)
+        <% @posts = Post.order('created_at DESC').page(params[:page]).per(5)
         #user Post.order('trendingValue') %>
 
 	<% @posts.each do |post| %>
