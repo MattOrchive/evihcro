@@ -71,10 +71,6 @@
 
 <div id='posts'>
 <h2>Posts:</h2>
-<%= @user.posts.each do |post|%>
-	<br />
-	<%= post %>
-<% end %>
         
-<%= #render :partial => 'aPost' %>
+<%= render :partial => 'aPost' %>
 </div>
