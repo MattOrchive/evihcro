@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   # GET /posts.xml
   def index
     @posts = Post.order('id').page(params[:page]).per(5)
-    @user = User.find(:user_id => current_user)
+    @user = current_user
     
     respond_to do |format|
       format.html # index.html.erb
