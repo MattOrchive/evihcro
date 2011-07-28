@@ -104,6 +104,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1.xml
   def destroy
     @post = Post.find(params[:id])
+    @post.vote_up
     @post.destroy
 
     redirect_to(:action=>'index')
