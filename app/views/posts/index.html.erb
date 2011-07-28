@@ -156,7 +156,7 @@
                                 <p id="voteAccurate">
 					<%=image_tag('NFIcons/time.png') %> 
                                   <b><a class="blue"><%= link_to "Accurate", 
-                                   {:action => 'vote_up', :id => post.id
+                                   { :controller => :posts, :action => 'vote_up', :id => post.id
                                  }%></a></b>
 				</p>	                                
                                 <p id="voteInaccurate">
@@ -164,7 +164,13 @@
                                   <b><a class="blue"><%= link_to "Inaccurate", 
                                    {:action => 'vote_down', :id => post.id
                                  }%></a></b>
-				</p>	
+				</p>
+                                <p id="Destroy">
+					<%=image_tag('NFIcons/time.png') %> 
+                                  <b><a class="blue"><%= link_to "Destroy", 
+                                   { :controller => :posts, :action => 'destroy', :id => post.id
+                                 }%></a></b>
+				</p>	                                
 			</section> 
 
 		</div>
