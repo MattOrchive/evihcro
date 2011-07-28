@@ -1,5 +1,4 @@
 OrchiveApp::Application.routes.draw do	
-        
   resources :comments
 
   devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "join" }, :controllers => {:registrations => 'users/registrations', :sessions=> 'users/sessions'}  
@@ -16,11 +15,22 @@ OrchiveApp::Application.routes.draw do
     resources :comments
     
     #Jon's modifications
+    match "vote_up", :on => :collection
+    match "vote_down", :on => :collection
+    #post 'vote_up', :on => :member
+    #post 'vote_down', :on => :collection
+    
 #       member do
 #       post 'vote_up'
 #       delete 'destroy'
 #    end
   end
+  
+          
+  #map.connect '/posts/vote_up', :controller => 'posts', :action => 'vote_up'
+  #map.connect '/posts/vote_down', :controller => 'posts', :action => 'vote_down'
+  #^jon's vote routing  
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

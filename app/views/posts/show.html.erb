@@ -73,21 +73,21 @@
                 
                <section class="floatRight">
                            
-				<p id="voteAccurate">
-					<%=image_tag('NFIcons/source.png') %> 
-                                  <b><a class="blue"><%= "Accurate"  %></a></b>
-				</p>	                           
-				<p id="voteInaccurate">
+                                <p id="voteAccurate">
 					<%=image_tag('NFIcons/time.png') %> 
-                                  <b><a class="blue"><%= link_to "Destroy", 
-                                   { :controller => 'posts', :action => 'destroy', :id => @post
-                                 }, :method => :delete, :remote => true %></a></b>
-				</p>	
+                                  <b><a class="blue"><%= link_to "Accurate", post_path(@post),
+                                   :action => :vote_up, :method => :get
+                                 %></a></b>
+				</p>	      
+                                <p id="voteAccurate">
+					<%=image_tag('NFIcons/time.png') %> 
+                                  <b><a class="blue"><%= link_to 'Accurate2', :action => :vote_up, :id => @post.id%></a></b>
+				</p>                                
 				<p id="Flag">
 					<%=image_tag('NFIcons/userLoc.png') %> 
-                                  <b><a class="blue"><%= link_to "Destroy2", 
-                                   { :action => 'destroy'
-                                 }, :method => :delete, :remote => true %></a></b>
+                                  <b><a class="blue"><%= link_to 'Delete', post_path(@post),
+                                    :confirm => "Are you sure?", 
+                                    :method => :delete %></a></b>
 				</p>	                                
                                 
                 </section>                

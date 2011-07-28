@@ -29,6 +29,7 @@ GEM
       activesupport (= 3.0.8)
     activesupport (3.0.8)
     acts-as-taggable-on (2.0.6)
+    acts_as_rateable (2.0.1)
     arel (2.0.10)
     bcrypt-ruby (2.1.4)
     bcrypt-ruby (2.1.4-x86-mingw32)
@@ -92,6 +93,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on
+  acts_as_rateable
   cancan
   devise
   gravtastic

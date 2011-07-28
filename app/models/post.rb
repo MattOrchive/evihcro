@@ -2,6 +2,7 @@
 	before_save :setFilters
 	acts_as_taggable_on
 	acts_as_taggable_on :tags
+  acts_as_rateable #this is for voting
 
 	belongs_to :user
 
@@ -9,7 +10,8 @@
 
 #	attr_accessor :filter1, :filter2, :filter3, :filter4, :filter5, :filter6, :filter7, :filter8, :filter9, :filter10
 	attr_accessor :politics, :tech, :entertainment, :sports, :science, :crime, :business, :social, :nature, :other
-	attr_accessible :name, :title, :content, :user_location, :post_location, :user_id
+
+	attr_accessible :name, :title, :content, :user_location, :post_location, :user_id, :politics, :tech, :entertainment, :sports, :science, :crime, :business, :social, :nature, :other
 
 
 
@@ -47,25 +49,6 @@
 	
 	validates :content, :presence => true,
 											:length => {:within => 50..600}
-                    
-def vote_up
-    #simplified for testing
-    @post = Post.find(params[:id])
-    @post.accuracy+=1
-    #render :text => @post.accuracy
-    
-    #redirect_to(:action=>'index')
-
-  end
-
-def vote_down
-    @post = Post.find(params[:id])    
-    @post.inaccuracy += 1
-    #render :text => @post.inaccuracy
-    #redirect_to(:action=>'index')
-
-  end
-   
 	private
 		def setFilters
 			self.tag_list.clear

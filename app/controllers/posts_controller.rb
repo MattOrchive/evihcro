@@ -5,9 +5,9 @@ class PostsController < ApplicationController
 	# GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.order('id').page(params[:page]).per(5)
+    @posts = Post.order('created_at DESC').page(params[:page]).per(5)
     @user = current_user
-    
+  
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
@@ -138,11 +138,13 @@ class PostsController < ApplicationController
 
   def vote_up
     #simplified for testing
-    @post.vote_up
+    @post = Post.find(params[:id])
+    @post.rate_it( 1, current_user.id )
+    #@post.accuracy+=1
+    
+    @post.save
     #@post.accuracy+=1
     #render :text => @post.accuracy
-    
-    redirect_to(:action=>'index')
     
     respond_to do |format|
       format.html { redirect_to(posts_url) }
@@ -150,6 +152,9 @@ class PostsController < ApplicationController
 
       format.js { redirect_to(posts_url) }
     end    
+    
+   redirect_to post_path
+    
 #    check_votes_users
 #
 #    if !$voted_up and !$voted_down #TODO: how to set it so this boolean maps to individual users?
@@ -175,11 +180,13 @@ class PostsController < ApplicationController
   end
 
   def vote_down
+    @post = Post.find(params[:id])
     
-    @post.vote_down
+    @post.rate_it( -1, current_user.id )
+    #@post.inaccuracy+= 1
+    @post.save
     #@post.inaccuracy += 1
     #render :text => @post.inaccuracy
-    redirect_to(:action=>'index')
     
     respond_to do |format|
       format.html { redirect_to(posts_url) }
@@ -187,6 +194,9 @@ class PostsController < ApplicationController
 
       format.js { redirect_to(posts_url) }
     end    
+    
+    redirect_to post_path    
+    
 #    check_votes_users
 #    
 #    if !$voted_up and !$voted_down

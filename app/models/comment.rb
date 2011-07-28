@@ -1,6 +1,7 @@
 class Comment < ActiveRecord::Base
   belongs_to :post
 	belongs_to :user
+  acts_as_rateable #This is for voting
 	
 	comment_regex = /\A[a-zA-Z.\:\;, \/\'\"\(\)\{\}\[\]]+\z/
 	

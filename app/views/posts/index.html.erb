@@ -152,8 +152,17 @@
 					Date Created: <a class='blue'><%=post.created_at.strftime("%B %e %l:%M %p %Y")%>(<%=distance_of_time_in_words(post.created_at, Time.now)%> ago)</a>
 				</p>
                                 
-                                <!-- Attempting to add a vote option, Jon -->
-
+                                <!-- Attempting to add a vote option, Jon -->            
+                                <p id="voteAccurate">
+					<%=image_tag('NFIcons/time.png') %> 
+                                  <b><a class="blue"><%= link_to "Accurate", 
+                                   :action => :vote_up, :id => post.id
+                                 %></a></b>
+				</p>	                                
+                                <p id="voteInaccurate">
+					<%=image_tag('NFIcons/time.png') %> 
+                                  <b><a class="blue"><%= link_to 'Accurate2', :action => :vote_up, :id => post.id%></a></b>
+				</p>
                                 <p id="Destroy">
 					<%=image_tag('NFIcons/time.png') %> 
                                   <b><a class="blue"><%= link_to "Destroy", 
