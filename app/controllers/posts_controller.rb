@@ -108,12 +108,12 @@ class PostsController < ApplicationController
 
     redirect_to(:action=>'index')
     
-    respond_to do |format|
-      format.html { redirect_to(posts_url) }
-      format.xml  { head :ok }
-
-      format.js { redirect_to(posts_url) }
-    end
+#    respond_to do |format|
+#      format.html { redirect_to(posts_url) }
+#      format.xml  { head :ok }
+#
+#      format.js { redirect_to(posts_url) }
+#    end
   end
 
   # Jon's vote code -- may be glitchy

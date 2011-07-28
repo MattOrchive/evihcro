@@ -98,6 +98,4 @@ OrchiveApp::Application.routes.draw do
 	match '/users/:id', :to => 'users#show',    :as => :user,         :via => :get
 	match '/dashboard' => 'users#adminUI'
   
-  #jon's code
-  match '/posts/:id/destroy', :to => "posts#destroy", :as=> :user, :via => :delete
 end
