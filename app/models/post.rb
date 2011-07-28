@@ -47,6 +47,25 @@
 	
 	validates :content, :presence => true,
 											:length => {:within => 50..600}
+                    
+def vote_up
+    #simplified for testing
+    @post = Post.find(params[:id])
+    @post.accuracy+=1
+    #render :text => @post.accuracy
+    
+    #redirect_to(:action=>'index')
+
+  end
+
+def vote_down
+    @post = Post.find(params[:id])    
+    @post.inaccuracy += 1
+    #render :text => @post.inaccuracy
+    #redirect_to(:action=>'index')
+
+  end
+   
 	private
 		def setFilters
 			self.tag_list.clear

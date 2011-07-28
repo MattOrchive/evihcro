@@ -138,7 +138,8 @@ class PostsController < ApplicationController
 
   def vote_up
     #simplified for testing
-    @post.accuracy+=1
+    @post.vote_up
+    #@post.accuracy+=1
     #render :text => @post.accuracy
     
     redirect_to(:action=>'index')
@@ -167,7 +168,8 @@ class PostsController < ApplicationController
 
   def vote_down
     
-    @post.inaccuracy += 1
+    @post.vote_down
+    #@post.inaccuracy += 1
     #render :text => @post.inaccuracy
     redirect_to(:action=>'index')
     
