@@ -157,8 +157,8 @@
                                 <p id="Destroy">
 					<%=image_tag('NFIcons/time.png') %> 
                                   <b><a class="blue"><%= link_to "Destroy", 
-                                   {:action => :destroy, :id => post.id
-                                 }%></a></b>
+                                   :action => :destroy, :id => post.id, :remote => true
+                                 %></a></b>
 				</p>	                                
 			</section> 
 
