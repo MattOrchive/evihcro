@@ -144,6 +144,12 @@ class PostsController < ApplicationController
     
     redirect_to(:action=>'index')
     
+    respond_to do |format|
+      format.html { redirect_to(posts_url) }
+      format.xml  { head :ok }
+
+      format.js { redirect_to(posts_url) }
+    end    
 #    check_votes_users
 #
 #    if !$voted_up and !$voted_down #TODO: how to set it so this boolean maps to individual users?
@@ -164,6 +170,8 @@ class PostsController < ApplicationController
 #    end
 #    update_status
 
+    
+    
   end
 
   def vote_down
@@ -173,6 +181,12 @@ class PostsController < ApplicationController
     #render :text => @post.inaccuracy
     redirect_to(:action=>'index')
     
+    respond_to do |format|
+      format.html { redirect_to(posts_url) }
+      format.xml  { head :ok }
+
+      format.js { redirect_to(posts_url) }
+    end    
 #    check_votes_users
 #    
 #    if !$voted_up and !$voted_down
