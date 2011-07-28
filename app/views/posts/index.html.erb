@@ -151,6 +151,14 @@
 					<%=image_tag('NFIcons/time.png') %> 
 					Date Created: <a class='blue'><%=post.created_at.strftime("%B %e %l:%M %p %Y")%>(<%=distance_of_time_in_words(post.created_at, Time.now)%> ago)</a>
 				</p>
+                                
+                                <!-- Attempting to add a delete option, Jon -->
+                                <p id="voteInaccurate">
+					<%=image_tag('NFIcons/time.png') %> 
+                                  <b><a class="blue"><%= link_to "Destroy", 
+                                   { :controller => 'posts', :action => 'destroy', :id => post.id
+                                 }, :method => :delete, :remote => true %></a></b>
+				</p>	
 			</section> 
 
 		</div>
