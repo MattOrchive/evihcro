@@ -106,7 +106,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
 
-    redirect_to '/posts'
+    redirect_to(:action=>'index')
+    
     respond_to do |format|
       format.html { redirect_to(posts_url) }
       format.xml  { head :ok }
